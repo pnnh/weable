@@ -1,0 +1,17 @@
+{
+    "siteName": "Weable",
+    "siteTagline": "免费在线小游戏，在浏览器中即刻畅玩",
+    "siteDescription": "Weable 是一个免费在线小游戏平台，汇集了多种技术栈实现的游戏——俄罗斯方块、打砖块、贪吃蛇、太空战争等，无需下载安装，直接在浏览器中游玩。",
+    "homeTitle": "Weable — 免费在线小游戏",
+    "homeDescription": "基于 Cocos Creator、Defold、Godot、Phaser 等引擎构建的免费在线小游戏，无需下载，即开即玩。",
+    "playGame": "开始游戏",
+    "learnMore": "了解更多",
+    "backToHome": "返回首页",
+    "allGames": "所有游戏",
+    "features": "游戏特性",
+    "about": "关于",
+    "engine": "游戏引擎",
+    "controls": "操作方式",
+    "gameDetailTitle": "{name} — Weable",
+    "changeLanguage": "语言"
+}

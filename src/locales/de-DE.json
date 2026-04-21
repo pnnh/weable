@@ -1,0 +1,17 @@
+{
+    "siteName": "Weable",
+    "siteTagline": "Kostenlose Online-Minispiele, sofort im Browser spielen",
+    "siteDescription": "Weable ist eine Sammlung kostenloser Online-Minispiele, die mit verschiedenen Spiel-Engines entwickelt wurden — spielen Sie Tetris, Breakout, Snake, Space War und mehr direkt in Ihrem Browser.",
+    "homeTitle": "Weable — Kostenlose Online-Minispiele",
+    "homeDescription": "Spielen Sie kostenlose Online-Minispiele, entwickelt mit Cocos Creator, Defold, Godot, Phaser und mehr — kein Download, keine Installation.",
+    "playGame": "Jetzt Spielen",
+    "learnMore": "Mehr Erfahren",
+    "backToHome": "Zurück zur Startseite",
+    "allGames": "Alle Spiele",
+    "features": "Funktionen",
+    "about": "Über",
+    "engine": "Engine",
+    "controls": "Steuerung",
+    "gameDetailTitle": "{name} — Weable",
+    "changeLanguage": "Sprache"
+}

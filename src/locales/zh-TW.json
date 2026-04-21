@@ -1,0 +1,17 @@
+{
+    "siteName": "Weable",
+    "siteTagline": "免費線上小遊戲，在瀏覽器中即刻暢玩",
+    "siteDescription": "Weable 是一個免費線上小遊戲平台，匯集了多種技術棧實現的遊戲——俄羅斯方塊、打磚塊、貪食蛇、太空戰爭等，無需下載安裝，直接在瀏覽器中遊玩。",
+    "homeTitle": "Weable — 免費線上小遊戲",
+    "homeDescription": "基於 Cocos Creator、Defold、Godot、Phaser 等引擎構建的免費線上小遊戲，無需下載，即開即玩。",
+    "playGame": "開始遊戲",
+    "learnMore": "了解更多",
+    "backToHome": "返回首頁",
+    "allGames": "所有遊戲",
+    "features": "遊戲特性",
+    "about": "關於",
+    "engine": "遊戲引擎",
+    "controls": "操作方式",
+    "gameDetailTitle": "{name} — Weable",
+    "changeLanguage": "語言"
+}

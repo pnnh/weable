@@ -1,0 +1,17 @@
+{
+    "siteName": "Weable",
+    "siteTagline": "Mini-jeux gratuits en ligne, jouez instantanément dans votre navigateur",
+    "siteDescription": "Weable est une collection de mini-jeux gratuits en ligne construits avec divers moteurs de jeu — jouez à Tetris, Breakout, Snake, Space War et plus directement dans votre navigateur.",
+    "homeTitle": "Weable — Mini-jeux Gratuits en Ligne",
+    "homeDescription": "Jouez à des mini-jeux gratuits en ligne construits avec Cocos Creator, Defold, Godot, Phaser et plus — sans téléchargement, sans installation.",
+    "playGame": "Jouer Maintenant",
+    "learnMore": "En Savoir Plus",
+    "backToHome": "Retour à l'Accueil",
+    "allGames": "Tous les Jeux",
+    "features": "Fonctionnalités",
+    "about": "À propos",
+    "engine": "Moteur",
+    "controls": "Contrôles",
+    "gameDetailTitle": "{name} — Weable",
+    "changeLanguage": "Langue"
+}
