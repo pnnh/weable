@@ -3,7 +3,6 @@
   "name": "weable",
   "compatibility_date": "2026-04-20",
   "main": ".open-next/worker.js",
-  // adapter 输出的入口
   "observability": {
     "enabled": true
   },
@@ -13,5 +12,18 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "weable-db",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "IMAGES_BUCKET",
+      "bucket_name": "weable-images"
+    }
+  ]
 }

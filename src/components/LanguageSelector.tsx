@@ -1,6 +1,8 @@
-import Link from "next/link";
-import type { LangKey } from "@/lib/language";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { supportedLanguages } from "@/lib/language";
+import type { LangKey } from "@/lib/language";
 
 type Props = {
     currentLang: LangKey;
@@ -9,20 +11,23 @@ type Props = {
 };
 
 export default function LanguageSelector({ currentLang, pathSuffix = "" }: Props) {
+    const router = useRouter();
+
+    function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
+        router.push(`/${e.target.value}/${pathSuffix}`);
+    }
+
     return (
-        <div className="flex flex-wrap gap-x-3 gap-y-1">
+        <select
+            value={currentLang}
+            onChange={handleChange}
+            className="text-sm border border-gray-200 rounded-md px-2 py-1 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+        >
             {supportedLanguages.map((l) => (
-                <Link
-                    key={l.key}
-                    href={`/${l.key}/${pathSuffix}`}
-                    className={`text-sm transition-colors ${l.key === currentLang
-                            ? "text-blue-600 font-semibold"
-                            : "text-gray-500 hover:text-gray-900"
-                        }`}
-                >
+                <option key={l.key} value={l.key}>
                     {l.name}
-                </Link>
+                </option>
             ))}
-        </div>
+        </select>
     );
 }
