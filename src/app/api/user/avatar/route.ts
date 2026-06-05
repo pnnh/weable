@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCurrentUser } from "@/lib/auth";
-import { getStorage } from "@/lib/storage";
+import { getAvatarStorage } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
-const AVATAR_PREFIX = "__avatar__";
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 const MAX_SIZE = 2 * 1024 * 1024; // 2 MB
 
@@ -27,8 +26,8 @@ export async function POST(req: NextRequest) {
     }
 
     const buffer = Buffer.from(await file.arrayBuffer());
-    const storage = getStorage();
-    await storage.save(AVATAR_PREFIX, `user_${user.id}`, buffer);
+    const storage = getAvatarStorage();
+    await storage.save(`user_${user.id}`, buffer);
 
     return NextResponse.json({ ok: true });
 }

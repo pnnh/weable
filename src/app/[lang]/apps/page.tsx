@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isValidLang, supportedLanguages } from "@/lib/language";
+import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
 import { games } from "@/data/games";
 import GameGrid from "@/components/GameGrid";
@@ -9,10 +9,6 @@ import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
 
 type Props = { params: Promise<{ lang: string }> };
-
-export async function generateStaticParams() {
-    return supportedLanguages.map((l) => ({ lang: l.key }));
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { lang } = await params;

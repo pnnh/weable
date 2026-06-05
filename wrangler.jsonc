@@ -17,13 +17,17 @@
     {
       "binding": "DB",
       "database_name": "weable-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+      "database_id": "a6463e67-8911-4c11-814a-aaf5df7e8f82"
     }
   ],
   "r2_buckets": [
     {
       "binding": "IMAGES_BUCKET",
       "bucket_name": "weable-images"
+    },
+    {
+      "bucket_name": "weable-images",           // 可以用同一个 bucket
+      "binding": "NEXT_INC_CACHE_R2_BUCKET"   // 必须是这个名字
     }
   ]
 }

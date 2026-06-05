@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCurrentUser } from "@/lib/auth";
-import { getStorage } from "@/lib/storage";
+import { getAvatarStorage } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
-const AVATAR_PREFIX = "__avatar__";
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
 const MAX_SIZE = 2 * 1024 * 1024; // 2 MB
 
@@ -17,14 +16,14 @@ export async function GET(_req: NextRequest, { params }: Props) {
         return NextResponse.json({ error: "Invalid channel ID" }, { status: 400 });
     }
 
-    const storage = getStorage();
-    const data = await storage.read(AVATAR_PREFIX, `channel_${channelId}`);
+    const storage = getAvatarStorage();
+    const data = await storage.read(`channel_${channelId}`);
 
     if (!data) {
         return new NextResponse(null, { status: 404 });
     }
 
-    return new NextResponse(data, {
+    return new NextResponse(new Uint8Array(data), {
         headers: {
             "Content-Type": "image/png",
             "Cache-Control": "public, max-age=3600",
@@ -57,8 +56,8 @@ export async function POST(req: NextRequest, { params }: Props) {
     }
 
     const buffer = Buffer.from(await file.arrayBuffer());
-    const storage = getStorage();
-    await storage.save(AVATAR_PREFIX, `channel_${channelId}`, buffer);
+    const storage = getAvatarStorage();
+    await storage.save(`channel_${channelId}`, buffer);
 
     return NextResponse.json({ ok: true });
 }

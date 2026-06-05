@@ -34,7 +34,7 @@ export async function GET(_req: NextRequest, { params }: Props) {
         return NextResponse.json({ error: "File not found" }, { status: 404 });
     }
 
-    return new NextResponse(data, {
+    return new NextResponse(new Uint8Array(data), {
         headers: {
             "Content-Type": image.mimeType,
             "Cache-Control": "public, max-age=31536000, immutable",

@@ -6,9 +6,6 @@
     "dev": "next dev -p 7600 --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "adapter": "next build && opennextjs-cloudflare build",
-    "preview": "opennextjs-cloudflare preview",
     "db:migrate": "tsx src/db/migrate.ts"
   },
   "dependencies": {
@@ -33,8 +30,6 @@
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.1",
     "drizzle-kit": "^0.31.10",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
     "tsx": "^4.22.3",
     "typescript": "^5",

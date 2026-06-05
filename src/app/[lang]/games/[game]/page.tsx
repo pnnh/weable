@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { isValidLang, supportedLanguages } from "@/lib/language";
+import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
 import { games } from "@/data/games";
 import { t } from "@/lib/i18n";
@@ -12,14 +12,8 @@ import GameCoverPlaceholder from "@/components/GameCoverPlaceholder";
 
 type Props = { params: Promise<{ lang: string; game: string }> };
 
-export async function generateStaticParams() {
-    const pairs: { lang: string; game: string }[] = [];
-    for (const l of supportedLanguages) {
-        for (const game of games) {
-            pairs.push({ lang: l.key, game: game.id });
-        }
-    }
-    return pairs;
+export function generateStaticParams() {
+    return games.map((game) => ({ game: game.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

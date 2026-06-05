@@ -41,21 +41,37 @@ export default async function HomePage({ params, searchParams }: Props) {
             : undefined
     );
 
-    const [allIds, pageRows] = await Promise.all([
-        db
-            .select()
-            .from(images)
-            .innerJoin(channels, eq(images.channelId, channels.id))
-            .where(baseWhere),
-        db
-            .select()
-            .from(images)
-            .innerJoin(channels, eq(images.channelId, channels.id))
-            .where(baseWhere)
-            .orderBy(desc(images.updatedAt))
-            .limit(PAGE_SIZE)
-            .offset((page - 1) * PAGE_SIZE),
+
+    let allIds: { images: typeof images.$inferSelect; channels: typeof channels.$inferSelect }[] = [];
+    let pageRows: typeof allIds = [];
+
+    try{
+        [allIds, pageRows] = await Promise.all([
+            db
+                .select()
+                .from(images)
+                .innerJoin(channels, eq(images.channelId, channels.id))
+                .where(baseWhere),
+            db
+                .select()
+                .from(images)
+                .innerJoin(channels, eq(images.channelId, channels.id))
+                .where(baseWhere)
+                .orderBy(desc(images.updatedAt))
+                .limit(PAGE_SIZE)
+                .offset((page - 1) * PAGE_SIZE),
     ]);
+    }catch(err){
+        const cause = (err as { cause?: unknown }).cause;
+        console.error("[HomePage] DB count query failed", {
+            message: (err as Error).message,
+            cause: cause instanceof Error
+                ? { message: cause.message, stack: cause.stack, name: cause.name }
+                : cause,
+            stack: (err as Error).stack,
+        });
+        throw err;
+    }
 
     const total = allIds.length;
     const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));

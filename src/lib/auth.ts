@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers';
+import { headers } from 'next/headers';
 import { eq } from 'drizzle-orm';
 import { getDb } from '@/db/index';
 import { users } from '@/db/schema';
@@ -17,6 +18,65 @@ const DEV_USER_BASE = {
   email: process.env.DEV_USER_EMAIL ?? 'dev@local',
 };
 
+type JwtPayload = {
+  sub?: unknown;
+  email?: unknown;
+  name?: unknown;
+  preferred_username?: unknown;
+  common_name?: unknown;
+};
+
+function decodeBase64Url(value: string): string | null {
+  try {
+    const normalized = value.replace(/-/g, '+').replace(/_/g, '/');
+    const padLen = (4 - (normalized.length % 4)) % 4;
+    const padded = normalized + '='.repeat(padLen);
+    if (typeof Buffer !== 'undefined') {
+      return Buffer.from(padded, 'base64').toString('utf8');
+    }
+    if (typeof atob !== 'undefined') {
+      return atob(padded);
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function parseJwtPayload(jwt: string): JwtPayload | null {
+  const parts = jwt.split('.');
+  if (parts.length < 2) return null;
+  const payloadText = decodeBase64Url(parts[1]);
+  if (!payloadText) return null;
+  try {
+    return JSON.parse(payloadText) as JwtPayload;
+  } catch {
+    return null;
+  }
+}
+
+function asNonEmptyString(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const trimmed = value.trim();
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+function getCloudflareIdentity(jwt: string): { id: string; name: string; email: string } | null {
+  const payload = parseJwtPayload(jwt);
+  if (!payload) return null;
+
+  const id = asNonEmptyString(payload.sub);
+  const email = asNonEmptyString(payload.email);
+  const name =
+    asNonEmptyString(payload.name) ??
+    asNonEmptyString(payload.preferred_username) ??
+    asNonEmptyString(payload.common_name) ??
+    email;
+
+  if (!id || !email || !name) return null;
+  return { id, name, email };
+}
+
 async function ensureUserRow(id: string, name: string, email: string): Promise<CurrentUser> {
   const db = getDb();
   db.insert(users)
@@ -31,10 +91,27 @@ async function ensureUserRow(id: string, name: string, email: string): Promise<C
 }
 
 export async function getCurrentUser(): Promise<CurrentUser> {
+  const headerStore = await headers();
   const cookieStore = await cookies();
+
+  const accessJwt =
+    headerStore.get('cf-access-jwt-assertion') ??
+    cookieStore.get('CF_Authorization')?.value ??
+    cookieStore.get('cf_authorization')?.value;
+
+  const cfIdentity = accessJwt ? getCloudflareIdentity(accessJwt) : null;
+  if (cfIdentity) {
+    return ensureUserRow(cfIdentity.id, cfIdentity.name, cfIdentity.email);
+  }
+
   const userId = cookieStore.get('user_id')?.value;
-  const base = userId
-    ? { id: userId, name: userId, email: `${userId}@local` }
-    : DEV_USER_BASE;
-  return ensureUserRow(base.id, base.name, base.email);
+  if (userId) {
+    return ensureUserRow(userId, userId, `${userId}@local`);
+  }
+
+  if (process.env.NODE_ENV !== 'production') {
+    return ensureUserRow(DEV_USER_BASE.id, DEV_USER_BASE.name, DEV_USER_BASE.email);
+  }
+
+  throw new Error('Unable to resolve authenticated user from Cloudflare Access JWT or session cookie.');
 }
