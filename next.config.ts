@@ -1,13 +1,14 @@
 import type { NextConfig } from "next";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+// import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
-if (process.env.NODE_ENV === "development") {
-  void initOpenNextCloudflareForDev();
-}
+// if (process.env.NODE_ENV === "development") {
+//   void initOpenNextCloudflareForDev();
+// }
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   reactStrictMode: true,
+  allowedDevOrigins: ['127.0.0.1']
 };
 
 export default nextConfig;
