@@ -1,0 +1,62 @@
+wrangler.jsonc
+  h_de2c1989c48e7b 20,27-30
+worker-configuration.d.ts
+  h_de2c1989c48e7b 1-5,7-13,15-19,21-23,25-29,31-38
+tsconfig.json
+  h_de2c1989c48e7b 33
+src/lib/auth.ts
+  s_5dad9612edd6ff::t_39bcb0801ec651 2,21-79,94,96-106,108-116
+src/app/api/user/avatar/route.ts
+  s_1a1ed303022782::t_d6523021b8d88d 3,29-30
+src/app/api/images/[imageId]/file/route.ts
+  h_de2c1989c48e7b 37
+src/db/index.ts
+  h_de2c1989c48e7b 3,7-9,11-12,34-40,42-51,53-55,58-59
+src/lib/storage.ts
+  h_de2c1989c48e7b 1-2,9-12,35-58,116-169,171-177,182,186-192,194,198-212
+next.config.ts
+  h_de2c1989c48e7b 2,4-6,9-10
+src/db/migrate.ts
+  s_1a1ed303022782::t_92b952c1604d1a 6-8,10-14,16,18-19,21-23
+src/app/[lang]/games/[game]/page.tsx
+  h_de2c1989c48e7b 4,16
+src/app/[lang]/page.tsx
+  h_de2c1989c48e7b 44-48,64-74
+src/app/api/channel/avatar/[channelId]/route.ts
+  s_1a1ed303022782::t_20eb2b0af8524a 3,19-20,59-60
+  h_de2c1989c48e7b 26
+src/app/api/user/avatar/[userId]/route.ts
+  s_1a1ed303022782::t_f80d1c5b005846 2,15-16
+  h_de2c1989c48e7b 22
+src/app/[lang]/apps/page.tsx
+  h_de2c1989c48e7b 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "1d9b56474f064d8975deb88a290fad91e12276e2",
+  "prompts": {},
+  "humans": {
+    "h_de2c1989c48e7b": {
+      "author": "xspanni <xspanni@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1a1ed303022782": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "32300d76-39cf-48e7-bb7c-874f38157b69",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "xspanni <xspanni@gmail.com>"
+    },
+    "s_5dad9612edd6ff": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "6639d038-96f2-45f0-b2cc-45601bcf3743",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "xspanni <xspanni@gmail.com>"
+    }
+  }
+}
