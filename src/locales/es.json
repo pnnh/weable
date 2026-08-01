@@ -68,5 +68,14 @@
     "apps": "Aplicaciones",
     "prevPage": "Anterior",
     "nextPage": "Siguiente",
-    "searchImages": "Buscar por título o descripción..."
+    "searchImages": "Buscar por título o descripción...",
+    "newDirectory": "Nueva Carpeta",
+    "directoryName": "Nombre de la Carpeta",
+    "directoryNamePlaceholder": "p. ej. Recursos de Diseño",
+    "directoryDescriptionPlaceholder": "Descripción de la carpeta (opcional)",
+    "createDirectory": "Crear Carpeta",
+    "duplicateEntryName": "Ya existe una entrada con este nombre en esta carpeta",
+    "nameRequired": "El nombre es obligatorio",
+    "breadcrumbRoot": "Raíz",
+    "invalidTitleChars": "El nombre no puede contener /, \\ ni .."
 }

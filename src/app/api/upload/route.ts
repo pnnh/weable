@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { and, eq } from "drizzle-orm";
 import { getCurrentUser } from "@/lib/auth";
 import { getDb } from "@/db/index";
 import { images, createId } from "@/db/schema";
@@ -29,6 +30,19 @@ export async function POST(req: NextRequest) {
     const id = createId();
     const buffer = Buffer.from(await file.arrayBuffer());
 
+    const parentId = (formData.get("parentId") as string | null) || null;
+    if (parentId !== null) {
+        const db = getDb();
+        const [dir] = await db
+            .select()
+            .from(images)
+            .where(and(eq(images.id, parentId), eq(images.userId, user.id), eq(images.mimeType, "directory")))
+            .limit(1);
+        if (!dir) {
+            return NextResponse.json({ error: "parent directory not found" }, { status: 404 });
+        }
+    }
+
     const storage = getStorage();
     await storage.save(id, file.name, buffer);
 
@@ -36,6 +50,7 @@ export async function POST(req: NextRequest) {
     await db.insert(images).values({
         id,
         userId: user.id,
+        parentId,
         title: file.name.replace(/\.[^.]+$/, ""),
         filename: file.name,
         mimeType: file.type,

@@ -68,5 +68,14 @@
     "apps": "應用",
     "prevPage": "上一頁",
     "nextPage": "下一頁",
-    "searchImages": "依標題或描述搜尋..."
+    "searchImages": "依標題或描述搜尋...",
+    "newDirectory": "新建目錄",
+    "directoryName": "目錄名稱",
+    "directoryNamePlaceholder": "例如：設計稿",
+    "directoryDescriptionPlaceholder": "目錄說明（可選）",
+    "createDirectory": "建立目錄",
+    "duplicateEntryName": "此層級已存在同名條目",
+    "nameRequired": "名稱不可為空",
+    "breadcrumbRoot": "根目錄",
+    "invalidTitleChars": "名稱不能包含 /、\\、.."
 }

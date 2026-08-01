@@ -68,5 +68,14 @@
     "apps": "Apps",
     "prevPage": "Vorherige",
     "nextPage": "Nächste",
-    "searchImages": "Nach Titel oder Beschreibung suchen..."
+    "searchImages": "Nach Titel oder Beschreibung suchen...",
+    "newDirectory": "Neuer Ordner",
+    "directoryName": "Ordnername",
+    "directoryNamePlaceholder": "z. B. Design-Assets",
+    "directoryDescriptionPlaceholder": "Ordnerbeschreibung (optional)",
+    "createDirectory": "Ordner erstellen",
+    "duplicateEntryName": "Ein Eintrag mit diesem Namen existiert bereits in diesem Ordner",
+    "nameRequired": "Name ist erforderlich",
+    "breadcrumbRoot": "Stamm",
+    "invalidTitleChars": "Name darf /, \\ oder .. nicht enthalten"
 }

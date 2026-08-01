@@ -4,10 +4,11 @@ import { useState, useRef } from "react";
 
 type Props = {
     lang: string;
+    parentId?: string | null;
     labels: { newImage: string; imageTooLarge: string; uploadError: string };
 };
 
-export default function ImageUploadForm({ lang, labels }: Props) {
+export default function ImageUploadForm({ lang, parentId, labels }: Props) {
     const [error, setError] = useState("");
     const [uploading, setUploading] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
@@ -33,6 +34,7 @@ export default function ImageUploadForm({ lang, labels }: Props) {
         try {
             const formData = new FormData();
             formData.append("file", file);
+            if (parentId) formData.append("parentId", parentId);
 
             const res = await fetch("/api/upload", { method: "POST", body: formData });
 

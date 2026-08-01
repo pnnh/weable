@@ -68,5 +68,14 @@
     "apps": "应用",
     "prevPage": "上一页",
     "nextPage": "下一页",
-    "searchImages": "按标题或描述搜索..."
+    "searchImages": "依标题或描述搜索...",
+    "newDirectory": "新建目录",
+    "directoryName": "目录名称",
+    "directoryNamePlaceholder": "例如：设计稿",
+    "directoryDescriptionPlaceholder": "目录说明（可选）",
+    "createDirectory": "创建目录",
+    "duplicateEntryName": "该层级已存在同名条目",
+    "nameRequired": "名称不能为空",
+    "breadcrumbRoot": "根目录",
+    "invalidTitleChars": "名称不能包含 /、\\、.."
 }

@@ -14,10 +14,14 @@ import ImageUploadForm from "@/components/ImageUploadForm";
 
 export const dynamic = "force-dynamic";
 
-type Props = { params: Promise<{ lang: string; imageId: string }> };
+type Props = {
+    params: Promise<{ lang: string; imageId: string }>;
+    searchParams: Promise<{ parentId?: string }>;
+};
 
-export default async function ImageEditorPage({ params }: Props) {
+export default async function ImageEditorPage({ params, searchParams }: Props) {
     const { lang, imageId } = await params;
+    const { parentId } = await searchParams;
     if (!isValidLang(lang)) notFound();
     const l = lang as LangKey;
 
@@ -34,6 +38,7 @@ export default async function ImageEditorPage({ params }: Props) {
                     <h1 className="text-2xl font-bold text-gray-900 mb-8">{t(l, "newImage")}</h1>
                     <ImageUploadForm
                         lang={lang}
+                        parentId={parentId ?? null}
                         labels={{
                             newImage: t(l, "newImage"),
                             imageTooLarge: t(l, "imageTooLarge"),
@@ -54,6 +59,7 @@ export default async function ImageEditorPage({ params }: Props) {
         .then((rows) => rows[0] ?? null);
 
     if (!existingImage) notFound();
+    if (existingImage.mimeType === "directory") notFound();
 
     const userChannels = await db
         .select()

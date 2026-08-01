@@ -27,6 +27,10 @@ export async function GET(_req: NextRequest, { params }: Props) {
         return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
 
+    if (image.mimeType === "directory") {
+        return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
     const storage = getStorage();
     const data = await storage.read(imageId, image.filename);
 

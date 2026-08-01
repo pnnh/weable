@@ -1,4 +1,5 @@
 import { relations } from "drizzle-orm";
+import type { AnySQLiteColumn } from "drizzle-orm/sqlite-core";
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import bs58 from "bs58";
 import { uuidv7 } from "uuidv7";
@@ -50,6 +51,9 @@ export const images = sqliteTable("images", {
   channelId: text("channel_id").references(() => channels.id, {
     onDelete: "set null",
   }),
+  parentId: text("parent_id").references((): AnySQLiteColumn => images.id, {
+    onDelete: "set null",
+  }),
   title: text("title").notNull(),
   description: text("description").notNull().default(""),
   filename: text("filename").notNull(),
@@ -77,7 +81,7 @@ export const channelsRelations = relations(channels, ({ one, many }) => ({
   images: many(images),
 }));
 
-export const imagesRelations = relations(images, ({ one }) => ({
+export const imagesRelations = relations(images, ({ one, many }) => ({
   user: one(users, {
     fields: [images.userId],
     references: [users.id],
@@ -86,4 +90,10 @@ export const imagesRelations = relations(images, ({ one }) => ({
     fields: [images.channelId],
     references: [channels.id],
   }),
+  parent: one(images, {
+    fields: [images.parentId],
+    references: [images.id],
+    relationName: "children",
+  }),
+  children: many(images, { relationName: "children" }),
 }));

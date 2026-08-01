@@ -42,6 +42,7 @@ next-env.d.ts
 
 .codebase-memory/
 .data/
+*.db
 
 .wrangler/
 pnpm-debug.log*

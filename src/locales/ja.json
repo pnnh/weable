@@ -68,5 +68,14 @@
     "apps": "アプリ",
     "prevPage": "前へ",
     "nextPage": "次へ",
-    "searchImages": "タイトルまたは説明で検索..."
+    "searchImages": "タイトルまたは説明で検索...",
+    "newDirectory": "新しいフォルダー",
+    "directoryName": "フォルダー名",
+    "directoryNamePlaceholder": "例：デザイン素材",
+    "directoryDescriptionPlaceholder": "フォルダーの説明（任意）",
+    "createDirectory": "フォルダーを作成",
+    "duplicateEntryName": "同じ名前の項目がこのフォルダーに既に存在します",
+    "nameRequired": "名前は必須です",
+    "breadcrumbRoot": "ルート",
+    "invalidTitleChars": "名前に /、\\、.. を含めることはできません"
 }

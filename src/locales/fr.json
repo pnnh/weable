@@ -68,5 +68,14 @@
     "apps": "Applications",
     "prevPage": "Précédent",
     "nextPage": "Suivant",
-    "searchImages": "Rechercher par titre ou description..."
+    "searchImages": "Rechercher par titre ou description...",
+    "newDirectory": "Nouveau Dossier",
+    "directoryName": "Nom du Dossier",
+    "directoryNamePlaceholder": "ex. Ressources de Design",
+    "directoryDescriptionPlaceholder": "Description du dossier (facultatif)",
+    "createDirectory": "Créer le Dossier",
+    "duplicateEntryName": "Une entrée avec ce nom existe déjà dans ce dossier",
+    "nameRequired": "Le nom est requis",
+    "breadcrumbRoot": "Racine",
+    "invalidTitleChars": "Le nom ne peut pas contenir /, \\ ou .."
 }

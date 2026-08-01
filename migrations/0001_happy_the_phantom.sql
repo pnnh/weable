@@ -1,0 +1,1 @@
+ALTER TABLE `images` ADD `parent_id` text REFERENCES images(id);

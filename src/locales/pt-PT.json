@@ -68,5 +68,14 @@
     "apps": "Aplicações",
     "prevPage": "Anterior",
     "nextPage": "Seguinte",
-    "searchImages": "Pesquisar por título ou descrição..."
+    "searchImages": "Pesquisar por título ou descrição...",
+    "newDirectory": "Nova Pasta",
+    "directoryName": "Nome da Pasta",
+    "directoryNamePlaceholder": "ex. Recursos de Design",
+    "directoryDescriptionPlaceholder": "Descrição da pasta (opcional)",
+    "createDirectory": "Criar Pasta",
+    "duplicateEntryName": "Já existe uma entrada com este nome nesta pasta",
+    "nameRequired": "O nome é obrigatório",
+    "breadcrumbRoot": "Raiz",
+    "invalidTitleChars": "O nome não pode conter /, \\ ou .."
 }

@@ -68,5 +68,14 @@
     "apps": "Apps",
     "prevPage": "Previous",
     "nextPage": "Next",
-    "searchImages": "Search by title or description..."
+    "searchImages": "Search by title or description...",
+    "newDirectory": "New Directory",
+    "directoryName": "Directory Name",
+    "directoryNamePlaceholder": "e.g. Design Assets",
+    "directoryDescriptionPlaceholder": "Directory description (optional)",
+    "createDirectory": "Create Directory",
+    "duplicateEntryName": "An entry with this name already exists in this directory",
+    "nameRequired": "Name is required",
+    "breadcrumbRoot": "Root",
+    "invalidTitleChars": "Name cannot contain /, \\, or .."
 }
