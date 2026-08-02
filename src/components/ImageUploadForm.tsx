@@ -2,10 +2,20 @@
 
 import { useState, useRef } from "react";
 
+const MAX_UPLOAD_FILES = 50;
+const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;
+
 type Props = {
     lang: string;
     parentId?: string | null;
-    labels: { newImage: string; imageTooLarge: string; uploadError: string };
+    labels: {
+        newImage: string;
+        imageTooLarge: string;
+        uploadError: string;
+        uploadTooManyFiles: string;
+        uploadLimitsHint: string;
+        uploadingImages: string;
+    };
 };
 
 export default function ImageUploadForm({ lang, parentId, labels }: Props) {
@@ -21,11 +31,15 @@ export default function ImageUploadForm({ lang, parentId, labels }: Props) {
         if (!form) return;
 
         const fileInput = form.querySelector<HTMLInputElement>('input[type="file"]');
-        const file = fileInput?.files?.[0];
-        if (!file) return;
+        const files = Array.from(fileInput?.files ?? []);
+        if (files.length === 0) return;
 
-        // Client-side size check (10 MB)
-        if (file.size > 10 * 1024 * 1024) {
+        if (files.length > MAX_UPLOAD_FILES) {
+            setError(labels.uploadTooManyFiles);
+            return;
+        }
+
+        if (files.some((file) => file.size > MAX_FILE_SIZE_BYTES)) {
             setError(labels.imageTooLarge);
             return;
         }
@@ -33,7 +47,9 @@ export default function ImageUploadForm({ lang, parentId, labels }: Props) {
         setUploading(true);
         try {
             const formData = new FormData();
-            formData.append("file", file);
+            files.forEach((file) => {
+                formData.append("file", file);
+            });
             if (parentId) formData.append("parentId", parentId);
 
             const res = await fetch("/api/upload", { method: "POST", body: formData });
@@ -44,8 +60,10 @@ export default function ImageUploadForm({ lang, parentId, labels }: Props) {
                 return;
             }
 
-            const { id } = await res.json();
-            window.location.href = `/${lang}/console/images/${id}`;
+            const listUrl = parentId
+                ? `/${lang}/console/images?parentId=${encodeURIComponent(parentId)}`
+                : `/${lang}/console/images`;
+            window.location.href = listUrl;
         } catch {
             setError(labels.uploadError);
         } finally {
@@ -67,18 +85,19 @@ export default function ImageUploadForm({ lang, parentId, labels }: Props) {
                 <input
                     name="file"
                     type="file"
+                    multiple
                     accept="image/*"
                     required
                     className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                 />
-                <p className="text-xs text-gray-500 mt-1">Max 10 MB</p>
+                <p className="text-xs text-gray-500 mt-1">{labels.uploadLimitsHint}</p>
             </div>
             <button
                 type="submit"
                 disabled={uploading}
                 className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 disabled:opacity-50"
             >
-                {uploading ? "…" : labels.newImage}
+                {uploading ? labels.uploadingImages : labels.newImage}
             </button>
         </form>
     );

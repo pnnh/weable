@@ -3,6 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const TREE_INDENT_STEP_PX = 20;
+const TOGGLE_CELL_WIDTH_CLASS = "w-10";
+const TOGGLE_SLOT_SIZE_CLASS = "w-5 h-5";
+const ITEM_ICON_SIZE_CLASS = "w-8 h-8";
+
 export type ImageEntry = {
     id: string;
     title: string;
@@ -65,63 +70,65 @@ function TreeRow({
         setExpanded((prev) => !prev);
     }
 
-    const indent = depth * 20;
+    const indent = depth * TREE_INDENT_STEP_PX;
+    const shiftStyle = indent > 0 ? { transform: `translateX(${indent}px)` } : undefined;
 
     return (
         <>
             <tr className="border-b border-gray-100 hover:bg-gray-50">
                 {/* expand toggle + thumbnail/icon cell */}
-                <td className="py-3 pr-2 w-10" style={{ paddingLeft: `${indent + 8}px` }}>
-                    {isDirectory ? (
-                        <button
-                            type="button"
-                            onClick={handleToggle}
-                            className="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-700 rounded"
-                            aria-label={expanded ? "collapse" : "expand"}
-                        >
-                            {childState === "loading" ? (
-                                <span className="text-xs">…</span>
-                            ) : (
-                                <span className="text-xs">{expanded ? "▼" : "▶"}</span>
-                            )}
-                        </button>
-                    ) : (
-                        <span className="w-6 h-6 block" />
-                    )}
+                <td className={`py-3 pr-2 ${TOGGLE_CELL_WIDTH_CLASS}`}>
+                    <div style={shiftStyle}>
+                        {isDirectory ? (
+                            <button
+                                type="button"
+                                onClick={handleToggle}
+                                className={`${TOGGLE_SLOT_SIZE_CLASS} flex items-center justify-center text-gray-400 hover:text-gray-700 rounded`}
+                                aria-label={expanded ? "collapse" : "expand"}
+                            >
+                                {childState === "loading" ? (
+                                    <span className="text-xs">…</span>
+                                ) : (
+                                    <span className="text-xs">{expanded ? "▼" : "▶"}</span>
+                                )}
+                            </button>
+                        ) : (
+                            <span className={`${TOGGLE_SLOT_SIZE_CLASS} block`} />
+                        )}
+                    </div>
                 </td>
-                {/* thumbnail or folder icon */}
-                <td className="py-3 pr-4 w-12">
-                    {isDirectory ? (
-                        <div className="w-10 h-10 rounded bg-yellow-50 border border-yellow-200 flex items-center justify-center text-xl">
-                            📁
-                        </div>
-                    ) : (
-                        <div className="w-10 h-10 rounded bg-gray-100 overflow-hidden">
-                            <img
-                                src={`/api/images/${item.id}/file`}
-                                alt={item.title}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    )}
-                </td>
-                {/* title */}
+                {/* icon + title */}
                 <td className="py-3 pr-4">
-                    {isDirectory ? (
-                        <Link
-                            href={`/${lang}/console/images?parentId=${encodeURIComponent(item.id)}`}
-                            className="text-blue-600 hover:underline font-medium"
-                        >
-                            {item.title}
-                        </Link>
-                    ) : (
-                        <Link
-                            href={`/${lang}/console/images/${item.id}`}
-                            className="text-blue-600 hover:underline font-medium"
-                        >
-                            {item.title}
-                        </Link>
-                    )}
+                    <div className="flex items-center gap-3 min-w-0" style={shiftStyle}>
+                        {isDirectory ? (
+                            <div className={`${ITEM_ICON_SIZE_CLASS} shrink-0 rounded bg-yellow-50 border border-yellow-200 flex items-center justify-center text-base`}>
+                                📁
+                            </div>
+                        ) : (
+                            <div className={`${ITEM_ICON_SIZE_CLASS} shrink-0 rounded bg-gray-100 overflow-hidden`}>
+                                <img
+                                    src={`/api/images/${item.id}/file`}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
+                        {isDirectory ? (
+                            <Link
+                                href={`/${lang}/console/images?parentId=${encodeURIComponent(item.id)}`}
+                                className="text-blue-600 hover:underline font-medium truncate"
+                            >
+                                {item.title}
+                            </Link>
+                        ) : (
+                            <Link
+                                href={`/${lang}/console/images/${item.id}`}
+                                className="text-blue-600 hover:underline font-medium truncate"
+                            >
+                                {item.title}
+                            </Link>
+                        )}
+                    </div>
                 </td>
                 {/* status */}
                 <td className="py-3 pr-4">
@@ -159,7 +166,10 @@ function TreeRow({
                     ))}
                     {children.length === 0 && (
                         <tr className="border-b border-gray-100">
-                            <td colSpan={5} className="py-2 text-gray-400 text-sm italic" style={{ paddingLeft: `${indent + 52}px` }}>
+                            <td className={`py-2 pr-2 ${TOGGLE_CELL_WIDTH_CLASS}`}>
+                                <span className={`${TOGGLE_SLOT_SIZE_CLASS} block`} />
+                            </td>
+                            <td colSpan={3} className="py-2 text-gray-400 text-sm italic" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
                                 —
                             </td>
                         </tr>
@@ -168,7 +178,10 @@ function TreeRow({
             )}
             {isDirectory && expanded && childState === "error" && (
                 <tr className="border-b border-gray-100">
-                    <td colSpan={5} className="py-2 text-red-500 text-sm" style={{ paddingLeft: `${indent + 52}px` }}>
+                    <td className={`py-2 pr-2 ${TOGGLE_CELL_WIDTH_CLASS}`}>
+                        <span className={`${TOGGLE_SLOT_SIZE_CLASS} block`} />
+                    </td>
+                    <td colSpan={3} className="py-2 text-red-500 text-sm" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
                         Load failed
                     </td>
                 </tr>
@@ -186,7 +199,6 @@ export default function ImagesTreeTable({ initialItems, lang, depth = 0, labels 
                 <thead className="text-xs text-gray-500 uppercase border-b border-gray-200">
                     <tr>
                         <th className="py-3" />
-                        <th className="py-3 pr-4" />
                         <th className="py-3 pr-4">Title</th>
                         <th className="py-3 pr-4">Status</th>
                         <th className="py-3">{labels.updated}</th>

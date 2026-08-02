@@ -5,7 +5,7 @@ import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
 import { getCurrentUser } from "@/lib/auth";
 import { getDb } from "@/db/index";
-import { channels, images, createId } from "@/db/schema";
+import { channels, images } from "@/db/schema";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
@@ -28,6 +28,9 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
     const user = await getCurrentUser();
     const db = getDb();
     const isNew = imageId === "new";
+    const listHref = parentId
+        ? `/${lang}/console/images?parentId=${encodeURIComponent(parentId)}`
+        : `/${lang}/console/images`;
 
     // For "new", show upload form; for existing, show edit form
     if (isNew) {
@@ -43,6 +46,9 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
                             newImage: t(l, "newImage"),
                             imageTooLarge: t(l, "imageTooLarge"),
                             uploadError: t(l, "uploadError"),
+                            uploadTooManyFiles: t(l, "uploadTooManyFiles"),
+                            uploadLimitsHint: t(l, "uploadLimitsHint"),
+                            uploadingImages: t(l, "uploadingImages"),
                         }}
                     />
                 </main>
@@ -100,7 +106,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
             .set({ title, description, channelId, isPublished, updatedAt: now })
             .where(and(eq(images.id, imageId), eq(images.userId, user2.id)));
 
-        redirect(`/${lang}/console/images`);
+        redirect(listHref);
     }
 
     return (
@@ -167,7 +173,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
                         <button type="submit" className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700">
                             {t(l, "save")}
                         </button>
-                        <a href={`/${lang}/console/images`} className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-50">
+                        <a href={listHref} className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-50">
                             {t(l, "cancel")}
                         </a>
                     </div>
@@ -175,7 +181,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
 
                 <ImageDeleteSection
                     imageId={imageId}
-                    redirectTo={`/${lang}/console/images`}
+                    redirectTo={listHref}
                     labels={{
                         deleteImage: t(l, "deleteImage"),
                         deleteImageConfirm: t(l, "deleteImageConfirm"),

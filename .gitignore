@@ -19,9 +19,13 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+Thumbs.db
+*.tmp
+*.swp
 *.pem
 
 # debug
@@ -46,3 +50,7 @@ next-env.d.ts
 
 .wrangler/
 pnpm-debug.log*
+
+# editors
+.vscode/
+.idea/
