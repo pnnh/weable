@@ -1,0 +1,526 @@
+src/components/BatchChannelDialog.tsx
+  s_728ab26ae8e076::t_ac60a56adfdee8 1-108
+src/components/ImageDeleteSection.tsx
+  s_728ab26ae8e076::t_c3c73bb76c64e1 7,16,23
+src/app/[lang]/console/api/channel/avatar/[channelId]/route.ts
+  s_728ab26ae8e076::t_5fac9d33072510 1-2,4-42
+  h_6465a203f88bd5 3
+.gitignore
+  h_6465a203f88bd5 57-58
+  h_6465a203f88bd5 56
+src/app/[lang]/console/api/images/route.ts
+  s_728ab26ae8e076::t_80fcc0fb789f04 1-71
+". qoderignore"
+  h_6465a203f88bd5 1-3
+src/app/[lang]/console/api/images/batch/route.ts
+  s_728ab26ae8e076::t_bf1834a6ad1bc1 1-3,5-71,106
+  h_6465a203f88bd5 4,72-105
+src/components/ImagesBatchToolbar.tsx
+  h_6465a203f88bd5 4,6-7,25-29,35,37-38,41-45,52,60,77-92,95-111
+  s_728ab26ae8e076::t_21a620e7f85977 1-3,5,8-24,30-34,36,39-40,46-51,53-59,61-76,93-94,112-114
+specs/003-batch-publish-channel/contracts/console-api-migration.md
+  s_728ab26ae8e076::t_806626497115cc 1-62
+src/lib/auth.ts
+  s_728ab26ae8e076::t_c791d1076a9491 94-103,126
+src/app/[lang]/console/api/_lib/gate.ts
+  s_728ab26ae8e076::t_9eac79c8d79a53 1-20
+src/app/[lang]/console/images/page.tsx
+  h_6465a203f88bd5 83-89,106-108,112-117,164,166-168
+  s_728ab26ae8e076::t_2d846983078a30 8,12
+src/locales/zh.json
+  s_728ab26ae8e076::t_134c5b5fcf7ff0 83-88
+src/app/[lang]/console/api/upload/route.ts
+  s_728ab26ae8e076::t_bd8ddd318c4da0 1-80
+specs/003-batch-publish-channel/checklists/requirements.md
+  s_728ab26ae8e076::t_9b2770254297c1 1-36
+specs/003-batch-publish-channel/quickstart.md
+  s_728ab26ae8e076::t_b695fed67695cf 2-4,6-12,15-32,34-41,43-44,46-50,52-56,76-78
+  s_728ab26ae8e076::t_3fe9c549fd6b29 1,5,13-14,33,42,45,51,57-75,79-80
+src/components/ChannelDeleteSection.tsx
+  s_728ab26ae8e076::t_a858cfc05183c7 7,18,25
+src/app/[lang]/console/api/images/[imageId]/route.ts
+  h_6465a203f88bd5 6
+  s_728ab26ae8e076::t_ec3abd063c78a1 1-5,7-87
+specs/003-batch-publish-channel/spec.md
+  h_6465a203f88bd5 17,97-99
+  s_728ab26ae8e076::t_01b431fe478c14 11-15,18
+  s_728ab26ae8e076::t_077e3b5b4b70ac 16
+  s_728ab26ae8e076::t_138ec49cf2f4cb 1-9,21-96,100-125
+  s_728ab26ae8e076::t_5682d49c956a13 10
+  s_728ab26ae8e076::t_45520e2a24f6c5 19-20
+src/app/[lang]/console/api/directories/route.ts
+  s_728ab26ae8e076::t_bc1bdde4ff3a4c 1-99
+src/locales/fr.json
+  s_728ab26ae8e076::t_2c8769cb8eacc4 83-88
+src/app/[lang]/console/api/images/[imageId]/file/route.ts
+  h_6465a203f88bd5 6
+  s_728ab26ae8e076::t_6f1537e5270df6 1-5,7-51
+.graphifyignore
+  h_6465a203f88bd5 174,177-191
+  h_6465a203f88bd5 176
+.specify/feature.json
+  s_728ab26ae8e076::t_93a1fd97258016 2
+  s_728ab26ae8e076::t_c391e8808f3f04 3
+specs/003-batch-publish-channel/plan.md
+  s_728ab26ae8e076::t_50f4c1c139fcc9 1,9-13,18-22,30-32,41-44,66-67,69-89,91-110
+  s_728ab26ae8e076::t_adf31679eb03f7 3-5,16,24-28,38-40,46-53,68,90,114
+  s_728ab26ae8e076::t_297740b8ed332d 2
+  s_728ab26ae8e076::t_a8c012b39f52cb 6-8
+  s_728ab26ae8e076::t_f0d893d746d9dc 14-15
+  s_728ab26ae8e076::t_be0c628f73480c 17
+  s_728ab26ae8e076::t_c0d9997a03791a 23
+  s_728ab26ae8e076::t_0f201d5614c5ab 29
+  s_728ab26ae8e076::t_0e1fe6bfd5ad09 33-37
+  s_728ab26ae8e076::t_918a5c3802cd76 45
+  s_728ab26ae8e076::t_12a949b9267819 54-56,63-65
+  s_728ab26ae8e076::t_cc02fdcedb64f3 111-113
+  h_6465a203f88bd5 57-62
+specs/003-batch-publish-channel/research.md
+  s_728ab26ae8e076::t_e94cbae9d61119 2-4,6-8,11,14-16,20-22,26-28,32-34,38-40,44-46,50-52
+  s_728ab26ae8e076::t_a6d76389617e32 1,5,9-10,12-13,17-19,23-25,29-31,35-37,41-43,47-49,53-81
+specs/003-batch-publish-channel/tasks.md
+  s_728ab26ae8e076::t_a136d091128c1e 1,5,7,9,19,25,27,33,37,39,41-68,79-81,95-97,111,119,121-124,132-135,139-141,143,145,149-152,156,159-171,181,183,188,192,199-201
+  s_728ab26ae8e076::t_d680d108977d9e 2-4,6,8,10-18,20-24,26,28-32,34-36,38,40,69-78,82-94,98-110,112-118,120,125-131,136-138,142,144,146-148,153-155,157-158,172-180,182,184-187,189-191,193-198,202
+src/locales/zh-TW.json
+  s_728ab26ae8e076::t_7e4da1f037b884 83-88
+src/locales/es.json
+  s_728ab26ae8e076::t_c38f6aa08a18db 83-88
+src/app/[lang]/console/api/images/breadcrumb/route.ts
+  s_728ab26ae8e076::t_2d6e15a99e61b1 1-45
+src/app/[lang]/console/api/user/avatar/[userId]/route.ts
+  s_728ab26ae8e076::t_3bc00af50e2c94 1-31
+specs/003-batch-publish-channel/data-model.md
+  s_728ab26ae8e076::t_e5b9d288f63763 1-4,6-58
+  s_728ab26ae8e076::t_0d3a8fe8ac05f3 5
+src/components/ImagesTreeTable.tsx
+  s_728ab26ae8e076::t_32bc620d532d3b 3,10,33-35,40,44-50,56,62,69-75,81,100-110,142,196,201,214,227-272,275-276,282-292,301
+  h_6465a203f88bd5 169
+  h_6465a203f88bd5 172
+src/locales/en.json
+  s_728ab26ae8e076::t_94cdaaf24b7951 83-88
+src/locales/de-DE.json
+  s_728ab26ae8e076::t_38d8d80af911a4 83-88
+specs/003-batch-publish-channel/contracts/patch-images-batch.md
+  s_728ab26ae8e076::t_17a65dd705fbc4 1,10,12,48-49,53
+  s_728ab26ae8e076::t_c4f405da784012 2-9,11,13-47,50-52,54-67
+src/components/CreateDirectoryDialog.tsx
+  s_728ab26ae8e076::t_1c2b9c99bcd5bd 22
+  h_6465a203f88bd5 52
+src/components/ImageUploadForm.tsx
+  s_728ab26ae8e076::t_946536e6d5e72a 55
+src/components/ChannelAvatarUpload.tsx
+  s_728ab26ae8e076::t_b7c894a9e91581 6,16,18,29
+src/app/[lang]/console/channels/[channelId]/page.tsx
+  h_6465a203f88bd5 130
+  s_728ab26ae8e076::t_9569378a52e534 78
+src/components/UserProfileClient.tsx
+  s_728ab26ae8e076::t_d8f7e306a10954 6,25,30,37,39,47
+src/app/[lang]/console/api/channels/[channelId]/route.ts
+  s_728ab26ae8e076::t_57482362f4bd6c 1-45
+src/app/api/channel/avatar/[channelId]/route.ts
+  s_728ab26ae8e076::t_22f1760ad89e4d 8
+src/components/BatchPublishDialog.tsx
+  s_728ab26ae8e076::t_91f21af2d0f68d 1-110
+src/locales/ja.json
+  s_728ab26ae8e076::t_cb25dac3e67867 83-88
+src/locales/pt-PT.json
+  s_728ab26ae8e076::t_b0762e1dd416bf 83-88
+src/app/[lang]/console/api/user/profile/route.ts
+  s_728ab26ae8e076::t_02ea0d5a8ae343 1-36
+src/app/[lang]/console/api/user/avatar/route.ts
+  s_728ab26ae8e076::t_02ced8a834a922 1-38
+src/app/[lang]/console/images/[imageId]/page.tsx
+  h_6465a203f88bd5 120
+  s_728ab26ae8e076::t_d07adf131130f5 183
+src/app/[lang]/console/profile/page.tsx
+  s_728ab26ae8e076::t_5553dbbf1ef775 39
+.claude/skills/speckit-analyze/SKILL.md
+  h_6465a203f88bd5 1-262
+.claude/skills/speckit-bug-assess/SKILL.md
+  h_6465a203f88bd5 2,5-8,13,102,172
+.claude/skills/speckit-bug-fix/SKILL.md
+  h_6465a203f88bd5 2,4-7,12,31,41,56,110
+.claude/skills/speckit-bug-test/SKILL.md
+  h_6465a203f88bd5 2,5-8,13,32,43,111,117
+.claude/skills/speckit-checklist/SKILL.md
+  h_6465a203f88bd5 1-376
+.claude/skills/speckit-clarify/SKILL.md
+  h_6465a203f88bd5 1-294
+.claude/skills/speckit-constitution/SKILL.md
+  h_6465a203f88bd5 1-171
+.claude/skills/speckit-converge/SKILL.md
+  h_6465a203f88bd5 1-279
+.claude/skills/speckit-implement/SKILL.md
+  h_6465a203f88bd5 1-226
+.claude/skills/speckit-plan/SKILL.md
+  h_6465a203f88bd5 1-169
+.claude/skills/speckit-specify/SKILL.md
+  h_6465a203f88bd5 1-348
+.claude/skills/speckit-tasks/SKILL.md
+  h_6465a203f88bd5 1-217
+.claude/skills/speckit-taskstoissues/SKILL.md
+  h_6465a203f88bd5 1-112
+.qoder/commands/speckit.analyze.md
+  h_6465a203f88bd5 62
+.qoder/commands/speckit.checklist.md
+  h_6465a203f88bd5 71
+.qoder/commands/speckit.clarify.md
+  h_6465a203f88bd5 60
+.qoder/commands/speckit.converge.md
+  h_6465a203f88bd5 90
+.qoder/commands/speckit.implement.md
+  h_6465a203f88bd5 50
+.qoder/commands/speckit.plan.md
+  h_6465a203f88bd5 58
+.qoder/commands/speckit.tasks.md
+  h_6465a203f88bd5 59
+.qoder/commands/speckit.taskstoissues.md
+  h_6465a203f88bd5 51
+".qoder/repowiki/knowledge/zh/Tailwind CSS v4 + Next.js App Router 样式体系/Tailwind CSS v4 + Next.js App Router 样式体系.md"
+  h_6465a203f88bd5 1-35
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/_module.yaml"
+  h_6465a203f88bd5 1-11
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/架构设计.md"
+  h_6465a203f88bd5 1-7
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/图片资源 API 路由/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/_module.yaml"
+  h_6465a203f88bd5 1-10
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/文件上传与用户信息 API/编码规范.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/架构设计.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/API 路由层（Next.js App Router）/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/架构设计.md"
+  h_6465a203f88bd5 1-4
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/SpecKit 特性规格与文档工作区/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/_module.yaml"
+  h_6465a203f88bd5 1-23
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/_module.yaml"
+  h_6465a203f88bd5 1-10
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/架构设计.md"
+  h_6465a203f88bd5 1-4
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/编码规范.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端 UI 组件库（Next.js 客户端与服务器组件）/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/_module.yaml"
+  h_6465a203f88bd5 1-8
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/图片资源 API 路由/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/用户头像与资料 API 路由/编码规范.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/Next.js App Router API 路由层/编码规范.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/_module.yaml"
+  h_6465a203f88bd5 1-8
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/_module.yaml"
+  h_6465a203f88bd5 1-10
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/架构设计.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/多语言路由与页面布局/编码规范.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/_module.yaml"
+  h_6465a203f88bd5 1-11
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/应用根布局与首页路由/编码规范.md"
+  h_6465a203f88bd5 1-3
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/架构设计.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/前端应用（Next.js App Router）/编码规范.md"
+  h_6465a203f88bd5 1-3
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/_module.yaml"
+  h_6465a203f88bd5 1-9
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/多语言国际化资源（i18n Locales）/编码规范.md"
+  h_6465a203f88bd5 1-4
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/_module.yaml"
+  h_6465a203f88bd5 1-10
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/架构设计.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/数据库层与迁移管理/编码规范.md"
+  h_6465a203f88bd5 1-4
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/架构设计.md"
+  h_6465a203f88bd5 1-6
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈项目根（Next.js + Cloudflare 工作区）/编码规范.md"
+  h_6465a203f88bd5 1-6
+.qoder/repowiki/knowledge/zh/_index.yaml
+  h_6465a203f88bd5 1-191
+".qoder/repowiki/knowledge/zh/pnpm 依赖管理与锁定策略/pnpm 依赖管理与锁定策略.md"
+  h_6465a203f88bd5 1-37
+".qoder/repowiki/knowledge/zh/构建与部署系统（Next.js + OpenNext_Cloudflare）/构建与部署系统（Next.js + OpenNext_Cloudflare）.md"
+  h_6465a203f88bd5 1-27
+".qoder/repowiki/knowledge/zh/配置系统 — Next.js + Cloudflare 环境配置与运行时依赖注入/配置系统 — Next.js + Cloudflare 环境配置与运行时依赖注入.md"
+  h_6465a203f88bd5 1-49
+".qoder/repowiki/knowledge/zh/错误处理：Next.js API 路由的响应式错误与存储适配器异常模式/错误处理：Next.js API 路由的响应式错误与存储适配器异常模式.md"
+  h_6465a203f88bd5 1-29
+".qoder/repowiki/zh/content/API 接口文档/API 接口文档.md"
+  h_6465a203f88bd5 1-708
+".qoder/repowiki/zh/content/API 接口文档/图片管理 API.md"
+  h_6465a203f88bd5 1-456
+".qoder/repowiki/zh/content/API 接口文档/文件上传 API.md"
+  h_6465a203f88bd5 1-383
+".qoder/repowiki/zh/content/API 接口文档/用户管理 API.md"
+  h_6465a203f88bd5 1-418
+".qoder/repowiki/zh/content/API 接口文档/目录管理 API.md"
+  h_6465a203f88bd5 1-487
+".qoder/repowiki/zh/content/API 接口文档/频道管理 API.md"
+  h_6465a203f88bd5 1-398
+.qoder/repowiki/zh/content/前端组件/前端组件.md
+  h_6465a203f88bd5 1-503
+.qoder/repowiki/zh/content/前端组件/图片上传表单组件.md
+  h_6465a203f88bd5 1-345
+.qoder/repowiki/zh/content/前端组件/图片树形表格组件.md
+  h_6465a203f88bd5 1-415
+.qoder/repowiki/zh/content/前端组件/语言选择器组件.md
+  h_6465a203f88bd5 1-331
+.qoder/repowiki/zh/content/前端组件/通用UI组件.md
+  h_6465a203f88bd5 1-457
+.qoder/repowiki/zh/content/前端组件/频道头像组件.md
+  h_6465a203f88bd5 1-372
+.qoder/repowiki/zh/content/功能特性/功能特性.md
+  h_6465a203f88bd5 1-311
+.qoder/repowiki/zh/content/功能特性/国际化支持.md
+  h_6465a203f88bd5 1-364
+.qoder/repowiki/zh/content/功能特性/图片管理.md
+  h_6465a203f88bd5 1-453
+.qoder/repowiki/zh/content/功能特性/用户界面.md
+  h_6465a203f88bd5 1-387
+.qoder/repowiki/zh/content/功能特性/频道系统.md
+  h_6465a203f88bd5 1-448
+.qoder/repowiki/zh/content/开发指南/代码规范.md
+  h_6465a203f88bd5 1-409
+.qoder/repowiki/zh/content/开发指南/开发指南.md
+  h_6465a203f88bd5 1-500
+".qoder/repowiki/zh/content/开发指南/扩展开发/Cloudflare Workers 扩展.md"
+  h_6465a203f88bd5 1-385
+.qoder/repowiki/zh/content/开发指南/扩展开发/存储适配器开发.md
+  h_6465a203f88bd5 1-353
+.qoder/repowiki/zh/content/开发指南/扩展开发/扩展开发.md
+  h_6465a203f88bd5 1-381
+.qoder/repowiki/zh/content/开发指南/扩展开发/第三方服务集成.md
+  h_6465a203f88bd5 1-299
+.qoder/repowiki/zh/content/开发指南/扩展开发/认证提供者开发.md
+  h_6465a203f88bd5 1-321
+.qoder/repowiki/zh/content/开发指南/贡献指南.md
+  h_6465a203f88bd5 1-363
+".qoder/repowiki/zh/content/架构设计/存储架构设计/Cloudflare R2 存储实现.md"
+  h_6465a203f88bd5 1-280
+.qoder/repowiki/zh/content/架构设计/存储架构设计/存储工厂和实例管理.md
+  h_6465a203f88bd5 1-356
+.qoder/repowiki/zh/content/架构设计/存储架构设计/存储架构设计.md
+  h_6465a203f88bd5 1-385
+.qoder/repowiki/zh/content/架构设计/存储架构设计/存储适配器模式设计.md
+  h_6465a203f88bd5 1-381
+.qoder/repowiki/zh/content/架构设计/存储架构设计/本地文件存储实现.md
+  h_6465a203f88bd5 1-366
+.qoder/repowiki/zh/content/架构设计/数据流设计.md
+  h_6465a203f88bd5 1-616
+.qoder/repowiki/zh/content/架构设计/架构设计.md
+  h_6465a203f88bd5 1-425
+.qoder/repowiki/zh/content/架构设计/系统架构概览.md
+  h_6465a203f88bd5 1-424
+.qoder/repowiki/zh/content/架构设计/组件交互设计.md
+  h_6465a203f88bd5 1-391
+.qoder/repowiki/zh/content/架构设计/认证架构设计/会话处理机制.md
+  h_6465a203f88bd5 1-358
+.qoder/repowiki/zh/content/架构设计/认证架构设计/多源认证机制.md
+  h_6465a203f88bd5 1-334
+.qoder/repowiki/zh/content/架构设计/认证架构设计/安全最佳实践.md
+  h_6465a203f88bd5 1-406
+.qoder/repowiki/zh/content/架构设计/认证架构设计/用户信息管理.md
+  h_6465a203f88bd5 1-478
+.qoder/repowiki/zh/content/架构设计/认证架构设计/认证架构设计.md
+  h_6465a203f88bd5 1-347
+.qoder/repowiki/zh/content/核心模块/国际化系统.md
+  h_6465a203f88bd5 1-453
+.qoder/repowiki/zh/content/核心模块/存储系统.md
+  h_6465a203f88bd5 1-391
+.qoder/repowiki/zh/content/核心模块/数据库设计.md
+  h_6465a203f88bd5 1-419
+.qoder/repowiki/zh/content/核心模块/核心模块.md
+  h_6465a203f88bd5 1-461
+.qoder/repowiki/zh/content/核心模块/认证系统.md
+  h_6465a203f88bd5 1-368
+".qoder/repowiki/zh/content/部署指南/Cloudflare 部署.md"
+  h_6465a203f88bd5 1-324
+.qoder/repowiki/zh/content/部署指南/存储配置.md
+  h_6465a203f88bd5 1-334
+.qoder/repowiki/zh/content/部署指南/开发环境搭建.md
+  h_6465a203f88bd5 1-363
+.qoder/repowiki/zh/content/部署指南/数据库配置.md
+  h_6465a203f88bd5 1-351
+.qoder/repowiki/zh/content/部署指南/生产环境优化.md
+  h_6465a203f88bd5 1-302
+.qoder/repowiki/zh/content/部署指南/部署指南.md
+  h_6465a203f88bd5 1-349
+.qoder/repowiki/zh/content/项目概述.md
+  h_6465a203f88bd5 1-420
+.qoder/repowiki/zh/meta/repowiki-metadata.json
+  h_6465a203f88bd5 1
+.specify/extensions/.registry
+  h_6465a203f88bd5 11
+.specify/init-options.json
+  h_6465a203f88bd5 2-3,6-8
+.specify/integration.json
+  h_6465a203f88bd5 2,5-6,9-14,18-19
+.specify/integrations/claude.manifest.json
+  h_6465a203f88bd5 1-17
+.specify/integrations/qodercli.manifest.json
+  h_6465a203f88bd5 1-17
+.specify/integrations/speckit.manifest.json
+  h_6465a203f88bd5 3,7-8,13-20
+.specify/scripts/bash/check-prerequisites.sh
+  h_6465a203f88bd5 123,129,136
+.specify/scripts/bash/setup-tasks.sh
+  h_6465a203f88bd5 33,39
+.specify/scripts/python/check_prerequisites.py
+  h_6465a203f88bd5 1-207
+.specify/scripts/python/common.py
+  h_6465a203f88bd5 1-293
+.specify/scripts/python/create_new_feature.py
+  h_6465a203f88bd5 1-422
+.specify/scripts/python/setup_plan.py
+  h_6465a203f88bd5 1-86
+.specify/scripts/python/setup_tasks.py
+  h_6465a203f88bd5 1-145
+.specify/templates/checklist-template.md
+  h_6465a203f88bd5 7,13
+.specify/templates/plan-template.md
+  h_6465a203f88bd5 7,51-56
+.specify/templates/tasks-template.md
+  h_6465a203f88bd5 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "31583a4f2991315534f45490a9dc35051fe53a9d",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_728ab26ae8e076": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "67c1653c-40d5-4688-9868-d916077e18a9",
+        "model": "unknown"
+      },
+      "human_author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
