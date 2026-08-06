@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: specs_and_docs
+title: SpecKit 特性规格与文档工作区
+scope:
+    - specs/
+    - .specify/
+source_files: []
+depends_on: []
+related_to: []

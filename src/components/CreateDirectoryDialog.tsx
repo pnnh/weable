@@ -19,7 +19,7 @@ type Props = {
     };
 };
 
-export default function CreateDirectoryDialog({ parentId, labels }: Props) {
+export default function CreateDirectoryDialog({ lang, parentId, labels }: Props) {
     const router = useRouter();
     const [open, setOpen] = useState(false);
     const [title, setTitle] = useState("");
@@ -49,7 +49,7 @@ export default function CreateDirectoryDialog({ parentId, labels }: Props) {
         setError("");
         setSubmitting(true);
         try {
-            const res = await fetch("/api/directories", {
+            const res = await fetch(`/${lang}/console/api/directories`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ title: trimmed, description: description.trim(), parentId }),

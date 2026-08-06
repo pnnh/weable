@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: frontend_app/api_routes/images
+title: 图片资源 API 路由
+scope:
+    - src/app/api/images/
+source_files: []
+depends_on: []
+related_to:
+    - path: api_endpoints/images

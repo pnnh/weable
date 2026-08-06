@@ -5,11 +5,11 @@ import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
 import { getCurrentUser } from "@/lib/auth";
 import { getDb } from "@/db/index";
-import { images } from "@/db/schema";
+import { channels, images } from "@/db/schema";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
-import ImagesTreeTable from "@/components/ImagesTreeTable";
+import ImagesBatchToolbar from "@/components/ImagesBatchToolbar";
 import CreateDirectoryDialog from "@/components/CreateDirectoryDialog";
 
 export const dynamic = "force-dynamic";
@@ -80,6 +80,13 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
 
     const breadcrumb = parentId ? await buildBreadcrumb(db, user.id, parentId) : [];
 
+    // 频道列表供批量设置频道弹窗使用（research.md R6）
+    const channelRows = await db
+        .select({ id: channels.id, name: channels.name })
+        .from(channels)
+        .where(eq(channels.userId, user.id))
+        .orderBy(asc(channels.createdAt));
+
     const uploadHref = parentId
         ? `/${l}/console/images/new?parentId=${encodeURIComponent(parentId)}`
         : `/${l}/console/images/new`;
@@ -96,10 +103,18 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
         invalidTitleChars: t(l, "invalidTitleChars"),
     };
 
-    const tableLabels = {
+    const batchLabels = {
+        batchSetPublishStatus: t(l, "batchSetPublishStatus"),
+        batchSetChannel: t(l, "batchSetChannel"),
         imagePublished: t(l, "imagePublished"),
         imageDraft: t(l, "imageDraft"),
         updated: t(l, "updated"),
+        selectAllImages: t(l, "selectAllImages"),
+        cancel: t(l, "cancel"),
+        batchConfirm: t(l, "batchConfirm"),
+        batchOperationFailed: t(l, "batchOperationFailed"),
+        imageChannel: t(l, "imageChannel"),
+        noChannel: t(l, "noChannel"),
     };
 
     return (
@@ -146,10 +161,11 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
                 {rows.length === 0 ? (
                     <p className="text-gray-500">{t(l, "noImagesYet")}</p>
                 ) : (
-                    <ImagesTreeTable
-                        initialItems={rows}
+                    <ImagesBatchToolbar
                         lang={l}
-                        labels={tableLabels}
+                        initialItems={rows}
+                        channels={channelRows}
+                        labels={batchLabels}
                     />
                 )}
             </main>

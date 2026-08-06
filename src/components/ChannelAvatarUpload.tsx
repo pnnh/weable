@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 interface Props {
+    lang: string;
     channelId: string;
     channelName: string;
     labels: {
@@ -12,8 +13,9 @@ interface Props {
     };
 }
 
-export default function ChannelAvatarUpload({ channelId, channelName, labels }: Props) {
+export default function ChannelAvatarUpload({ lang, channelId, channelName, labels }: Props) {
     const [uploading, setUploading] = useState(false);
+    // 预览走公开 GET 接口（/api/channel/avatar/[channelId]，FR-016），上传走控制台前缀 POST
     const [avatarUrl, setAvatarUrl] = useState(`/api/channel/avatar/${channelId}?t=${Date.now()}`);
 
     async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -24,7 +26,7 @@ export default function ChannelAvatarUpload({ channelId, channelName, labels }: 
         const formData = new FormData();
         formData.append("file", file);
 
-        const res = await fetch(`/api/channel/avatar/${channelId}`, {
+        const res = await fetch(`/${lang}/console/api/channel/avatar/${channelId}`, {
             method: "POST",
             body: formData,
         });

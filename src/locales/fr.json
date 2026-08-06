@@ -80,5 +80,10 @@
     "duplicateEntryName": "Une entrée avec ce nom existe déjà dans ce dossier",
     "nameRequired": "Le nom est requis",
     "breadcrumbRoot": "Racine",
-    "invalidTitleChars": "Le nom ne peut pas contenir /, \\ ou .."
+    "invalidTitleChars": "Le nom ne peut pas contenir /, \\ ou ..",
+    "batchSetPublishStatus": "Définir l'état de publication",
+    "batchSetChannel": "Définir le canal",
+    "batchConfirm": "Confirmer",
+    "batchOperationFailed": "L'opération a échoué. Veuillez réessayer.",
+    "selectAllImages": "Sélectionner toutes les images"
 }

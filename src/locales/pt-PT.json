@@ -80,5 +80,10 @@
     "duplicateEntryName": "Já existe uma entrada com este nome nesta pasta",
     "nameRequired": "O nome é obrigatório",
     "breadcrumbRoot": "Raiz",
-    "invalidTitleChars": "O nome não pode conter /, \\ ou .."
+    "invalidTitleChars": "O nome não pode conter /, \\ ou ..",
+    "batchSetPublishStatus": "Definir estado de publicação",
+    "batchSetChannel": "Definir canal",
+    "batchConfirm": "Confirmar",
+    "batchOperationFailed": "Falha na operação. Tente novamente.",
+    "selectAllImages": "Selecionar todas as imagens"
 }

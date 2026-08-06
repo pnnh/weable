@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: locales
+title: 多语言国际化资源（i18n Locales）
+scope:
+    - src/locales/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/i18n_routes

@@ -75,6 +75,7 @@ export default async function ChannelEditorPage({ params }: Props) {
                 </h1>
                 {!isNew && existingChannel && (
                     <ChannelAvatarUpload
+                        lang={l}
                         channelId={channelId}
                         channelName={existingChannel.name}
                         labels={{
@@ -126,6 +127,7 @@ export default async function ChannelEditorPage({ params }: Props) {
                 </form>
                 {!isNew && (
                     <ChannelDeleteSection
+                        lang={l}
                         channelId={channelId}
                         redirectTo={`/${lang}/console/channels`}
                         publishedImageCount={publishedImageCount}

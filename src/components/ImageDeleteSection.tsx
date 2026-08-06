@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface Props {
+    lang: string;
     imageId: string;
     redirectTo: string;
     labels: {
@@ -12,14 +13,14 @@ interface Props {
     };
 }
 
-export default function ImageDeleteSection({ imageId, redirectTo, labels }: Props) {
+export default function ImageDeleteSection({ lang, imageId, redirectTo, labels }: Props) {
     const router = useRouter();
     const [deleting, setDeleting] = useState(false);
 
     async function handleDelete() {
         if (!confirm(labels.deleteImageConfirm)) return;
         setDeleting(true);
-        const res = await fetch(`/api/images/${imageId}`, { method: "DELETE" });
+        const res = await fetch(`/${lang}/console/api/images/${imageId}`, { method: "DELETE" });
         if (res.ok) {
             router.push(redirectTo);
         } else {

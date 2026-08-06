@@ -91,6 +91,16 @@ async function ensureUserRow(id: string, name: string, email: string): Promise<C
 }
 
 export async function getCurrentUser(): Promise<CurrentUser> {
+  const user = await getCurrentUserOrNull();
+  if (!user) {
+    throw new Error('Unable to resolve authenticated user from Cloudflare Access JWT or session cookie.');
+  }
+  return user;
+}
+
+// 与 getCurrentUser 相同的身份解析链，但生产环境无身份时返回 null 而非抛错，
+// 供 /[lang]/console/api/* 路由返回 401 JSON 使用
+export async function getCurrentUserOrNull(): Promise<CurrentUser | null> {
   const headerStore = await headers();
   const cookieStore = await cookies();
 
@@ -113,5 +123,5 @@ export async function getCurrentUser(): Promise<CurrentUser> {
     return ensureUserRow(DEV_USER_BASE.id, DEV_USER_BASE.name, DEV_USER_BASE.email);
   }
 
-  throw new Error('Unable to resolve authenticated user from Cloudflare Access JWT or session cookie.');
+  return null;
 }

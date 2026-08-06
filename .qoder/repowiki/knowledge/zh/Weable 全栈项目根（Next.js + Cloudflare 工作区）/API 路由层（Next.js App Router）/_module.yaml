@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: api_endpoints
+title: API 路由层（Next.js App Router）
+scope:
+    - src/app/api/
+source_files: []
+depends_on: []
+related_to:
+    - path: components
+    - path: database_layer
+    - path: shared_libs

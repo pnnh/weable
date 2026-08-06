@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface Props {
+    lang: string;
     channelId: string;
     redirectTo: string;
     publishedImageCount: number;
@@ -14,14 +15,14 @@ interface Props {
     };
 }
 
-export default function ChannelDeleteSection({ channelId, redirectTo, publishedImageCount, labels }: Props) {
+export default function ChannelDeleteSection({ lang, channelId, redirectTo, publishedImageCount, labels }: Props) {
     const router = useRouter();
     const [deleting, setDeleting] = useState(false);
 
     async function handleDelete() {
         if (!confirm(labels.deleteChannelConfirm)) return;
         setDeleting(true);
-        const res = await fetch(`/api/channels/${channelId}`, { method: "DELETE" });
+        const res = await fetch(`/${lang}/console/api/channels/${channelId}`, { method: "DELETE" });
         if (res.ok) {
             router.push(redirectTo);
         } else {

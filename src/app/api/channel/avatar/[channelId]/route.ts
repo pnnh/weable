@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getCurrentUser } from "@/lib/auth";
 import { getAvatarStorage } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
-const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"];
-const MAX_SIZE = 2 * 1024 * 1024; // 2 MB
-
 type Props = { params: Promise<{ channelId: string }> };
 
+// 公开接口：服务公开页面（FR-016）；控制台上传已迁移至 /[lang]/console/api/channel/avatar/[channelId]
 export async function GET(_req: NextRequest, { params }: Props) {
     const { channelId } = await params;
 
@@ -29,35 +26,4 @@ export async function GET(_req: NextRequest, { params }: Props) {
             "Cache-Control": "public, max-age=3600",
         },
     });
-}
-
-export async function POST(req: NextRequest, { params }: Props) {
-    const { channelId } = await params;
-
-    if (!channelId || !/^[a-zA-Z0-9_-]+$/.test(channelId)) {
-        return NextResponse.json({ error: "Invalid channel ID" }, { status: 400 });
-    }
-
-    await getCurrentUser();
-
-    const formData = await req.formData();
-    const file = formData.get("file") as File | null;
-
-    if (!file) {
-        return NextResponse.json({ error: "No file provided" }, { status: 400 });
-    }
-
-    if (!ALLOWED_TYPES.includes(file.type)) {
-        return NextResponse.json({ error: "Invalid file type" }, { status: 400 });
-    }
-
-    if (file.size > MAX_SIZE) {
-        return NextResponse.json({ error: "File too large (max 2 MB)" }, { status: 400 });
-    }
-
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const storage = getAvatarStorage();
-    await storage.save(`channel_${channelId}`, buffer);
-
-    return NextResponse.json({ ok: true });
 }

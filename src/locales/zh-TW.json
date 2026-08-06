@@ -80,5 +80,10 @@
     "duplicateEntryName": "此層級已存在同名條目",
     "nameRequired": "名稱不可為空",
     "breadcrumbRoot": "根目錄",
-    "invalidTitleChars": "名稱不能包含 /、\\、.."
+    "invalidTitleChars": "名稱不能包含 /、\\、..",
+    "batchSetPublishStatus": "設定發布狀態",
+    "batchSetChannel": "設定頻道",
+    "batchConfirm": "確認",
+    "batchOperationFailed": "操作失敗，請重試。",
+    "selectAllImages": "全選圖片"
 }

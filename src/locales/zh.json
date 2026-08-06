@@ -80,5 +80,10 @@
     "duplicateEntryName": "该层级已存在同名条目",
     "nameRequired": "名称不能为空",
     "breadcrumbRoot": "根目录",
-    "invalidTitleChars": "名称不能包含 /、\\、.."
+    "invalidTitleChars": "名称不能包含 /、\\、..",
+    "batchSetPublishStatus": "设置发布状态",
+    "batchSetChannel": "设置频道",
+    "batchConfirm": "确认",
+    "batchOperationFailed": "操作失败，请重试。",
+    "selectAllImages": "全选图片"
 }

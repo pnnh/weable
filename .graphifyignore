@@ -171,5 +171,21 @@ output/
 # Qt
 .qtcreator/
 
+
 # Graphify
 graphify-out/
+
+# Git Entire
+.entire/
+
+# qoder
+.qoder/
+
+# claude code
+.claude/
+
+# github copilot
+.github/
+
+# nextjs
+.next/

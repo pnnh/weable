@@ -80,5 +80,10 @@
     "duplicateEntryName": "同じ名前の項目がこのフォルダーに既に存在します",
     "nameRequired": "名前は必須です",
     "breadcrumbRoot": "ルート",
-    "invalidTitleChars": "名前に /、\\、.. を含めることはできません"
+    "invalidTitleChars": "名前に /、\\、.. を含めることはできません",
+    "batchSetPublishStatus": "公開状態を設定",
+    "batchSetChannel": "チャンネルを設定",
+    "batchConfirm": "確認",
+    "batchOperationFailed": "操作に失敗しました。もう一度お試しください。",
+    "selectAllImages": "すべての画像を選択"
 }

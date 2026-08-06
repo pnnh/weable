@@ -80,5 +80,10 @@
     "duplicateEntryName": "Ein Eintrag mit diesem Namen existiert bereits in diesem Ordner",
     "nameRequired": "Name ist erforderlich",
     "breadcrumbRoot": "Stamm",
-    "invalidTitleChars": "Name darf /, \\ oder .. nicht enthalten"
+    "invalidTitleChars": "Name darf /, \\ oder .. nicht enthalten",
+    "batchSetPublishStatus": "Veröffentlichungsstatus festlegen",
+    "batchSetChannel": "Kanal festlegen",
+    "batchConfirm": "Bestätigen",
+    "batchOperationFailed": "Vorgang fehlgeschlagen. Bitte erneut versuchen.",
+    "selectAllImages": "Alle Bilder auswählen"
 }

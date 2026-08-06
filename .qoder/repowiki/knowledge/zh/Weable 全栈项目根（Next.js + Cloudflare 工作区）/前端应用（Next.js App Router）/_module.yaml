@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: frontend_app
+title: 前端应用（Next.js App Router）
+scope:
+    - src/app/
+source_files: []
+depends_on: []
+related_to: []

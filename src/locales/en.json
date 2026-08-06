@@ -80,5 +80,10 @@
     "duplicateEntryName": "An entry with this name already exists in this directory",
     "nameRequired": "Name is required",
     "breadcrumbRoot": "Root",
-    "invalidTitleChars": "Name cannot contain /, \\, or .."
+    "invalidTitleChars": "Name cannot contain /, \\, or ..",
+    "batchSetPublishStatus": "Set Publish Status",
+    "batchSetChannel": "Set Channel",
+    "batchConfirm": "Confirm",
+    "batchOperationFailed": "Operation failed. Please try again.",
+    "selectAllImages": "Select all images"
 }

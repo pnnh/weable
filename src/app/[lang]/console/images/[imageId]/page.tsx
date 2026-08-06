@@ -117,7 +117,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
 
                 <div className="mb-8">
                     <img
-                        src={`/api/images/${imageId}/file`}
+                        src={`/${l}/console/api/images/${imageId}/file`}
                         alt={existingImage.title}
                         className="max-w-full max-h-64 rounded-lg border border-gray-200"
                     />
@@ -180,6 +180,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
                 </form>
 
                 <ImageDeleteSection
+                    lang={l}
                     imageId={imageId}
                     redirectTo={listHref}
                     labels={{

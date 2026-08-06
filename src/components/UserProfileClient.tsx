@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 interface Props {
+    lang: string;
     userId: string;
     name: string;
     email: string;
@@ -21,21 +22,21 @@ interface Props {
     };
 }
 
-export default function UserProfileClient({ userId, name, email, nickname, bio, labels }: Props) {
+export default function UserProfileClient({ lang, userId, name, email, nickname, bio, labels }: Props) {
     const [nick, setNick] = useState(nickname ?? "");
     const [bioVal, setBioVal] = useState(bio ?? "");
     const [saving, setSaving] = useState(false);
     const [saved, setSaved] = useState(false);
-    const [avatarUrl, setAvatarUrl] = useState(`/api/user/avatar/${userId}?t=${Date.now()}`);
+    const [avatarUrl, setAvatarUrl] = useState(`/${lang}/console/api/user/avatar/${userId}?t=${Date.now()}`);
 
     async function handleAvatarUpload(e: React.ChangeEvent<HTMLInputElement>) {
         const file = e.target.files?.[0];
         if (!file) return;
         const formData = new FormData();
         formData.append("file", file);
-        const res = await fetch("/api/user/avatar", { method: "POST", body: formData });
+        const res = await fetch(`/${lang}/console/api/user/avatar`, { method: "POST", body: formData });
         if (res.ok) {
-            setAvatarUrl(`/api/user/avatar/${userId}?t=${Date.now()}`);
+            setAvatarUrl(`/${lang}/console/api/user/avatar/${userId}?t=${Date.now()}`);
         }
     }
 
@@ -43,7 +44,7 @@ export default function UserProfileClient({ userId, name, email, nickname, bio, 
         e.preventDefault();
         setSaving(true);
         setSaved(false);
-        await fetch("/api/user/profile", {
+        await fetch(`/${lang}/console/api/user/profile`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nickname: nick || null, bio: bioVal || null }),

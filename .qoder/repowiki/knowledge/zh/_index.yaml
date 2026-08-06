@@ -1,0 +1,191 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-08-06T09:33:58Z"
+modules:
+    "":
+        dir_name: Weable 全栈项目根（Next.js + Cloudflare 工作区）
+        title: Weable 全栈项目根（Next.js + Cloudflare 工作区）
+        scope:
+            - README.md
+            - package.json
+            - next.config.ts
+            - drizzle.config.ts
+            - wrangler.jsonc
+            - .gitignore
+            - AGENTS.md
+            - CLAUDE.md
+            - .graphifyignore
+            - open-next.config.ts
+            - pnpm-lock.yaml
+            - pnpm-workspace.yaml
+            - postcss.config.mjs
+            - tsconfig.json
+            - weable.code-workspace
+            - worker-configuration.d.ts
+        source_files: []
+        children:
+            - api_endpoints
+            - components
+            - database_layer
+            - frontend_app
+            - locales
+            - shared_libs
+            - specs_and_docs
+        depends_on: []
+        related_to: []
+    api_endpoints:
+        dir_name: API 路由层（Next.js App Router）
+        title: API 路由层（Next.js App Router）
+        scope:
+            - src/app/api/
+        source_files: []
+        children:
+            - api_endpoints/images
+            - api_endpoints/upload_and_user
+        depends_on: []
+        related_to:
+            - path: components
+            - path: database_layer
+            - path: shared_libs
+    api_endpoints/images:
+        dir_name: 图片资源 API 路由
+        title: 图片资源 API 路由
+        scope:
+            - src/app/api/images/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend_app/api_routes/images
+    api_endpoints/upload_and_user:
+        dir_name: 文件上传与用户信息 API
+        title: 文件上传与用户信息 API
+        scope:
+            - src/app/api/upload/
+            - src/app/api/user/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend_app/api_routes/user
+    components:
+        dir_name: 前端 UI 组件库（Next.js 客户端与服务器组件）
+        title: 前端 UI 组件库（Next.js 客户端与服务器组件）
+        scope:
+            - src/components/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: api_endpoints
+    database_layer:
+        dir_name: 数据库层与迁移管理
+        title: 数据库层与迁移管理
+        scope:
+            - src/db/
+            - migrations/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: api_endpoints
+    frontend_app:
+        dir_name: 前端应用（Next.js App Router）
+        title: 前端应用（Next.js App Router）
+        scope:
+            - src/app/
+        source_files: []
+        children:
+            - frontend_app/api_routes
+            - frontend_app/i18n_routes
+            - frontend_app/root_layout
+        depends_on: []
+        related_to: []
+    frontend_app/api_routes:
+        dir_name: Next.js App Router API 路由层
+        title: Next.js App Router API 路由层
+        scope:
+            - src/app/api/
+        source_files: []
+        children:
+            - frontend_app/api_routes/images
+            - frontend_app/api_routes/user
+        depends_on: []
+        related_to: []
+    frontend_app/api_routes/images:
+        dir_name: 图片资源 API 路由
+        title: 图片资源 API 路由
+        scope:
+            - src/app/api/images/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: api_endpoints/images
+    frontend_app/api_routes/user:
+        dir_name: 用户头像与资料 API 路由
+        title: 用户头像与资料 API 路由
+        scope:
+            - src/app/api/user/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: api_endpoints/upload_and_user
+    frontend_app/i18n_routes:
+        dir_name: 多语言路由与页面布局
+        title: 多语言路由与页面布局
+        scope:
+            - src/app/[lang]/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend_app/root_layout
+            - path: locales
+    frontend_app/root_layout:
+        dir_name: 应用根布局与首页路由
+        title: 应用根布局与首页路由
+        scope:
+            - src/app/layout.tsx
+            - src/app/page.tsx
+            - src/app/globals.css
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend_app/i18n_routes
+    locales:
+        dir_name: 多语言国际化资源（i18n Locales）
+        title: 多语言国际化资源（i18n Locales）
+        scope:
+            - src/locales/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend_app/i18n_routes
+    shared_libs:
+        dir_name: 共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）
+        title: 共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）
+        scope:
+            - src/lib/
+            - src/data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: api_endpoints
+    specs_and_docs:
+        dir_name: SpecKit 特性规格与文档工作区
+        title: SpecKit 特性规格与文档工作区
+        scope:
+            - specs/
+            - .specify/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
