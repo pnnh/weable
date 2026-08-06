@@ -1,0 +1,75 @@
+src/components/SiteHeader.tsx
+  b325760fecf10347 1-19
+src/components/SiteFooter.tsx
+  b325760fecf10347 1-16
+src/locales/de-DE.json
+  b325760fecf10347 1-17
+src/app/page.tsx
+  b325760fecf10347 1-3,5-11
+src/locales/es.json
+  b325760fecf10347 1-17
+src/app/[lang]/layout.tsx
+  b325760fecf10347 1-47
+src/app/[lang]/page.tsx
+  b325760fecf10347 1-36
+src/locales/ja.json
+  b325760fecf10347 1-17
+src/locales/en.json
+  b325760fecf10347 1-17
+src/lib/i18n.ts
+  b325760fecf10347 1-27
+src/locales/zh-TW.json
+  b325760fecf10347 1-17
+src/locales/pt-PT.json
+  b325760fecf10347 1-17
+src/app/layout.tsx
+  b325760fecf10347 6
+src/lib/language.ts
+  b325760fecf10347 1-48
+src/components/LanguageSelector.tsx
+  b325760fecf10347 1-17,19-28
+  h_0d098b1c016293 18
+src/app/[lang]/games/[game]/page.tsx
+  b325760fecf10347 1-158
+src/locales/zh.json
+  b325760fecf10347 1-17
+package.json
+  h_0d098b1c016293 6,9-11,14,17,28-31
+src/locales/fr.json
+  b325760fecf10347 1-17
+wrangler.jsonc
+  h_0d098b1c016293 1-17
+src/components/GameCard.tsx
+  b325760fecf10347 1-71
+src/data/games.ts
+  b325760fecf10347 1-473
+src/components/GameCoverPlaceholder.tsx
+  b325760fecf10347 1-35
+src/components/GameGrid.tsx
+  b325760fecf10347 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "7731a8aa143aa66093df3eb86035550f3ef7bc87",
+  "prompts": {
+    "b325760fecf10347": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "b211042f-0896-404a-b9e7-16981ba6d6f7",
+        "model": "copilot/claude-sonnet-4.6"
+      },
+      "human_author": "larry",
+      "messages": [],
+      "total_additions": 1129,
+      "total_deletions": 33,
+      "accepted_lines": 1123,
+      "overriden_lines": 1
+    }
+  },
+  "humans": {
+    "h_0d098b1c016293": {
+      "author": "larry"
+    }
+  }
+}
