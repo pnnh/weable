@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: frontend_app/root_layout
+title: 应用根布局与首页路由
+scope:
+    - src/app/layout.tsx
+    - src/app/page.tsx
+    - src/app/globals.css
+source_files: []
+depends_on: []
+related_to: []

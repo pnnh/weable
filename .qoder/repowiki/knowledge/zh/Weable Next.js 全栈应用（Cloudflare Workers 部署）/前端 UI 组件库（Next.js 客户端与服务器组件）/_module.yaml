@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: components
-title: 前端 UI 组件库（Next.js 客户端与服务器组件）
-scope:
-    - src/components/
-source_files: []
-depends_on: []
-related_to: []

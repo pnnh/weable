@@ -12,12 +12,6 @@ export interface CurrentUser {
   bio: string | null;
 }
 
-const DEV_USER_BASE = {
-  id: process.env.DEV_USER_ID ?? 'dev-user-001',
-  name: process.env.DEV_USER_NAME ?? 'Dev User',
-  email: process.env.DEV_USER_EMAIL ?? 'dev@local',
-};
-
 type JwtPayload = {
   sub?: unknown;
   email?: unknown;
@@ -114,13 +108,16 @@ export async function getCurrentUserOrNull(): Promise<CurrentUser | null> {
     return ensureUserRow(cfIdentity.id, cfIdentity.name, cfIdentity.email);
   }
 
+  // user_id cookie 承载开发环境模拟登录会话，值为 users.id；按 id 查库还原真实身份，
+  // 行不存在视为无效会话（未登录）
   const userId = cookieStore.get('user_id')?.value;
   if (userId) {
-    return ensureUserRow(userId, userId, `${userId}@local`);
-  }
-
-  if (process.env.NODE_ENV !== 'production') {
-    return ensureUserRow(DEV_USER_BASE.id, DEV_USER_BASE.name, DEV_USER_BASE.email);
+    const db = getDb();
+    const rows = await db.select().from(users).where(eq(users.id, userId)).limit(1);
+    if (rows.length > 0) {
+      return { id: rows[0].id, name: rows[0].name, email: rows[0].email, nickname: rows[0].nickname ?? null, bio: rows[0].bio ?? null };
+    }
+    return null;
   }
 
   return null;

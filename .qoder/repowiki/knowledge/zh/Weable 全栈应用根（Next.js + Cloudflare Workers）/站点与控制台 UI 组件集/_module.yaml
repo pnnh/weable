@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: components
+title: 站点与控制台 UI 组件集
+scope:
+    - src/components/
+source_files: []
+depends_on: []
+related_to: []

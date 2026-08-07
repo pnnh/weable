@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-08-06T11:05:26Z"
+exported_at: "2026-08-07T09:00:17Z"
 modules:
     "":
-        dir_name: Weable Next.js 全栈应用（Cloudflare Workers 部署）
-        title: Weable Next.js 全栈应用（Cloudflare Workers 部署）
+        dir_name: Weable 全栈应用根（Next.js + Cloudflare Workers）
+        title: Weable 全栈应用根（Next.js + Cloudflare Workers）
         scope:
             - README.md
             - package.json
@@ -55,8 +55,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: frontend_app/api_routes/images
+        related_to: []
     api_endpoints/upload_and_user:
         dir_name: 文件上传与用户信息 API
         title: 文件上传与用户信息 API
@@ -66,11 +65,10 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: frontend_app/api_routes/user
+        related_to: []
     components:
-        dir_name: 前端 UI 组件库（Next.js 客户端与服务器组件）
-        title: 前端 UI 组件库（Next.js 客户端与服务器组件）
+        dir_name: 站点与控制台 UI 组件集
+        title: 站点与控制台 UI 组件集
         scope:
             - src/components/
         source_files: []
@@ -86,12 +84,10 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: frontend_app/api_routes/images
-            - path: frontend_app/api_routes/user
+        related_to: []
     frontend_app:
-        dir_name: Next.js 前端应用（App Router）
-        title: Next.js 前端应用（App Router）
+        dir_name: Next.js 多语言前端应用（App Router）
+        title: Next.js 多语言前端应用（App Router）
         scope:
             - src/app/
         source_files: []
@@ -120,10 +116,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: api_endpoints/images
-            - path: database_layer
-            - path: shared_libs
+        related_to: []
     frontend_app/api_routes/user:
         dir_name: 用户头像与资料 API 路由
         title: 用户头像与资料 API 路由
@@ -132,20 +125,16 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: api_endpoints/upload_and_user
-            - path: database_layer
-            - path: shared_libs
+        related_to: []
     frontend_app/i18n_routes:
-        dir_name: 多语言路由与页面布局
-        title: 多语言路由与页面布局
+        dir_name: 多语言站点路由与控制台 API（Next.js App Router）
+        title: 多语言站点路由与控制台 API（Next.js App Router）
         scope:
             - src/app/[lang]/
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: locales
+        related_to: []
     frontend_app/root_layout:
         dir_name: 应用根布局与首页路由
         title: 应用根布局与首页路由
@@ -156,18 +145,16 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: shared_libs
+        related_to: []
     locales:
-        dir_name: 多语言国际化资源（i18n Locales）
-        title: 多语言国际化资源（i18n Locales）
+        dir_name: 前端多语言文案资源 (i18n Locales)
+        title: 前端多语言文案资源 (i18n Locales)
         scope:
             - src/locales/
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: frontend_app/i18n_routes
+        related_to: []
     shared_libs:
         dir_name: 共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）
         title: 共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）
@@ -177,13 +164,10 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: frontend_app/api_routes/images
-            - path: frontend_app/api_routes/user
-            - path: frontend_app/root_layout
+        related_to: []
     specs_and_docs:
-        dir_name: Specify 规格文档与项目配置
-        title: Specify 规格文档与项目配置
+        dir_name: 图片管理控制台规格与 Specify 配置集
+        title: 图片管理控制台规格与 Specify 配置集
         scope:
             - specs/
             - .specify/
@@ -203,8 +187,8 @@ modules:
         depends_on: []
         related_to: []
     specs_and_docs/specs:
-        dir_name: 功能规格文档集（图片目录、批量上传与频道管理）
-        title: 功能规格文档集（图片目录、批量上传与频道管理）
+        dir_name: 图片管理控制台功能规格文档集
+        title: 图片管理控制台功能规格文档集
         scope:
             - specs/
         source_files: []

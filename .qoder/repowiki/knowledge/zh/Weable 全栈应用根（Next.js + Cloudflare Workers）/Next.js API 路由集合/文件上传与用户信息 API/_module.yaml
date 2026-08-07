@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: api_endpoints/upload_and_user
+title: 文件上传与用户信息 API
+scope:
+    - src/app/api/upload/
+    - src/app/api/user/
+source_files: []
+depends_on: []
+related_to: []

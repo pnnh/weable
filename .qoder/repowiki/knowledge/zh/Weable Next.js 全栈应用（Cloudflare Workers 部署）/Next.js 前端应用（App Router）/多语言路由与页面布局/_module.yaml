@@ -1,9 +1,0 @@
-schema_version: 1
-module_path: frontend_app/i18n_routes
-title: 多语言路由与页面布局
-scope:
-    - src/app/[lang]/
-source_files: []
-depends_on: []
-related_to:
-    - path: locales

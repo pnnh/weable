@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: specs_and_docs/specs
+title: 图片管理控制台功能规格文档集
+scope:
+    - specs/
+source_files: []
+depends_on: []
+related_to: []

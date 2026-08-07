@@ -13,15 +13,19 @@
 - [src/db/schema.ts](file://src/db/schema.ts)
 - [src/lib/auth.ts](file://src/lib/auth.ts)
 - [specs/003-batch-publish-channel/contracts/console-api-migration.md](file://specs/003-batch-publish-channel/contracts/console-api-migration.md)
+- [specs/004-images-search-pagination/contracts/get-images-list-search-pagination.md](file://specs/004-images-search-pagination/contracts/get-images-list-search-pagination.md)
+- [specs/004-images-search-pagination/data-model.md](file://specs/004-images-search-pagination/data-model.md)
+- [src/components/ImagesPagination.tsx](file://src/components/ImagesPagination.tsx)
 </cite>
 
 ## 更新摘要
 **所做更改**   
-- 更新了所有 API 端点路径，从 `/api/*` 迁移到 `/[lang]/console/api/*`
-- 添加了新的增强认证门禁系统说明
-- 新增了批量操作端点的详细文档
-- 更新了架构图和依赖关系分析以反映新的路由结构
-- 修正了认证流程和错误处理说明
+- 更新了 GET /api/images 端点，新增关键词搜索（q 参数）和分页功能（page/pageSize 参数）
+- 增强了响应格式，新增 total 计数、channelName 字段和改进的元数据展示
+- 添加了 SQL 注入保护和 LIKE 通配符转义机制
+- 新增了 ImagesPagination 组件用于前端分页控制
+- 更新了架构图以反映新的搜索和分页功能
+- 完善了错误处理和边界情况处理说明
 
 ## 目录
 1. [简介](#简介)
@@ -36,12 +40,12 @@
 10. [附录：数据模型与字段说明](#附录数据模型与字段说明)
 
 ## 简介
-本文件为 Weable 应用的"图片管理"RESTful API 文档，覆盖图片列表、单个图片详情、删除、更新、文件读取、目录创建、面包屑导航以及批量上传等能力。**重要更新**：所有控制台 API 已迁移至 `/[lang]/console/api/*` 路径，并采用增强的认证门禁系统。当前实现未包含分页机制与搜索功能，将在"扩展建议"中提供落地方案。
+本文件为 Weable 应用的"图片管理"RESTful API 文档，覆盖图片列表、单个图片详情、删除、更新、文件读取、目录创建、面包屑导航以及批量上传等能力。**重要更新**：所有控制台 API 已迁移至 `/[lang]/console/api/*` 路径，并采用增强的认证门禁系统。当前实现已包含完整的分页机制与搜索功能，支持关键词搜索、传统分页、SQL 注入防护等功能。
 
 ## 项目结构
 图片相关 API 位于 Next.js App Router 的 `src/app/[lang]/console/api` 目录下，采用按资源划分的路由组织方式。所有控制台 API 都通过统一的认证门禁系统进行保护：
 
-- `/[lang]/console/api/images`：获取图片/目录列表（支持 parentId 过滤）
+- `/[lang]/console/api/images`：获取图片/目录列表（支持 parentId 过滤、关键词搜索 q、分页 page/pageSize）
 - `/[lang]/console/api/images/:id`：单个图片的更新与删除
 - `/[lang]/console/api/images/:id/file`：获取图片二进制文件流
 - `/[lang]/console/api/images/breadcrumb`：根据目标目录 ID 返回从根到该目录的面包屑路径
@@ -52,7 +56,7 @@
 ```mermaid
 graph TB
 subgraph "控制台 API 路由"
-A["GET /[lang]/console/api/images"]
+A["GET /[lang]/console/api/images<br/>+ 搜索(q) + 分页(page/pageSize)"]
 B["PATCH /[lang]/console/api/images/:id"]
 C["DELETE /[lang]/console/api/images/:id"]
 D["GET /[lang]/console/api/images/:id/file"]
@@ -68,9 +72,11 @@ end
 subgraph "服务层"
 K["db/index.ts<br/>getDb()"]
 L["lib/storage.ts<br/>getStorage()"]
+M["ImagesPagination.tsx<br/>前端分页组件"]
 end
 subgraph "数据层"
-M["drizzle schema<br/>images/users/channels"]
+N["drizzle schema<br/>images/users/channels"]
+O["LIKE 转义函数<br/>escapeLikePattern()"]
 end
 A --> I
 B --> I
@@ -90,20 +96,22 @@ F --> K
 G --> K
 H --> K
 A --> M
-B --> M
-C --> M
-D --> M
-E --> M
-F --> M
-G --> M
-H --> M
+A --> O
+A --> N
+B --> N
+C --> N
+D --> N
+E --> N
+F --> N
+G --> N
+H --> N
 C --> L
 D --> L
 H --> L
 ```
 
 **图表来源**
-- [src/app/[lang]/console/api/images/route.ts:1-72](file://src/app/[lang]/console/api/images/route.ts#L1-L72)
+- [src/app/[lang]/console/api/images/route.ts:1-122](file://src/app/[lang]/console/api/images/route.ts#L1-L122)
 - [src/app/[lang]/console/api/images/[imageId]/route.ts:1-88](file://src/app/[lang]/console/api/images/[imageId]/route.ts#L1-L88)
 - [src/app/[lang]/console/api/images/[imageId]/file/route.ts:1-52](file://src/app/[lang]/console/api/images/[imageId]/file/route.ts#L1-L52)
 - [src/app/[lang]/console/api/images/breadcrumb/route.ts:1-46](file://src/app/[lang]/console/api/images/breadcrumb/route.ts#L1-L46)
@@ -111,33 +119,39 @@ H --> L
 - [src/app/[lang]/console/api/directories/route.ts:1-100](file://src/app/[lang]/console/api/directories/route.ts#L1-L100)
 - [src/app/[lang]/console/api/upload/route.ts:1-81](file://src/app/[lang]/console/api/upload/route.ts#L1-81)
 - [src/app/[lang]/console/api/_lib/gate.ts:1-21](file://src/app/[lang]/console/api/_lib/gate.ts#L1-L21)
+- [src/components/ImagesPagination.tsx:1-78](file://src/components/ImagesPagination.tsx#L1-L78)
 
 ## 核心组件
 - **增强的认证门禁**：`requireConsoleUser()` 函数提供统一的登录验证，检查语言代码有效性并强制用户登录。
 - **数据库访问**：通过 `getDb()` 获取 Drizzle ORM 客户端，操作 images/users/channels 表。
 - **存储访问**：通过 `getStorage()` 抽象对象存储（R2/本地），用于图片读写与删除。
+- **搜索与分页**：支持关键词搜索（q 参数）、传统分页（page/pageSize 参数）、SQL 注入防护。
 - **数据模型**：images 表支持父子层级（parentId 自引用），区分目录与图片（mimeType）。
 
 **章节来源**
 - [src/app/[lang]/console/api/_lib/gate.ts:1-21](file://src/app/[lang]/console/api/_lib/gate.ts#L1-L21)
 - [src/db/schema.ts:1-100](file://src/db/schema.ts#L1-L100)
+- [src/app/[lang]/console/api/images/route.ts:11-15](file://src/app/[lang]/console/api/images/route.ts#L11-L15)
 
 ## 架构总览
-图片管理 API 遵循"路由 -> 认证门禁 -> 业务逻辑 -> 数据/存储访问"的分层模式。所有写操作均通过 `requireConsoleUser()` 校验当前用户身份，确保数据隔离。目录与图片统一存储在 images 表中，通过 mimeType 区分。
+图片管理 API 遵循"路由 -> 认证门禁 -> 业务逻辑 -> 数据/存储访问"的分层模式。所有写操作均通过 `requireConsoleUser()` 校验当前用户身份，确保数据隔离。目录与图片统一存储在 images 表中，通过 mimeType 区分。新增的搜索和分页功能通过参数化查询和 LIKE 通配符转义确保安全性和性能。
 
 ```mermaid
 sequenceDiagram
 participant Client as "客户端"
 participant Gate as "requireConsoleUser()"
 participant Route as "NextRoute"
+participant Search as "escapeLikePattern()"
 participant DB as "getDb()/Drizzle"
 participant Store as "getStorage()"
 Client->>Gate : "验证语言代码 + 用户登录"
 Gate-->>Client : "404 (非法语言) / 401 (未登录)"
 Gate-->>Route : "用户信息"
-Route->>DB : "按 userId + parentId 查询条目"
-DB-->>Route : "条目列表"
-Route-->>Client : "{ items }"
+Route->>Search : "转义 LIKE 通配符"
+Search-->>Route : "安全搜索模式"
+Route->>DB : "按 userId + parentId + q 查询条目"
+DB-->>Route : "条目列表 + total 计数"
+Route-->>Client : "{ items, total, page, pageSize }"
 Client->>Route : "DELETE /[lang]/console/api/images/ : id"
 Route->>DB : "校验归属并删除记录"
 Route->>Store : "删除物理文件"
@@ -145,28 +159,33 @@ Route-->>Client : "204 No Content"
 ```
 
 **图表来源**
-- [src/app/[lang]/console/api/images/route.ts:11-15](file://src/app/[lang]/console/api/images/route.ts#L11-L15)
+- [src/app/[lang]/console/api/images/route.ts:17-103](file://src/app/[lang]/console/api/images/route.ts#L17-L103)
 - [src/app/[lang]/console/api/_lib/gate.ts:7-20](file://src/app/[lang]/console/api/_lib/gate.ts#L7-L20)
 
 ## 详细接口说明
 
 ### GET /[lang]/console/api/images
-- **功能**：获取当前用户的图片/目录列表，支持按父目录过滤。
+- **功能**：获取当前用户的图片/目录列表，支持按父目录过滤、关键词搜索和分页。
 - **认证**：需要已登录用户，通过 `requireConsoleUser()` 验证。
 - **查询参数**：
   - parentId：可选，string。若提供，则仅返回该目录的直接子项；未提供时返回根级（parent_id IS NULL）条目。
+  - q：可选，string。关键词搜索，对标题进行模糊匹配；服务端 trim 后为空视为无搜索条件；支持 SQL 注入防护。
+  - page：可选，number。页码，1 起；非法值回退为 1；仅在启用分页时生效。
+  - pageSize：可选，number。**分页开关**：提供合法正整数时启用分页；缺省或非法时返回全量（树展开调用路径，行为同现状）。
 - **排序规则**：目录优先（mimeType = 'directory'），同类型按 updatedAt 降序。
 - **成功响应（200）**：
-  - 字段：items[]，每项包含 id、title、mimeType、description、size、width、height、parentId、channelId、isPublished、createdAt、updatedAt。
+  - **启用分页时**：{ items[], total, page, pageSize }，其中 total 为过滤后的总数。
+  - **未启用分页时**：{ items[] }，全量返回。
+  - 每项包含 id、title、mimeType、description、size、width、height、parentId、channelId、channelName、isPublished、createdAt、updatedAt。
 - **错误响应**：
   - 404：当 parentId 存在但非目录或不属于当前用户时，返回 { error: "parent directory not found" }。
   - 401：未登录（由 requireConsoleUser() 抛出）。
 
 示例请求
 - GET /[lang]/console/api/images
-- GET /[lang]/console/api/images?parentId=AbC123XyZ
+- GET /[lang]/console/api/images?parentId=AbC123XyZ&q=logo&page=1&pageSize=20
 
-示例响应（200）
+示例响应（启用分页，200）
 {
   "items": [
     {
@@ -176,6 +195,9 @@ Route-->>Client : "204 No Content"
       "description": "UI 设计相关",
       "size": 0,
       "parentId": null,
+      "channelId": null,
+      "channelName": null,
+      "isPublished": false,
       "createdAt": 1753920000000,
       "updatedAt": 1753920000000
     },
@@ -189,15 +211,20 @@ Route-->>Client : "204 No Content"
       "height": 1080,
       "parentId": null,
       "channelId": "ch_abc",
+      "channelName": "旅行",
       "isPublished": false,
       "createdAt": 1753920001000,
       "updatedAt": 1753920001000
     }
-  ]
+  ],
+  "total": 45,
+  "page": 1,
+  "pageSize": 20
 }
 
 **章节来源**
-- [src/app/[lang]/console/api/images/route.ts:11-71](file://src/app/[lang]/console/api/images/route.ts#L11-L71)
+- [src/app/[lang]/console/api/images/route.ts:17-103](file://src/app/[lang]/console/api/images/route.ts#L17-L103)
+- [specs/004-images-search-pagination/contracts/get-images-list-search-pagination.md:1-93](file://specs/004-images-search-pagination/contracts/get-images-list-search-pagination.md#L1-L93)
 
 ### GET /[lang]/console/api/images/breadcrumb
 - **功能**：根据目标目录 ID 返回从根到该目录的祖先路径（面包屑）。
@@ -377,6 +404,10 @@ Route-->>Client : "204 No Content"
   - images.mimeType 区分目录与图片。
   - images.userId 保证数据隔离。
   - images.channelId 关联频道，可为空。
+- **搜索与分页依赖**：
+  - escapeLikePattern()：LIKE 通配符转义函数，防止 SQL 注入。
+  - ImagesPagination 组件：前端分页控件。
+  - Drizzle ORM like() 函数：参数化查询，绑定用户输入。
 
 ```mermaid
 classDiagram
@@ -412,13 +443,26 @@ class Channels {
 +boolean isPublic
 +number createdAt
 }
+class EscapeLikePattern {
++string escapeLikePattern(value : string) : string
+}
+class ImagesPagination {
++number page
++number total
++number pageSize
++onPageChange(page : number) : void
+}
 Images --> Users : "userId -> users.id"
 Images --> Channels : "channelId -> channels.id"
 Images --> Images : "parentId -> images.id (自引用)"
+ImagesPagination --> Images : "分页显示"
+EscapeLikePattern --> Images : "搜索过滤"
 ```
 
 **图表来源**
 - [src/db/schema.ts:26-69](file://src/db/schema.ts#L26-L69)
+- [src/app/[lang]/console/api/images/route.ts:11-15](file://src/app/[lang]/console/api/images/route.ts#L11-L15)
+- [src/components/ImagesPagination.tsx:1-78](file://src/components/ImagesPagination.tsx#L1-L78)
 
 **章节来源**
 - [src/db/schema.ts:1-100](file://src/db/schema.ts#L1-L100)
@@ -426,14 +470,15 @@ Images --> Images : "parentId -> images.id (自引用)"
 ## 性能与扩展性
 - **排序与查询**：
   - 列表按目录优先与 updatedAt 降序，适合展示最近更新的目录与图片。
-  - 当前未实现分页与搜索，建议在大数据量场景增加分页（limit/offset 或游标）与全文检索（title/description 模糊匹配）。
+  - 关键词搜索使用参数化查询和 LIKE 通配符转义，防止 SQL 注入。
+  - 分页使用 limit/offset 机制，支持大数据量场景。
 - **缓存策略**：
   - 文件读取接口设置了强缓存头，有利于前端重复加载。
 - **并发与事务**：
   - 批量上传逐条写入存储与数据库，可在高并发下考虑事务或重试机制保障一致性。
 - **扩展建议**：
-  - 分页：在 GET /[lang]/console/api/images 增加 page、pageSize 或 cursor 参数。
-  - 搜索：增加 q 参数对 title/description 进行 LIKE 或全文索引匹配。
+  - 搜索优化：可增加全文索引提升搜索性能。
+  - 分页优化：可考虑游标分页替代 offset 分页。
   - 排序：增加 sortBy（updatedAt/title/size）与 sortOrder（asc/desc）。
   - 权限：如需公开分享，可增加 isPublic 或 token 访问控制。
 
@@ -449,18 +494,24 @@ Images --> Images : "parentId -> images.id (自引用)"
 - **400 Bad Request**：
   - 参数校验失败（imageId 格式、title 非法字符、文件大小限制等）。
   - 批量操作中 ids 数组格式错误或超出限制。
+  - 分页参数非法（page 非正整数、pageSize 非正整数）。
 - **409 Conflict**：
   - 同级目录重名。
 - **500 Internal Server Error**：
   - 存储或数据库异常，需检查日志与外部依赖可用性。
+- **搜索相关问题**：
+  - 关键词搜索结果为空：检查 q 参数是否正确传递，确认数据库中是否存在匹配的标题。
+  - SQL 注入攻击：确认使用了 escapeLikePattern() 函数进行通配符转义。
+  - 分页结果不正确：检查 page 和 pageSize 参数计算是否正确。
 
 **章节来源**
 - [src/app/[lang]/console/api/_lib/gate.ts:7-20](file://src/app/[lang]/console/api/_lib/gate.ts#L7-L20)
 - [src/app/[lang]/console/api/images/route.ts:22-36](file://src/app/[lang]/console/api/images/route.ts#L22-L36)
+- [src/app/[lang]/console/api/images/route.ts:26-34](file://src/app/[lang]/console/api/images/route.ts#L26-L34)
 - [src/app/[lang]/console/api/images/batch/route.ts:28-43](file://src/app/[lang]/console/api/images/batch/route.ts#L28-L43)
 
 ## 结论
-Weable 的图片管理 API 已完成向 `/[lang]/console/api/*` 路径的迁移，采用增强的认证门禁系统保障安全性。统一的 images 表承载目录与图片，通过 mimeType 与 parentId 构建树形结构，并提供完整的 CRUD 与文件读取能力。新增的批量操作端点提升了批量管理的效率。当前实现未包含分页与搜索，建议在后续迭代中补充以提升可扩展性与用户体验。
+Weable 的图片管理 API 已完成向 `/[lang]/console/api/*` 路径的迁移，采用增强的认证门禁系统保障安全性。统一的 images 表承载目录与图片，通过 mimeType 与 parentId 构建树形结构，并提供完整的 CRUD 与文件读取能力。新增的批量操作端点提升了批量管理的效率。**最新增强**：GET /api/images 端点现已支持关键词搜索（q 参数）和传统分页（page/pageSize 参数），具备完善的 SQL 注入防护机制，响应格式包含 total 计数和 channelName 字段，为前端提供了更好的用户体验和数据展示能力。
 
 ## 附录：数据模型与字段说明
 - **images 表关键字段**：
@@ -468,13 +519,18 @@ Weable 的图片管理 API 已完成向 `/[lang]/console/api/*` 路径的迁移�
   - userId：所属用户，关联 users.id。
   - channelId：可选，关联 channels.id。
   - parentId：自引用，构建树形结构。
-  - title：名称（目录/图片）。
+  - title：名称（目录/图片），支持关键词搜索。
   - description：描述。
   - filename：原始文件名（目录与 title 相同）。
   - mimeType：区分目录与图片。
   - size/width/height：媒体属性。
   - isPublished：发布状态。
   - createdAt/updatedAt：时间戳。
+- **新增功能字段**：
+  - channelName：LEFT JOIN channels.name 所得，用于列表展示。
+  - total：分页时的总数统计。
+  - page/pageSize：分页参数，用于前端分页控件。
 
 **章节来源**
 - [src/db/schema.ts:46-69](file://src/db/schema.ts#L46-L69)
+- [specs/004-images-search-pagination/data-model.md:9-58](file://specs/004-images-search-pagination/data-model.md#L9-L58)
