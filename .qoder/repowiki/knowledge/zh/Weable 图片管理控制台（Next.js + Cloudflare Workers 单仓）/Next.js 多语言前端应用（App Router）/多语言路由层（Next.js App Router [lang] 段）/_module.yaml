@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: frontend_app/i18n_routes
+title: 多语言路由层（Next.js App Router [lang] 段）
+scope:
+    - src/app/[lang]/
+source_files: []
+depends_on: []
+related_to: []
