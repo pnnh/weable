@@ -85,5 +85,11 @@
     "batchSetChannel": "设置频道",
     "batchConfirm": "确认",
     "batchOperationFailed": "操作失败，请重试。",
-    "selectAllImages": "全选图片"
+    "selectAllImages": "全选图片",
+    "searchPlaceholder": "按名称搜索…",
+    "searchButton": "搜索",
+    "noSearchResults": "没有匹配的条目。",
+    "prevPage": "上一页",
+    "nextPage": "下一页",
+    "fileSize": "大小"
 }

@@ -85,5 +85,11 @@
     "batchSetChannel": "Définir le canal",
     "batchConfirm": "Confirmer",
     "batchOperationFailed": "L'opération a échoué. Veuillez réessayer.",
-    "selectAllImages": "Sélectionner toutes les images"
+    "selectAllImages": "Sélectionner toutes les images",
+    "searchPlaceholder": "Rechercher par nom…",
+    "searchButton": "Rechercher",
+    "noSearchResults": "Aucune entrée ne correspond à votre recherche.",
+    "prevPage": "Précédent",
+    "nextPage": "Suivant",
+    "fileSize": "Taille"
 }

@@ -9,6 +9,17 @@ const TOGGLE_SLOT_SIZE_CLASS = "w-5 h-5";
 const ITEM_ICON_SIZE_CLASS = "w-8 h-8";
 const CHECKBOX_CELL_WIDTH_CLASS = "w-8";
 
+// 文件大小人类可读展示：<1MB 显示 KB，否则显示 MB（research.md R8）
+function formatSize(bytes: number): string {
+    const mb = 1024 * 1024;
+    if (bytes < mb) {
+        const kb = bytes / 1024;
+        return `${kb >= 100 ? Math.round(kb) : kb.toFixed(1)} KB`;
+    }
+    const value = bytes / mb;
+    return `${value >= 100 ? Math.round(value) : value.toFixed(1)} MB`;
+}
+
 export type ImageEntry = {
     id: string;
     title: string;
@@ -19,6 +30,7 @@ export type ImageEntry = {
     height?: number | null;
     parentId?: string | null;
     channelId?: string | null;
+    channelName?: string | null;
     isPublished: boolean;
     createdAt: number;
     updatedAt: number;
@@ -38,6 +50,8 @@ type Props = {
         imageDraft: string;
         updated: string;
         selectAllImages: string;
+        imageChannel: string;
+        fileSize: string;
     };
 };
 
@@ -167,8 +181,8 @@ function TreeRow({
                     {!isDirectory && (
                         <span
                             className={`text-xs font-medium px-2 py-0.5 rounded-full ${item.isPublished
-                                    ? "bg-green-100 text-green-700"
-                                    : "bg-gray-100 text-gray-600"
+                                ? "bg-green-100 text-green-700"
+                                : "bg-gray-100 text-gray-600"
                                 }`}
                         >
                             {item.isPublished ? labels.imagePublished : labels.imageDraft}
@@ -177,6 +191,14 @@ function TreeRow({
                     {isDirectory && (
                         <span className="text-xs text-gray-400">—</span>
                     )}
+                </td>
+                {/* channel — directories have no channel affiliation */}
+                <td className="py-3 pr-4 text-sm text-gray-600">
+                    {!isDirectory && item.channelName ? item.channelName : null}
+                </td>
+                {/* size — directories have no file size semantics */}
+                <td className="py-3 pr-4 text-sm text-gray-600 whitespace-nowrap">
+                    {!isDirectory ? formatSize(item.size) : null}
                 </td>
                 {/* updated */}
                 <td className="py-3 text-gray-500 text-sm">
@@ -202,7 +224,7 @@ function TreeRow({
                             <td className={`py-2 pr-2 ${TOGGLE_CELL_WIDTH_CLASS}`}>
                                 <span className={`${TOGGLE_SLOT_SIZE_CLASS} block`} />
                             </td>
-                            <td colSpan={3} className="py-2 text-gray-400 text-sm italic" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
+                            <td colSpan={5} className="py-2 text-gray-400 text-sm italic" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
                                 —
                             </td>
                         </tr>
@@ -215,7 +237,7 @@ function TreeRow({
                     <td className={`py-2 pr-2 ${TOGGLE_CELL_WIDTH_CLASS}`}>
                         <span className={`${TOGGLE_SLOT_SIZE_CLASS} block`} />
                     </td>
-                    <td colSpan={3} className="py-2 text-red-500 text-sm" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
+                    <td colSpan={5} className="py-2 text-red-500 text-sm" style={{ paddingLeft: `${indent + TREE_INDENT_STEP_PX}px` }}>
                         Load failed
                     </td>
                 </tr>
@@ -293,6 +315,8 @@ export default function ImagesTreeTable({ initialItems, lang, depth = 0, labels,
                         <th className="py-3" />
                         <th className="py-3 pr-4">Title</th>
                         <th className="py-3 pr-4">Status</th>
+                        <th className="py-3 pr-4">{labels.imageChannel}</th>
+                        <th className="py-3 pr-4">{labels.fileSize}</th>
                         <th className="py-3">{labels.updated}</th>
                     </tr>
                 </thead>

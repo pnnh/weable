@@ -85,5 +85,11 @@
     "batchSetChannel": "設定頻道",
     "batchConfirm": "確認",
     "batchOperationFailed": "操作失敗，請重試。",
-    "selectAllImages": "全選圖片"
+    "selectAllImages": "全選圖片",
+    "searchPlaceholder": "依名稱搜尋…",
+    "searchButton": "搜尋",
+    "noSearchResults": "沒有符合的項目。",
+    "prevPage": "上一頁",
+    "nextPage": "下一頁",
+    "fileSize": "大小"
 }

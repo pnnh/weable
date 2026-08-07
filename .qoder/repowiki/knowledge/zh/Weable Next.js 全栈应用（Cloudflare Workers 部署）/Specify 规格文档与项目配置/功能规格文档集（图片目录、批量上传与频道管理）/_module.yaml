@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: specs_and_docs/specs
+title: 功能规格文档集（图片目录、批量上传与频道管理）
+scope:
+    - specs/
+source_files: []
+depends_on: []
+related_to: []

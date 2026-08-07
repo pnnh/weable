@@ -85,5 +85,11 @@
     "batchSetChannel": "チャンネルを設定",
     "batchConfirm": "確認",
     "batchOperationFailed": "操作に失敗しました。もう一度お試しください。",
-    "selectAllImages": "すべての画像を選択"
+    "selectAllImages": "すべての画像を選択",
+    "searchPlaceholder": "名前で検索…",
+    "searchButton": "検索",
+    "noSearchResults": "一致する項目がありません。",
+    "prevPage": "前へ",
+    "nextPage": "次へ",
+    "fileSize": "サイズ"
 }

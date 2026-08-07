@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: shared_libs
+title: 共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）
+scope:
+    - src/lib/
+    - src/data/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/api_routes/images
+    - path: frontend_app/api_routes/user
+    - path: frontend_app/root_layout

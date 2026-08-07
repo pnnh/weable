@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { and, asc, desc, eq, isNull, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNull, like, sql } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
@@ -16,8 +16,15 @@ export const dynamic = "force-dynamic";
 
 type Props = {
     params: Promise<{ lang: string }>;
-    searchParams: Promise<{ parentId?: string }>;
+    searchParams: Promise<{ parentId?: string; q?: string; page?: string }>;
 };
+
+const PAGE_SIZE = 20;
+
+// 转义 LIKE 通配符（SQLite 默认转义符为 \），保证用户输入仅作普通文本匹配（同 console/api/images 路由）
+function escapeLikePattern(value: string): string {
+    return value.replace(/\\/g, "\\\\").replace(/%/g, "\\%").replace(/_/g, "\\_");
+}
 
 async function buildBreadcrumb(
     db: ReturnType<typeof getDb>,
@@ -44,9 +51,14 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
     if (!isValidLang(lang)) notFound();
     const l = lang as LangKey;
 
-    const { parentId } = await searchParams;
+    const { parentId, q: rawQ, page: rawPage } = await searchParams;
     const db = getDb();
     const user = await getCurrentUser();
+
+    // 视图状态：q trim 后为空视为无搜索；page 非法回退为 1（FR-009）
+    const q = (rawQ ?? "").trim();
+    const pageRaw = Number.parseInt(rawPage ?? "", 10);
+    const page = Number.isInteger(pageRaw) && pageRaw > 0 ? pageRaw : 1;
 
     // validate parentId when provided
     if (parentId) {
@@ -64,19 +76,45 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
         if (!dir) notFound();
     }
 
+    // 当前目录直接条目 + 可选标题模糊匹配（参数化 + 通配符转义，同 console/api/images 路由）
+    const whereClause = and(
+        eq(images.userId, user.id),
+        parentId ? eq(images.parentId, parentId) : isNull(images.parentId),
+        q
+            ? like(images.title, sql`'%' || ${escapeLikePattern(q)} || '%'`)
+            : undefined,
+    );
+
+    const [totalRow] = await db.select({ value: count() }).from(images).where(whereClause);
+    const total = totalRow?.value ?? 0;
+
     const rows = await db
-        .select()
+        .select({ images: images, channelName: channels.name })
         .from(images)
-        .where(
-            and(
-                eq(images.userId, user.id),
-                parentId ? eq(images.parentId, parentId) : isNull(images.parentId),
-            ),
-        )
+        .leftJoin(channels, eq(images.channelId, channels.id))
+        .where(whereClause)
         .orderBy(
             asc(sql`CASE WHEN ${images.mimeType} = 'directory' THEN 0 ELSE 1 END`),
             desc(images.updatedAt),
-        );
+        )
+        .limit(PAGE_SIZE)
+        .offset((page - 1) * PAGE_SIZE);
+
+    const items = rows.map(({ images: img, channelName }) => ({
+        id: img.id,
+        title: img.title,
+        mimeType: img.mimeType,
+        description: img.description,
+        size: img.size,
+        width: img.width,
+        height: img.height,
+        parentId: img.parentId,
+        channelId: img.channelId,
+        channelName,
+        isPublished: img.isPublished,
+        createdAt: img.createdAt,
+        updatedAt: img.updatedAt,
+    }));
 
     const breadcrumb = parentId ? await buildBreadcrumb(db, user.id, parentId) : [];
 
@@ -115,6 +153,12 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
         batchOperationFailed: t(l, "batchOperationFailed"),
         imageChannel: t(l, "imageChannel"),
         noChannel: t(l, "noChannel"),
+        searchPlaceholder: t(l, "searchPlaceholder"),
+        searchButton: t(l, "searchButton"),
+        noSearchResults: t(l, "noSearchResults"),
+        prevPage: t(l, "prevPage"),
+        nextPage: t(l, "nextPage"),
+        fileSize: t(l, "fileSize"),
     };
 
     return (
@@ -158,12 +202,16 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
                     </div>
                 </div>
 
-                {rows.length === 0 ? (
+                {items.length === 0 && !q ? (
                     <p className="text-gray-500">{t(l, "noImagesYet")}</p>
                 ) : (
                     <ImagesBatchToolbar
                         lang={l}
-                        initialItems={rows}
+                        parentId={parentId ?? null}
+                        initialItems={items}
+                        initialQ={q}
+                        initialPage={page}
+                        initialTotal={total}
                         channels={channelRows}
                         labels={batchLabels}
                     />

@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-08-06T09:33:58Z"
+exported_at: "2026-08-06T11:05:26Z"
 modules:
     "":
-        dir_name: Weable 全栈项目根（Next.js + Cloudflare 工作区）
-        title: Weable 全栈项目根（Next.js + Cloudflare 工作区）
+        dir_name: Weable Next.js 全栈应用（Cloudflare Workers 部署）
+        title: Weable Next.js 全栈应用（Cloudflare Workers 部署）
         scope:
             - README.md
             - package.json
@@ -37,8 +37,8 @@ modules:
         depends_on: []
         related_to: []
     api_endpoints:
-        dir_name: API 路由层（Next.js App Router）
-        title: API 路由层（Next.js App Router）
+        dir_name: Next.js API 路由集合
+        title: Next.js API 路由集合
         scope:
             - src/app/api/
         source_files: []
@@ -46,10 +46,7 @@ modules:
             - api_endpoints/images
             - api_endpoints/upload_and_user
         depends_on: []
-        related_to:
-            - path: components
-            - path: database_layer
-            - path: shared_libs
+        related_to: []
     api_endpoints/images:
         dir_name: 图片资源 API 路由
         title: 图片资源 API 路由
@@ -79,8 +76,7 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to:
-            - path: api_endpoints
+        related_to: []
     database_layer:
         dir_name: 数据库层与迁移管理
         title: 数据库层与迁移管理
@@ -91,10 +87,11 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: api_endpoints
+            - path: frontend_app/api_routes/images
+            - path: frontend_app/api_routes/user
     frontend_app:
-        dir_name: 前端应用（Next.js App Router）
-        title: 前端应用（Next.js App Router）
+        dir_name: Next.js 前端应用（App Router）
+        title: Next.js 前端应用（App Router）
         scope:
             - src/app/
         source_files: []
@@ -125,6 +122,8 @@ modules:
         depends_on: []
         related_to:
             - path: api_endpoints/images
+            - path: database_layer
+            - path: shared_libs
     frontend_app/api_routes/user:
         dir_name: 用户头像与资料 API 路由
         title: 用户头像与资料 API 路由
@@ -135,6 +134,8 @@ modules:
         depends_on: []
         related_to:
             - path: api_endpoints/upload_and_user
+            - path: database_layer
+            - path: shared_libs
     frontend_app/i18n_routes:
         dir_name: 多语言路由与页面布局
         title: 多语言路由与页面布局
@@ -144,7 +145,6 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: frontend_app/root_layout
             - path: locales
     frontend_app/root_layout:
         dir_name: 应用根布局与首页路由
@@ -157,7 +157,7 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: frontend_app/i18n_routes
+            - path: shared_libs
     locales:
         dir_name: 多语言国际化资源（i18n Locales）
         title: 多语言国际化资源（i18n Locales）
@@ -178,13 +178,35 @@ modules:
         children: []
         depends_on: []
         related_to:
-            - path: api_endpoints
+            - path: frontend_app/api_routes/images
+            - path: frontend_app/api_routes/user
+            - path: frontend_app/root_layout
     specs_and_docs:
-        dir_name: SpecKit 特性规格与文档工作区
-        title: SpecKit 特性规格与文档工作区
+        dir_name: Specify 规格文档与项目配置
+        title: Specify 规格文档与项目配置
         scope:
             - specs/
             - .specify/
+        source_files: []
+        children:
+            - specs_and_docs/specify_config
+            - specs_and_docs/specs
+        depends_on: []
+        related_to: []
+    specs_and_docs/specify_config:
+        dir_name: Specify 项目配置与扩展管理
+        title: Specify 项目配置与扩展管理
+        scope:
+            - .specify/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    specs_and_docs/specs:
+        dir_name: 功能规格文档集（图片目录、批量上传与频道管理）
+        title: 功能规格文档集（图片目录、批量上传与频道管理）
+        scope:
+            - specs/
         source_files: []
         children: []
         depends_on: []

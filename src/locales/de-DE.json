@@ -85,5 +85,11 @@
     "batchSetChannel": "Kanal festlegen",
     "batchConfirm": "Bestätigen",
     "batchOperationFailed": "Vorgang fehlgeschlagen. Bitte erneut versuchen.",
-    "selectAllImages": "Alle Bilder auswählen"
+    "selectAllImages": "Alle Bilder auswählen",
+    "searchPlaceholder": "Nach Name suchen…",
+    "searchButton": "Suchen",
+    "noSearchResults": "Keine Einträge entsprechen Ihrer Suche.",
+    "prevPage": "Zurück",
+    "nextPage": "Weiter",
+    "fileSize": "Größe"
 }
