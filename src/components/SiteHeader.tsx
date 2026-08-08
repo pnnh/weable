@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { LangKey } from "@/lib/language";
 import { t } from "@/lib/i18n";
 import LanguageSelector from "@/components/LanguageSelector";
-import { IoAppsSharp } from "react-icons/io5";
 import { BiSolidUserRectangle } from "react-icons/bi";
 
 type Props = { lang: LangKey; pathSuffix?: string };
@@ -30,13 +29,6 @@ export default function SiteHeader({ lang, pathSuffix = "" }: Props) {
                         className="text-gray-500 hover:text-gray-900 transition-colors"
                     >
                         <BiSolidUserRectangle size={22} />
-                    </Link>
-                    <Link
-                        href={`/${lang}/apps`}
-                        title={t(lang, "apps")}
-                        className="text-gray-500 hover:text-gray-900 transition-colors"
-                    >
-                        <IoAppsSharp size={20} />
                     </Link>
                 </div>
             </div>
