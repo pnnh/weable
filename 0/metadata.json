@@ -1,0 +1,376 @@
+{
+  "cli_version": "0.9.0",
+  "checkpoint_id": "01KZG9K4B56N0HK16VNPAFZY51",
+  "session_id": "49a7abe1-e295-4723-92ac-0a5c1176250a",
+  "strategy": "manual-commit",
+  "created_at": "2026-08-08T08:59:49.930643776Z",
+  "branch": "main",
+  "checkpoints_count": 8,
+  "save_step_count": 8,
+  "files_touched": [
+    ".gitattributes",
+    ".gitignore",
+    ".specify/bugs/callback-edge-fs-error/assessment.md",
+    ".specify/bugs/callback-edge-fs-error/fix.md",
+    ".specify/bugs/session-mutual-exclusion/assessment.md",
+    ".specify/bugs/session-mutual-exclusion/fix.md",
+    ".specify/feature.json",
+    ".specify/scripts/python/__pycache__/common.cpython-312.pyc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "migrations/0002_gorgeous_storm.sql",
+    "migrations/meta/0002_snapshot.json",
+    "migrations/meta/_journal.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "specs/007-calieo-oauth2-signin/checklists/requirements.md",
+    "specs/007-calieo-oauth2-signin/contracts/callback-route.md",
+    "specs/007-calieo-oauth2-signin/contracts/signin-route.md",
+    "specs/007-calieo-oauth2-signin/data-model.md",
+    "specs/007-calieo-oauth2-signin/plan.md",
+    "specs/007-calieo-oauth2-signin/quickstart.md",
+    "specs/007-calieo-oauth2-signin/research.md",
+    "specs/007-calieo-oauth2-signin/spec.md",
+    "specs/007-calieo-oauth2-signin/tasks.md",
+    "src/app/[lang]/account/signin/actions.ts",
+    "src/app/[lang]/account/signin/page.tsx",
+    "src/app/api/auth/callback/calieo/route.ts",
+    "src/app/api/auth/signin/calieo/route.ts",
+    "src/components/CalieoSignInButton.tsx",
+    "src/db/schema.ts",
+    "src/lib/auth.ts",
+    "src/lib/calieo-oauth.ts",
+    "wrangler.jsonc"
+  ],
+  "agent": "Copilot CLI",
+  "model": "claude-sonnet-4.6",
+  "turn_id": "023b5097572c",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 11516544,
+    "cache_creation_tokens": 490184,
+    "cache_read_tokens": 11024845,
+    "output_tokens": 62344,
+    "api_call_count": 116
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-copilot-cli-speckit-specify-2026-08-08T07:55:52.592Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-specify"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "7a14f9a4a0d8",
+      "timestamp": "2026-08-08T07:55:52.592Z",
+      "native": {
+        "command": "/speckit-specify"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-specify",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-plan-2026-08-08T08:06:08.299Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-plan"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "f114920d17b9",
+      "timestamp": "2026-08-08T08:06:08.299Z",
+      "native": {
+        "command": "/speckit-plan"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-plan",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-tasks-2026-08-08T08:14:33.55Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-tasks"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "cce875131cfa",
+      "timestamp": "2026-08-08T08:14:33.55Z",
+      "native": {
+        "command": "/speckit-tasks"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-tasks",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-implement-2026-08-08T08:19:43.918Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-implement"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "54531c561576",
+      "timestamp": "2026-08-08T08:19:43.918Z",
+      "native": {
+        "command": "/speckit-implement"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-implement",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-bug-assess-2026-08-08T08:40:11.398Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-bug-assess"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "b269cc93c984",
+      "timestamp": "2026-08-08T08:40:11.398Z",
+      "native": {
+        "command": "/speckit-bug-assess"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-bug-assess",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-bug-fix-2026-08-08T08:43:08.348Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-bug-fix"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "856d4adfe32a",
+      "timestamp": "2026-08-08T08:43:08.348Z",
+      "native": {
+        "command": "/speckit-bug-fix"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-bug-fix",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-bug-assess-2026-08-08T08:50:01.945Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-bug-assess"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "4fd0166ec73c",
+      "timestamp": "2026-08-08T08:50:01.945Z",
+      "native": {
+        "command": "/speckit-bug-assess"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-bug-assess",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "prompt-skill-copilot-cli-speckit-bug-fix-2026-08-08T08:52:41.858Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-bug-fix"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "f9da106291c3",
+      "timestamp": "2026-08-08T08:52:41.858Z",
+      "native": {
+        "command": "/speckit-bug-fix"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-bug-fix",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 8
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-08-08T08:59:49.853842351Z",
+    "agent_lines": 1990,
+    "agent_removed": 0,
+    "human_added": 113,
+    "human_modified": 97,
+    "human_removed": 0,
+    "total_committed": 2185,
+    "total_lines_changed": 2201,
+    "agent_percentage": 90.41344843253066,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 34,
+      "user_lines_removed": 5,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.json": 19,
+        ".gitattributes": 1,
+        ".gitignore": 1,
+        "AGENTS.md": 11,
+        "CLAUDE.md": 2
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1,
+        ".gitignore": 2,
+        "AGENTS.md": 1,
+        "CLAUDE.md": 1
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 19,
+      "user_lines_removed": 1,
+      "agent_lines_added": 218,
+      "agent_lines_removed": 6,
+      "user_added_per_file": {
+        ".claude/settings.json": 19
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 19,
+      "user_lines_removed": 1,
+      "agent_lines_added": 931,
+      "agent_lines_removed": 6,
+      "user_added_per_file": {
+        ".claude/settings.json": 19
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 19,
+      "user_lines_removed": 1,
+      "agent_lines_added": 1145,
+      "agent_lines_removed": 6,
+      "user_added_per_file": {
+        ".claude/settings.json": 19
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 34,
+      "user_lines_removed": 16,
+      "agent_lines_added": 1832,
+      "agent_lines_removed": 16,
+      "user_added_per_file": {
+        ".claude/settings.json": 19,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 34,
+      "user_lines_removed": 16,
+      "agent_lines_added": 1928,
+      "agent_lines_removed": 16,
+      "user_added_per_file": {
+        ".claude/settings.json": 19,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      }
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 34,
+      "user_lines_removed": 19,
+      "agent_lines_added": 1994,
+      "agent_lines_removed": 16,
+      "user_added_per_file": {
+        ".claude/settings.json": 19,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15,
+        "src/app/api/auth/callback/calieo/route.ts": 2,
+        "src/app/api/auth/signin/calieo/route.ts": 1
+      }
+    },
+    {
+      "checkpoint_number": 8,
+      "user_lines_added": 34,
+      "user_lines_removed": 19,
+      "agent_lines_added": 2087,
+      "agent_lines_removed": 16,
+      "user_added_per_file": {
+        ".claude/settings.json": 19,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15
+      },
+      "user_removed_per_file": {
+        ".claude/settings.json": 1,
+        "specs/007-calieo-oauth2-signin/tasks.md": 15,
+        "src/app/api/auth/callback/calieo/route.ts": 2,
+        "src/app/api/auth/signin/calieo/route.ts": 1
+      }
+    }
+  ]
+}

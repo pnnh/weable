@@ -1,0 +1,109 @@
+/speckit-specify 我准备为当前项目接入标准的OAuth2和OIDC认证流程（作为客户端），然后在/en/account/signin页面加入使用三方账号登录的功能。
+在signin页面登录按钮下方增加通过“Calieo”登录按钮。（Calieo是一个标准的OAuth2和OIDC身份认证服务，地址是https://portal.calieo.xyz）。
+在开发阶段/en/account/signin允许只填一个邮箱和名称就实现登录（现有逻辑），但是在正式production构建后只允许三方登录。
+分析该如何对当前项目实现以上功能，该集成哪些第三方库（比如next-auth之类）。制定一个可行的技术方案。
+
+---
+
+/speckit-specify 我准备为当前项目接入标准的OAuth2和OIDC认证流程（作为客户端），然后在/en/account/signin页面加入使用三方账号登录的功能。
+在signin页面登录按钮下方增加通过“Calieo”登录按钮。（Calieo是一个标准的OAuth2和OIDC身份认证服务，地址是https://portal.calieo.xyz）。
+在开发阶段/en/account/signin允许只填一个邮箱和名称就实现登录（现有逻辑），但是在正式production构建后只允许三方登录。
+分析该如何对当前项目实现以上功能，该集成哪些第三方库（比如next-auth之类）。制定一个可行的技术方案。
+
+---
+
+/speckit-plan
+
+---
+
+/speckit-plan
+
+---
+
+/speckit-tasks
+
+---
+
+/speckit-tasks
+
+---
+
+/speckit-implement
+
+---
+
+/speckit-implement
+
+---
+
+/speckit-bug-assess 当点击使用“Calieo”登录并完成授权跳转回来后，浏览器控制台出现如下错误：
+
+backendManager.js:1 
+ GET http://localhost:7600/api/auth/callback/calieo?REDACTED&REDACTED 500 (Internal Server Error)
+Unable to add filesystem: <illegal path>
+index.tsx:936 Uncaught Error: The edge runtime does not support Node.js 'fs' module.
+Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime
+    at Object.get (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0vki_next_dist_esm_server_web_12jntde._.js:62:41)
+    at promisify (node:internal/util:462:15)
+    at module evaluation (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/node_modules__pnpm_0mk2on~._.js:188:18)
+    at <unknown> (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1307:27)
+    at runModuleExecutionHooks (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1649:9)
+    at instantiateModuleShared (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1305:9)
+    at instantiateModule (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1621:12)
+    at getOrInstantiateModuleFromParent (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1604:12)
+    at DevContext.commonJsRequire [as r] (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:299:12)
+    at module evaluation (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/node_modules__pnpm_0mk2on~._.js:619:51)
+page-loader.ts:135 Fetch finished loading: GET "http://localhost:7600/_next/static/development/_devMiddlewareManifest.json".
+stack-frame.ts:97 Fetch finished loading: POST "http://localhost:7600/__nextjs_original-stack-frames".
+
+分析错误原因
+
+---
+
+/speckit-bug-assess 当点击使用“Calieo”登录并完成授权跳转回来后，浏览器控制台出现如下错误：
+
+backendManager.js:1 
+ GET http://localhost:7600/api/auth/callback/calieo?REDACTED&REDACTED 500 (Internal Server Error)
+Unable to add filesystem: <illegal path>
+index.tsx:936 Uncaught Error: The edge runtime does not support Node.js 'fs' module.
+Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime
+    at Object.get (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0vki_next_dist_esm_server_web_12jntde._.js:62:41)
+    at promisify (node:internal/util:462:15)
+    at module evaluation (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/node_modules__pnpm_0mk2on~._.js:188:18)
+    at <unknown> (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1307:27)
+    at runModuleExecutionHooks (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1649:9)
+    at instantiateModuleShared (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1305:9)
+    at instantiateModule (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1621:12)
+    at getOrInstantiateModuleFromParent (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:1604:12)
+    at DevContext.commonJsRequire [as r] (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/0y13_next_dist_esm_build_templates_edge-wrapper_0~oixyi.js:299:12)
+    at module evaluation (file:///home/larry/projects/weable/.next/dev/server/edge/chunks/node_modules__pnpm_0mk2on~._.js:619:51)
+page-loader.ts:135 Fetch finished loading: GET "http://localhost:7600/_next/static/development/_devMiddlewareManifest.json".
+stack-frame.ts:97 Fetch finished loading: POST "http://localhost:7600/__nextjs_original-stack-frames".
+
+分析错误原因
+
+---
+
+/speckit-bug-fix slug=callback-edge-fs-error
+
+---
+
+/speckit-bug-fix slug=callback-edge-fs-error
+
+---
+
+/speckit-bug-assess 当我使用Calieo登录成功并返回后，/en/console页面显示的个人信息仍是之前的。说明可能之前的用户状态未注销，或者两种登录认证方式可能同时生效了。
+实际上无论哪种登录方式，用户状态都应该是互斥的，也就是同一时间只允许登录一个账号。新账号登录时需要将旧账号注销。分析并修复该问题。
+
+---
+
+/speckit-bug-assess 当我使用Calieo登录成功并返回后，/en/console页面显示的个人信息仍是之前的。说明可能之前的用户状态未注销，或者两种登录认证方式可能同时生效了。
+实际上无论哪种登录方式，用户状态都应该是互斥的，也就是同一时间只允许登录一个账号。新账号登录时需要将旧账号注销。分析并修复该问题。
+
+---
+
+/speckit-bug-fix slug=session-mutual-exclusion
+
+---
+
+/speckit-bug-fix slug=session-mutual-exclusion

@@ -1,0 +1,59 @@
+{
+  "cli_version": "0.9.0",
+  "checkpoint_id": "01KZG9K4B56N0HK16VNPAFZY51",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 8,
+  "files_touched": [
+    ".gitattributes",
+    ".gitignore",
+    ".specify/bugs/callback-edge-fs-error/assessment.md",
+    ".specify/bugs/callback-edge-fs-error/fix.md",
+    ".specify/bugs/session-mutual-exclusion/assessment.md",
+    ".specify/bugs/session-mutual-exclusion/fix.md",
+    ".specify/feature.json",
+    ".specify/scripts/python/__pycache__/common.cpython-312.pyc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "README.md",
+    "migrations/0002_gorgeous_storm.sql",
+    "migrations/meta/0002_snapshot.json",
+    "migrations/meta/_journal.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "specs/007-calieo-oauth2-signin/checklists/requirements.md",
+    "specs/007-calieo-oauth2-signin/contracts/callback-route.md",
+    "specs/007-calieo-oauth2-signin/contracts/signin-route.md",
+    "specs/007-calieo-oauth2-signin/data-model.md",
+    "specs/007-calieo-oauth2-signin/plan.md",
+    "specs/007-calieo-oauth2-signin/quickstart.md",
+    "specs/007-calieo-oauth2-signin/research.md",
+    "specs/007-calieo-oauth2-signin/spec.md",
+    "specs/007-calieo-oauth2-signin/tasks.md",
+    "src/app/[lang]/account/signin/actions.ts",
+    "src/app/[lang]/account/signin/page.tsx",
+    "src/app/api/auth/callback/calieo/route.ts",
+    "src/app/api/auth/signin/calieo/route.ts",
+    "src/components/CalieoSignInButton.tsx",
+    "src/db/schema.ts",
+    "src/lib/auth.ts",
+    "src/lib/calieo-oauth.ts",
+    "wrangler.jsonc"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 11516544,
+    "cache_creation_tokens": 490184,
+    "cache_read_tokens": 11024845,
+    "output_tokens": 62344,
+    "api_call_count": 116
+  }
+}
