@@ -1,0 +1,75 @@
+.kilo/kilo.jsonc
+  h_de2c1989c48e7b 1,3-19
+  h_de2c1989c48e7b 2
+.kilo/commands/speckit.analyze.md
+  h_de2c1989c48e7b 1-251
+.kilo/commands/speckit.checklist.md
+  h_de2c1989c48e7b 1-365
+.kilo/commands/speckit.clarify.md
+  h_de2c1989c48e7b 1-287
+.kilo/commands/speckit.constitution.md
+  h_de2c1989c48e7b 1-164
+.kilo/commands/speckit.converge.md
+  h_de2c1989c48e7b 1-269
+.kilo/commands/speckit.implement.md
+  h_de2c1989c48e7b 1-215
+.kilo/commands/speckit.plan.md
+  h_de2c1989c48e7b 1-166
+.kilo/commands/speckit.specify.md
+  h_de2c1989c48e7b 1-345
+.kilo/commands/speckit.tasks.md
+  h_de2c1989c48e7b 1-215
+.kilo/commands/speckit.taskstoissues.md
+  h_de2c1989c48e7b 1-102
+.specify/feature.json
+  h_de2c1989c48e7b 2
+.specify/init-options.json
+  h_de2c1989c48e7b 8
+.specify/integration.json
+  h_de2c1989c48e7b 2,6-7,17-20
+.specify/integrations/kilocode.manifest.json
+  h_de2c1989c48e7b 1-17
+.specify/integrations/speckit.manifest.json
+  h_de2c1989c48e7b 3
+specs/008-remove-apps-privacy/checklists/requirements.md
+  h_de2c1989c48e7b 1-39
+specs/008-remove-apps-privacy/data-model.md
+  h_de2c1989c48e7b 1-80
+specs/008-remove-apps-privacy/plan.md
+  h_de2c1989c48e7b 1-113
+specs/008-remove-apps-privacy/quickstart.md
+  h_de2c1989c48e7b 1-138
+specs/008-remove-apps-privacy/research.md
+  h_de2c1989c48e7b 1-114
+specs/008-remove-apps-privacy/spec.md
+  h_de2c1989c48e7b 1-110
+specs/008-remove-apps-privacy/tasks.md
+  h_de2c1989c48e7b 1-195
+src/locales/de-DE.json
+  h_de2c1989c48e7b 81
+src/locales/en.json
+  h_de2c1989c48e7b 81
+src/locales/es.json
+  h_de2c1989c48e7b 81
+src/locales/fr.json
+  h_de2c1989c48e7b 81
+src/locales/ja.json
+  h_de2c1989c48e7b 81
+src/locales/pt-PT.json
+  h_de2c1989c48e7b 81
+src/locales/zh-TW.json
+  h_de2c1989c48e7b 81
+src/locales/zh.json
+  h_de2c1989c48e7b 81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "d0624dd10d3bb498310e9d42188282c71fb502d4",
+  "prompts": {},
+  "humans": {
+    "h_de2c1989c48e7b": {
+      "author": "xspanni <xspanni@gmail.com>"
+    }
+  }
+}
