@@ -20,6 +20,11 @@
       "database_id": "a6463e67-8911-4c11-814a-aaf5df7e8f82"
     }
   ],
+  "vars": {
+    // 生产环境通过 wrangler secret put CALIEO_CLIENT_ID 注入
+    // wrangler secret put CALIEO_CLIENT_SECRET
+    "CALIEO_CLIENT_ID": ""
+  },
   "r2_buckets": [
     {
       "binding": "IMAGES_BUCKET",

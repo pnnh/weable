@@ -40,6 +40,7 @@ export async function signIn(_prev: SignInState, formData: FormData): Promise<Si
     }
 
     const cookieStore = await cookies();
+    cookieStore.set("calieo_session", "", { maxAge: 0, path: "/" }); // 清除 Calieo 残留会话
     cookieStore.set("user_id", rows[0].id, {
         httpOnly: true,
         sameSite: "lax",

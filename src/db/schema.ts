@@ -29,6 +29,7 @@ export const users = sqliteTable("users", {
   email: text("email").notNull().unique(),
   nickname: text("nickname"),
   bio: text("bio"),
+  calieoSub: text("calieo_sub").unique(),
   createdAt: integer("created_at").notNull().$defaultFn(() => Date.now()),
 });
 

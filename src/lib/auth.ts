@@ -120,5 +120,16 @@ export async function getCurrentUserOrNull(): Promise<CurrentUser | null> {
     return null;
   }
 
+  // calieo_session cookie 承载 Calieo OAuth2/OIDC 登录会话，值为 users.id
+  const calieoSessionId = cookieStore.get('calieo_session')?.value;
+  if (calieoSessionId) {
+    const db = getDb();
+    const rows = await db.select().from(users).where(eq(users.id, calieoSessionId)).limit(1);
+    if (rows.length > 0) {
+      return { id: rows[0].id, name: rows[0].name, email: rows[0].email, nickname: rows[0].nickname ?? null, bio: rows[0].bio ?? null };
+    }
+    return null;
+  }
+
   return null;
 }

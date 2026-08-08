@@ -56,5 +56,4 @@ pnpm-debug.log*
 # editors
 .vscode/
 .idea/
-
-/graphify-out/
+graphify-out/
