@@ -1,0 +1,129 @@
+src/app/[lang]/account/signout/actions.ts
+  s_a80f7018b33141::t_077ce10a72673b 1-9,11-12
+  h_6465a203f88bd5 10
+specs/005-dev-signin-signout/plan.md
+  s_a80f7018b33141::t_5497d96708ee8a 1-79
+specs/005-dev-signin-signout/research.md
+  s_a80f7018b33141::t_816163d2c41721 1-45
+src/app/[lang]/account/signin/page.tsx
+  s_a80f7018b33141::t_2dff81f40d999f 1-32
+specs/005-dev-signin-signout/spec.md
+  s_a80f7018b33141::t_2aa6e929859b45 1-109
+specs/005-dev-signin-signout/tasks.md
+  h_6465a203f88bd5 21,31,45-46,60-61,75,85-86
+  s_a80f7018b33141::t_37c40d9e544fb8 1-20,22-30,32-44,47-59,62-74,76-84,87-158
+specs/005-dev-signin-signout/data-model.md
+  s_a80f7018b33141::t_3f3e099d2f4c66 1-50
+specs/005-dev-signin-signout/quickstart.md
+  s_a80f7018b33141::t_9daedfca04458e 1-66
+.specify/feature.json
+  s_a80f7018b33141::t_b5d872bf706fa7 2
+src/app/[lang]/account/signin/actions.ts
+  s_a80f7018b33141::t_bf92bf7552e7a9 1-50
+src/app/[lang]/account/signout/page.tsx
+  s_a80f7018b33141::t_9c58065094c816 1-58
+specs/005-dev-signin-signout/checklists/requirements.md
+  s_a80f7018b33141::t_416a9981316d2c 1-35
+specs/005-dev-signin-signout/contracts/account-pages.md
+  s_a80f7018b33141::t_1ffcff95c11d52 1-53
+src/lib/auth.ts
+  s_a80f7018b33141::t_17123c035316e2 111-112,115-120
+src/app/[lang]/account/signin/sign-in-form.tsx
+  h_6465a203f88bd5 28-29
+  s_a80f7018b33141::t_05e65b5f5d7502 1-27,30-55
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js API 路由集合/图片资源 API 路由/_module.yaml"
+  h_6465a203f88bd5 8
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js API 路由集合/文件上传与用户信息 API/_module.yaml"
+  h_6465a203f88bd5 9
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/Next.js App Router API 路由层/图片资源 API 路由/_module.yaml"
+  h_6465a203f88bd5 8
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/_module.yaml"
+  h_6465a203f88bd5 3,8
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/架构设计.md"
+  h_6465a203f88bd5 1-7
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/多语言站点路由与控制台 API（Next.js App Router）/编码规范.md"
+  h_6465a203f88bd5 1-2,4,6-7
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/Next.js 多语言前端应用（App Router）/应用根布局与首页路由/_module.yaml"
+  h_6465a203f88bd5 10
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/共享库与静态数据（认证、国际化、存储抽象、游戏与隐私内容）/_module.yaml"
+  h_6465a203f88bd5 9
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/前端多语言文案资源 (i18n Locales)/_module.yaml"
+  h_6465a203f88bd5 3,8
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/前端多语言文案资源 (i18n Locales)/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/前端多语言文案资源 (i18n Locales)/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/前端多语言文案资源 (i18n Locales)/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/前端多语言文案资源 (i18n Locales)/编码规范.md"
+  h_6465a203f88bd5 2,4
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/图片管理控制台规格与 Specify 配置集/图片管理控制台功能规格文档集/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/图片管理控制台规格与 Specify 配置集/图片管理控制台功能规格文档集/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/图片管理控制台规格与 Specify 配置集/图片管理控制台功能规格文档集/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/图片管理控制台规格与 Specify 配置集/图片管理控制台功能规格文档集/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/图片管理控制台规格与 Specify 配置集/图片管理控制台功能规格文档集/编码规范.md"
+  h_6465a203f88bd5 5-6
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/数据库层与迁移管理/_module.yaml"
+  h_6465a203f88bd5 9
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/站点与控制台 UI 组件集/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/站点与控制台 UI 组件集/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/站点与控制台 UI 组件集/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/站点与控制台 UI 组件集/特殊配置与命令.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable 全栈应用根（Next.js + Cloudflare Workers）/站点与控制台 UI 组件集/编码规范.md"
+  h_6465a203f88bd5 1-6
+.qoder/repowiki/knowledge/zh/_index.yaml
+  h_6465a203f88bd5 6,9-10,58,68,70-71,87,89-90,119,128,130-131,137,148,150-151,157,167,169-170,190-191
+".qoder/repowiki/zh/content/API 接口文档/图片管理 API.md"
+  h_6465a203f88bd5 16-18,23-28,43,48,59,75,78-79,99-107,114,122,128,134,137,144,150-154,162,168,172-174,177-179,186,188,198-200,214,219-222,226-227,407-410,446-454,458-459,464-465,473-474,480-481,497,502-505,510,514,522,529-532,535-536
+.qoder/repowiki/zh/content/前端组件/图片树形表格组件.md
+  h_6465a203f88bd5 6-8,13-20,34,37-38,47-48,63-64,69,76-78,90-92,95-96,100-102,110-112,122-123,130,136,140-146,149-150,156-158,161-162,167-168,170-171,175,183-184,193,207,212-217,220,224,227,229-235,239-248,252,255,257-262,265,268-270,290-297,299,308-317,320-331,348,351,354-357,361-363,375-377,380,384-389,393,396-403,406-407,410,415-423,432-434,437-449,452
+.qoder/repowiki/zh/content/功能特性/国际化支持.md
+  h_6465a203f88bd5 14-16,20-24,28-34,50-51,53,69-71,84-86,88,99,113-115,125-127,140,153-156,165-167,169,236,238,243-268,286-289,292-299,328,350-355,358,390,441-450
+.qoder/repowiki/zh/content/功能特性/图片管理/图片管理.md
+  h_6465a203f88bd5 10-11,18,23,26-34,48,54-55,57,62-63,75-77,80-85,88-89,91-96,98-109,113,118-120,126,131,141-142,145,150-151,163-164,167-169,171-174,178-179,185-251,253-254,263,286,290,401-402,404,406-437,440,443-444,446-447,459-462,476-477,481-484,493,502-503,510-516,518,520,525-526,528,554-565,575-577,580,585-586,591,601-602,604-611,613-614,617-624,630-631,633-635
+.qoder/repowiki/zh/content/功能特性/图片管理/批量图片管理.md
+  h_6465a203f88bd5 17,19-20,23-29,43,48-49,54,57,84-85,93,108-110,112,117,123,126,143,193,196,246,253,272,275,280-281,287,290,292-295,298-299,301-302,320,323,345,348,374,378,405,408,439,444,447-453,459,461-463,469-474,476-478,492-511,513-514,517-518,520-521,523-524,526-550,554,556,561,566,568-569,571,578-579,582-583,589,598-600,604,623-630,637,641,646-653,657-661
+.qoder/repowiki/zh/meta/repowiki-metadata.json
+  h_6465a203f88bd5 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "e74d652703fe3a90784c344bfc944a55f6f951ac",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_a80f7018b33141": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "32f0235e-500b-4c84-8f08-d0a28e8015cc",
+        "model": "unknown"
+      },
+      "human_author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
