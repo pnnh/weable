@@ -1,0 +1,79 @@
+src/db/schema.ts
+  s_9f86da914ebe29::t_0eda65272a9efb 32
+src/lib/auth.ts
+  s_9f86da914ebe29::t_371c1673e92698 123-133
+migrations/meta/0002_snapshot.json
+  s_9f86da914ebe29::t_4efc719b17c196 1-309
+specs/007-calieo-oauth2-signin/contracts/callback-route.md
+  s_9f86da914ebe29::t_a8d843a57be72b 1-116
+src/app/[lang]/account/signin/page.tsx
+  s_9f86da914ebe29::t_aa3c1e2f79c36d 7,11-17,19-24,29-32,37-61,67
+wrangler.jsonc
+  s_9f86da914ebe29::t_e8cdbd1ea0802b 23-27
+.specify/feature.json
+  s_9f86da914ebe29::t_f8a9fe5ac1ccf7 2-3
+src/app/api/auth/callback/calieo/route.ts
+  s_9f86da914ebe29::t_89c58176652988 1-2,4-106,108-109,111-125
+  s_9f86da914ebe29::t_501649c68aa02d 107,110
+  s_9f86da914ebe29::t_4fb1cf9c681beb 3
+specs/007-calieo-oauth2-signin/spec.md
+  s_9f86da914ebe29::t_e68a3ac2a1de69 1-165
+README.md
+  s_9f86da914ebe29::t_30560157030e50 1-15
+specs/007-calieo-oauth2-signin/quickstart.md
+  s_9f86da914ebe29::t_71724f49d239e9 1-142
+src/lib/calieo-oauth.ts
+  s_9f86da914ebe29::t_4f23cca9d531f7 1-95
+.specify/bugs/callback-edge-fs-error/assessment.md
+  s_9f86da914ebe29::t_03707026cdcede 1-96
+migrations/meta/_journal.json
+  s_9f86da914ebe29::t_4efc719b17c196 18-24
+src/app/api/auth/signin/calieo/route.ts
+  s_9f86da914ebe29::t_b8bca3bb393129 1-46
+specs/007-calieo-oauth2-signin/checklists/requirements.md
+  s_9f86da914ebe29::t_e529beafbd69ef 1-36
+specs/007-calieo-oauth2-signin/tasks.md
+  s_9f86da914ebe29::t_7eeb65a6447e7a 1-16,19-27,31-47,50-55,57-66,68-71,73-85,87-99,101-113,115-123,126-214
+  s_9f86da914ebe29::t_6bfb80916fddd2 17-18,28-30,48-49,56,67,72,86,100,114,124-125
+.specify/bugs/callback-edge-fs-error/fix.md
+  s_9f86da914ebe29::t_799e8e3bbcb511 1-66
+src/app/[lang]/account/signin/actions.ts
+  s_9f86da914ebe29::t_2caac6acf3618a 43
+.specify/bugs/session-mutual-exclusion/assessment.md
+  s_9f86da914ebe29::t_55ce0cbf44dd9e 1-93
+.specify/bugs/session-mutual-exclusion/fix.md
+  s_9f86da914ebe29::t_ac5f64e3f28ec2 1-59
+specs/007-calieo-oauth2-signin/data-model.md
+  s_9f86da914ebe29::t_1ce92a0b45612a 1-165
+specs/007-calieo-oauth2-signin/contracts/signin-route.md
+  s_9f86da914ebe29::t_b03bec173e810d 1-65
+specs/007-calieo-oauth2-signin/plan.md
+  s_9f86da914ebe29::t_5a606549d53bb5 1,3,5,7-9,13,15,17,19,21,23,25-28,32,34-41,43-44,47,50-58,61,65-76,78-82,85
+  s_9f86da914ebe29::t_c36ee03cd0b79d 2,4,6,10-12,14,16,18,20,22,24,29-31,33,42,45-46,48-49,59-60,62-64,77,83-84
+migrations/0002_gorgeous_storm.sql
+  s_9f86da914ebe29::t_4efc719b17c196 1-2
+src/components/CalieoSignInButton.tsx
+  s_9f86da914ebe29::t_e6b39f6fdd4c24 1-16
+specs/007-calieo-oauth2-signin/research.md
+  s_9f86da914ebe29::t_d68c032f6bfee0 1-140
+package.json
+  s_9f86da914ebe29::t_3b62dfb28e96fe 22
+pnpm-lock.yaml
+  s_9f86da914ebe29::t_1a883b2902be06 32-34,2944-2946,6466-6467
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "d7dd6c53514f47c699087c297f647b889eade03f",
+  "prompts": {},
+  "sessions": {
+    "s_9f86da914ebe29": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "49a7abe1-e295-4723-92ac-0a5c1176250a",
+        "model": "unknown"
+      },
+      "human_author": "xspanni <xspanni@gmail.com>"
+    }
+  }
+}
