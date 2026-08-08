@@ -1,0 +1,227 @@
+/graphify .
+
+---
+
+/graphify .
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_04.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 4 of 8。文件列表如下：
+/home/larry/projects/weable/public/file.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_05.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 5 of 8。文件列表如下：
+/home/larry/projects/weable/public/globe.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_06.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 6 of 8。文件列表如下：
+/home/larry/projects/weable/public/next.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_03.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 3 of 8。文件列表如下：
+/home/larry/projects/weable/.specify/templates/constitution-template.md
+/home/larry/projects/weable/.specify/templates/plan-template.md
+/home/larry/projects/weable/.specify/templates/spec-template.md
+/home/larry/projects/weable/.specify/templates/tasks-template.md
+/home/larry/projects/weable/.specify/workflows/speckit/workflow.yml
+/home/larry/projects/weable/specs/001-image-directory-tree/checklists/requirements.md
+/home/larry/projects/weable/specs/001-image-directory-tree/contracts/get-images-and-breadcrumb.md
+/home/larry/projects/weable/specs/001-image-directory-tree/contracts/post-directories.md
+/home/larry/projects/weable/specs/001-image-directory-tree/data-model.md
+/home/larry/projects/weable/specs/001-image-directory-tree/plan.md
+/home/larry/projects/weable/specs/001-image-directory-tree/quickstart.md
+/home/larry/projects/weable/specs/001-image-directory-tree/research.md
+/home/larry/projects/weable/specs/001-image-directory-tree/spec.md
+/home/larry/projects/weable/specs/001-image-directory-tree/tasks.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/checklists/requirements.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/contracts/post-upload.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/data-model.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/plan.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/quickstart.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/research.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/spec.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/tasks.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_07.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 7 of 8。文件列表如下：
+/home/larry/projects/weable/public/vercel.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_01.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 1 of 8。文件列表如下：
+/home/larry/projects/weable/AGENTS.md
+/home/larry/projects/weable/CLAUDE.md
+/home/larry/projects/weable/README.md
+/home/larry/projects/weable/pnpm-workspace.yaml
+/home/larry/projects/weable/.github/agents/speckit.analyze.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.assess.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.fix.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.test.agent.md
+/home/larry/projects/weable/.github/agents/speckit.checklist.agent.md
+/home/larry/projects/weable/.github/agents/speckit.clarify.agent.md
+/home/larry/projects/weable/.github/agents/speckit.constitution.agent.md
+/home/larry/projects/weable/.github/agents/speckit.converge.agent.md
+/home/larry/projects/weable/.github/agents/speckit.implement.agent.md
+/home/larry/projects/weable/.github/agents/speckit.plan.agent.md
+/home/larry/projects/weable/.github/agents/speckit.specify.agent.md
+/home/larry/projects/weable/.github/agents/speckit.tasks.agent.md
+/home/larry/projects/weable/.github/agents/speckit.taskstoissues.agent.md
+/home/larry/projects/weable/.github/prompts/speckit.analyze.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.assess.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.fix.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.test.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.checklist.prompt.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_04.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 4 of 8。文件列表如下：
+/home/larry/projects/weable/public/file.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_05.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 5 of 8。文件列表如下：
+/home/larry/projects/weable/public/globe.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_02.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 2 of 8。文件列表如下：
+/home/larry/projects/weable/.github/prompts/speckit.clarify.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.constitution.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.converge.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.implement.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.plan.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.specify.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.tasks.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.taskstoissues.prompt.md
+/home/larry/projects/weable/.specify/bugs/date-locale-hydration/assessment.md
+/home/larry/projects/weable/.specify/bugs/date-locale-hydration/fix.md
+/home/larry/projects/weable/.specify/bugs/dialog-oncreated-ssr-error/assessment.md
+/home/larry/projects/weable/.specify/bugs/dialog-oncreated-ssr-error/fix.md
+/home/larry/projects/weable/.specify/bugs/images-tree-indent-icon-size/assessment.md
+/home/larry/projects/weable/.specify/bugs/images-tree-indent-icon-size/fix.md
+/home/larry/projects/weable/.specify/extensions.yml
+/home/larry/projects/weable/.specify/extensions/bug/README.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.assess.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.fix.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.test.md
+/home/larry/projects/weable/.specify/extensions/bug/extension.yml
+/home/larry/projects/weable/.specify/memory/constitution.md
+/home/larry/projects/weable/.specify/templates/checklist-template.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_08.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 8 of 8。文件列表如下：
+/home/larry/projects/weable/public/window.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_06.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 6 of 8。文件列表如下：
+/home/larry/projects/weable/public/next.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_03.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 3 of 8。文件列表如下：
+/home/larry/projects/weable/.specify/templates/constitution-template.md
+/home/larry/projects/weable/.specify/templates/plan-template.md
+/home/larry/projects/weable/.specify/templates/spec-template.md
+/home/larry/projects/weable/.specify/templates/tasks-template.md
+/home/larry/projects/weable/.specify/workflows/speckit/workflow.yml
+/home/larry/projects/weable/specs/001-image-directory-tree/checklists/requirements.md
+/home/larry/projects/weable/specs/001-image-directory-tree/contracts/get-images-and-breadcrumb.md
+/home/larry/projects/weable/specs/001-image-directory-tree/contracts/post-directories.md
+/home/larry/projects/weable/specs/001-image-directory-tree/data-model.md
+/home/larry/projects/weable/specs/001-image-directory-tree/plan.md
+/home/larry/projects/weable/specs/001-image-directory-tree/quickstart.md
+/home/larry/projects/weable/specs/001-image-directory-tree/research.md
+/home/larry/projects/weable/specs/001-image-directory-tree/spec.md
+/home/larry/projects/weable/specs/001-image-directory-tree/tasks.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/checklists/requirements.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/contracts/post-upload.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/data-model.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/plan.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/quickstart.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/research.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/spec.md
+/home/larry/projects/weable/specs/002-image-upload-tree-refine/tasks.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_07.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 7 of 8。文件列表如下：
+/home/larry/projects/weable/public/vercel.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_01.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 1 of 8。文件列表如下：
+/home/larry/projects/weable/AGENTS.md
+/home/larry/projects/weable/CLAUDE.md
+/home/larry/projects/weable/README.md
+/home/larry/projects/weable/pnpm-workspace.yaml
+/home/larry/projects/weable/.github/agents/speckit.analyze.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.assess.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.fix.agent.md
+/home/larry/projects/weable/.github/agents/speckit.bug.test.agent.md
+/home/larry/projects/weable/.github/agents/speckit.checklist.agent.md
+/home/larry/projects/weable/.github/agents/speckit.clarify.agent.md
+/home/larry/projects/weable/.github/agents/speckit.constitution.agent.md
+/home/larry/projects/weable/.github/agents/speckit.converge.agent.md
+/home/larry/projects/weable/.github/agents/speckit.implement.agent.md
+/home/larry/projects/weable/.github/agents/speckit.plan.agent.md
+/home/larry/projects/weable/.github/agents/speckit.specify.agent.md
+/home/larry/projects/weable/.github/agents/speckit.tasks.agent.md
+/home/larry/projects/weable/.github/agents/speckit.taskstoissues.agent.md
+/home/larry/projects/weable/.github/prompts/speckit.analyze.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.assess.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.fix.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.bug.test.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.checklist.prompt.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_02.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 2 of 8。文件列表如下：
+/home/larry/projects/weable/.github/prompts/speckit.clarify.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.constitution.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.converge.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.implement.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.plan.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.specify.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.tasks.prompt.md
+/home/larry/projects/weable/.github/prompts/speckit.taskstoissues.prompt.md
+/home/larry/projects/weable/.specify/bugs/date-locale-hydration/assessment.md
+/home/larry/projects/weable/.specify/bugs/date-locale-hydration/fix.md
+/home/larry/projects/weable/.specify/bugs/dialog-oncreated-ssr-error/assessment.md
+/home/larry/projects/weable/.specify/bugs/dialog-oncreated-ssr-error/fix.md
+/home/larry/projects/weable/.specify/bugs/images-tree-indent-icon-size/assessment.md
+/home/larry/projects/weable/.specify/bugs/images-tree-indent-icon-size/fix.md
+/home/larry/projects/weable/.specify/extensions.yml
+/home/larry/projects/weable/.specify/extensions/bug/README.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.assess.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.fix.md
+/home/larry/projects/weable/.specify/extensions/bug/commands/speckit.bug.test.md
+/home/larry/projects/weable/.specify/extensions/bug/extension.yml
+/home/larry/projects/weable/.specify/memory/constitution.md
+/home/larry/projects/weable/.specify/templates/checklist-template.md
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。
+
+---
+
+你是 graphify 语义抽取子代理。请在仓库 /home/larry/projects/weable 中工作，读取以下文件并抽取知识图谱片段，只输出到磁盘，不要修改其他文件。必须把最终 JSON 写入绝对路径 /home/larry/projects/weable/graphify-out/.graphify_chunk_08.json。若需要规则，请先读取 /home/larry/.claude/skills/graphify/references/extraction-spec.md 并严格遵守其中的 JSON schema、node id、edge confidence、hyperedge、source_file 必须使用绝对路径等全部要求。DEEP_MODE=false。Chunk 8 of 8。文件列表如下：
+/home/larry/projects/weable/public/window.svg
+完成标准：写入合法 JSON，包含 nodes/edges/hyperedges/input_tokens/output_tokens 字段。

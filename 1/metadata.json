@@ -1,0 +1,91 @@
+{
+  "cli_version": "0.9.0",
+  "checkpoint_id": "01KZG9K4B56N0HK16VNPAFZY51",
+  "session_id": "5e04a2f5-6a2f-4cd2-9db6-97a421ae85a5",
+  "strategy": "manual-commit",
+  "created_at": "2026-08-08T08:59:50.318831331Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    ".gitignore"
+  ],
+  "agent": "Copilot CLI",
+  "model": "",
+  "turn_id": "ffa3df1ffa3e",
+  "checkpoint_transcript_start": 763,
+  "transcript_lines_at_start": 763,
+  "compact_transcript_start": 131,
+  "token_usage": {
+    "input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 0,
+    "api_call_count": 0
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-copilot-cli-graphify-2026-08-02T06:48:50.627Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "graphify"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "ead386e63dcb",
+      "timestamp": "2026-08-02T06:48:50.627Z",
+      "native": {
+        "command": "/graphify"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/graphify",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-08-08T08:59:50.242251939Z",
+    "agent_lines": 2,
+    "agent_removed": 1,
+    "human_added": 2163,
+    "human_modified": 1,
+    "human_removed": 0,
+    "total_committed": 2166,
+    "total_lines_changed": 2182,
+    "agent_percentage": 0.13748854262144822,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 13478,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "graphify-out/.graphify_ast.json": 13307,
+        "graphify-out/.graphify_chunks.json": 89,
+        "graphify-out/.graphify_detect.json": 1,
+        "graphify-out/.graphify_python": 1,
+        "graphify-out/.graphify_root": 1,
+        "graphify-out/.graphify_uncached.txt": 71,
+        "graphify-out/cache/ast/v0.9.32/464cd4f34f1a1770121a4598aa7e741f2c158e0ed09dd8a52ebb8591035f4d4d.json": 1,
+        "graphify-out/cache/ast/v0.9.32/47e0a0bd504018b74fc2a59e529e3c944c9564624b689f3ed9e6d7b359039d6d.json": 1,
+        "graphify-out/cache/ast/v0.9.32/75a897cedb66530e5af802de3d1532042dda6acf076a04f34f6a3c0df6e5d303.json": 1,
+        "graphify-out/cache/ast/v0.9.32/a8ce142629ba69b5ab618b794c8e857e2fbf0bd7c3a1fb75c0cdbcf9a4e0fdda.json": 1,
+        "graphify-out/cache/ast/v0.9.32/aa8c41af4cca3b1b71632e5d13affd31e4dde9ef4568e679495e5e3eca189a14.json": 1,
+        "graphify-out/cache/ast/v0.9.32/b5e0bf3bf2bd8c0af338a1da8848ca00fd26f290d73c42a3f738591342f0673f.json": 1,
+        "graphify-out/cache/ast/v0.9.32/eb53d529a16fd70e1803dbb08483ca2aab045d00166840909a600d63035a1368.json": 1,
+        "graphify-out/cache/stat-index.json": 1
+      }
+    }
+  ]
+}
