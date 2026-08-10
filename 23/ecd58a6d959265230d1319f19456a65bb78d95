@@ -1,0 +1,98 @@
+.kilo/kilo.jsonc
+  h_6465a203f88bd5 16-19
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/Specify 驱动的功能规格与基础设施/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/Specify 驱动的功能规格与基础设施/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/Specify 驱动的功能规格与基础设施/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/Specify 驱动的功能规格与基础设施/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/共享运行时库（认证、i18n、存储抽象）/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/共享运行时库（认证、i18n、存储抽象）/编码规范.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/前端界面多语言文案资源/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/前端界面多语言文案资源/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/前端界面多语言文案资源/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈应用（pnpm monorepo）/架构设计.md"
+  h_6465a203f88bd5 1
+.qoder/repowiki/knowledge/zh/_index.yaml
+  h_6465a203f88bd5 6,9-10,161-162,183-184
+.qoder/repowiki/zh/content/前端组件/语言选择器组件.md
+  h_6465a203f88bd5 11,15-21,35-37,50,69-71,79,84,86-87,89-93,95,97-98,100-103,110,115,119,121-122,137,146-147,150,160,163,169,177,180,191,193-194,200,205-206,213,216,225-226,233,241,247-249,252,254-256,258-260,262-264,266,273,279,286,294,300-302,306,314,316-317,322-323,327,335-356
+.qoder/repowiki/zh/content/功能特性/国际化支持.md
+  h_6465a203f88bd5 19,25-28,43,45,72-73,76,82-83,86-88,92,94,108-110,113-115,118,156-157,163-164,169,186,189,209,212,219,233,250,259,276,281-283,287-289,318,340,343,348,352,354,363-364,379-380,397-398,432,435,438
+.qoder/repowiki/zh/content/核心模块/国际化系统.md
+  h_6465a203f88bd5 14,18-24,40-41,63,74,85-86,91-92,118,121-122,160-161,187,191,224-225,228-231,263,311-312,316-317,338,360,364,369,372-373,376,384-386,404-405,414,441
+.qoder/repowiki/zh/content/部署指南/数据库配置.md
+  h_6465a203f88bd5 13,20-26,58,64,67,70,74,86,88,93,96-97,138,141-142,144,159,167,170-171,175-181,185-186,189,192-193,197,200-201,210-212,216,221,228,230,233-234,236-237,253,263,271-274,277-278,283-284,287,301-303,311,318-320,325-327,332-333,336,346-350,353,397-415
+.qoder/repowiki/zh/content/部署指南/部署指南.md
+  h_6465a203f88bd5 20-27,69,75-76,93-94,123,132,134-136,141,144,152-154,157,165-167,245,255,258,269-270,274-276,279,282,289,305-307,318,322,325,336-337,343-344,347,352-354,360,365-366,375-376,383-387
+.qoder/repowiki/zh/meta/repowiki-metadata.json
+  h_6465a203f88bd5 1
+.specify/feature.json
+  h_6465a203f88bd5 2
+e2e/console-auth.spec.ts
+  h_6465a203f88bd5 1-25
+e2e/console-batch-delete.spec.ts
+  h_6465a203f88bd5 1-88
+e2e/console-images.spec.ts
+  h_6465a203f88bd5 3-4,6,9-14,26-67
+specs/010-batch-delete-upload-queue/checklists/requirements.md
+  h_6465a203f88bd5 1-36
+specs/010-batch-delete-upload-queue/contracts/delete-images-batch.md
+  h_6465a203f88bd5 1-111
+specs/010-batch-delete-upload-queue/contracts/upload-queue-session-storage.md
+  h_6465a203f88bd5 1-152
+specs/010-batch-delete-upload-queue/data-model.md
+  h_6465a203f88bd5 1-129
+specs/010-batch-delete-upload-queue/plan.md
+  h_6465a203f88bd5 1-95
+specs/010-batch-delete-upload-queue/quickstart.md
+  h_6465a203f88bd5 1-153
+specs/010-batch-delete-upload-queue/research.md
+  h_6465a203f88bd5 1-153
+specs/010-batch-delete-upload-queue/spec.md
+  h_6465a203f88bd5 1-165
+specs/010-batch-delete-upload-queue/tasks.md
+  h_6465a203f88bd5 1-231
+src/app/[lang]/console/api/images/batch/route.ts
+  h_6465a203f88bd5 5,108-171
+src/app/[lang]/console/images/[imageId]/page.tsx
+  h_6465a203f88bd5 13,35,41-42,46-58
+src/app/[lang]/console/images/page.tsx
+  h_6465a203f88bd5 3,6,56-57,148-152,215
+src/app/[lang]/console/page.tsx
+  h_6465a203f88bd5 1,5,22-23
+src/components/BatchDeleteDialog.tsx
+  h_6465a203f88bd5 1-92
+src/components/ImagesBatchToolbar.tsx
+  h_6465a203f88bd5 9,29-33,67,150-157,241-256
+src/components/UploadQueue.test.ts
+  h_6465a203f88bd5 1-178
+src/components/UploadQueue.tsx
+  h_6465a203f88bd5 1-445
+src/locales/en.json
+  h_6465a203f88bd5 80-97
+src/locales/es.json
+  h_6465a203f88bd5 80-97
+src/locales/zh.json
+  h_6465a203f88bd5 80-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "23ecd58a6d959265230d1319f19456a65bb78d95",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
