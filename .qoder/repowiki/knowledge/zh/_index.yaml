@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-08-10T06:31:45Z"
+exported_at: "2026-08-10T08:59:31Z"
 modules:
     "":
-        dir_name: Weable 全栈应用根（Next.js + Cloudflare Workers）
-        title: Weable 全栈应用根（Next.js + Cloudflare Workers）
+        dir_name: Weable Next.js 全栈应用（pnpm monorepo）
+        title: Weable Next.js 全栈应用（pnpm monorepo）
         scope:
             - README.md
             - package.json
@@ -158,8 +158,8 @@ modules:
         related_to:
             - path: shared_libs
     locales:
-        dir_name: 前端多语言文案资源（i18n JSON）
-        title: 前端多语言文案资源（i18n JSON）
+        dir_name: 前端界面多语言文案资源
+        title: 前端界面多语言文案资源
         scope:
             - src/locales/
         source_files: []
@@ -180,8 +180,8 @@ modules:
             - path: frontend_app/i18n_routes
             - path: frontend_app/root_layout
     specs_and_docs:
-        dir_name: 规格驱动开发（SDD）工程目录
-        title: 规格驱动开发（SDD）工程目录
+        dir_name: Specify 驱动的功能规格与基础设施
+        title: Specify 驱动的功能规格与基础设施
         scope:
             - specs/
             - .specify/

@@ -77,5 +77,22 @@
     "searchPlaceholder": "Buscar por nombre…",
     "searchButton": "Buscar",
     "noSearchResults": "Ninguna entrada coincide con la búsqueda.",
-    "fileSize": "Tamaño"
+    "fileSize": "Tamaño",
+    "batchDelete": "Eliminar",
+    "batchDeleteConfirmTitle": "Eliminar Imágenes",
+    "batchDeleteConfirmBody": "Esta acción no se puede deshacer. Se eliminarán permanentemente {count} imagen(es).",
+    "batchDeleteConfirm": "Eliminar",
+    "batchDeleteFailed": "Error al eliminar. Inténtalo de nuevo.",
+    "uploadQueue": "Cola de subida",
+    "uploadQueueEmpty": "No hay archivos seleccionados. Elige imágenes para subir.",
+    "uploadQueueStart": "Iniciar subida",
+    "uploadQueueUploading": "Subiendo…",
+    "uploadQueueStatusPending": "Pendiente",
+    "uploadQueueStatusSuccess": "Listo",
+    "uploadQueueStatusFailed": "Fallido ({count}×)",
+    "uploadQueueStatusOversized": "Demasiado grande",
+    "uploadQueueStatusNeedsFile": "Volver a seleccionar",
+    "uploadQueueSkippedDupes": "{count} archivo(s) ya en cola, omitido(s).",
+    "uploadQueueModified": "Modificado",
+    "uploadQueueAddFiles": "Elegir imágenes"
 }

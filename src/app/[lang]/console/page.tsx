@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { eq } from "drizzle-orm";
 import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
-import { getCurrentUser } from "@/lib/auth";
+import { getCurrentUserOrNull } from "@/lib/auth";
 import { getDb } from "@/db/index";
 import { channels, images } from "@/db/schema";
 import SiteHeader from "@/components/SiteHeader";
@@ -19,7 +19,8 @@ export default async function ConsolePage({ params }: Props) {
     if (!isValidLang(lang)) notFound();
     const l = lang as LangKey;
 
-    const user = await getCurrentUser();
+    const user = await getCurrentUserOrNull();
+    if (!user) redirect(`/${l}/account/signin`);
     const db = getDb();
 
     const channelCount = await db.$count(channels, eq(channels.userId, user.id));

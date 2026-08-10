@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { and, eq, inArray, ne } from "drizzle-orm";
 import { getDb } from "@/db/index";
 import { channels, images } from "@/db/schema";
+import { getStorage } from "@/lib/storage";
 import { requireConsoleUser } from "../../_lib/gate";
 
 export const runtime = "nodejs";
@@ -103,4 +104,68 @@ export async function PATCH(req: NextRequest, { params }: Props) {
     }
 
     return NextResponse.json({ ok: true, updated: changes });
+}
+
+// 批量删除图片（含 R2 存储文件和 D1 数据库记录，contracts/delete-images-batch.md）
+export async function DELETE(req: NextRequest, { params }: Props) {
+    const { lang } = await params;
+    const gate = await requireConsoleUser(lang);
+    if ("error" in gate) return gate.error;
+    const user = gate.user;
+
+    let body: { ids?: unknown };
+    try {
+        body = await req.json();
+    } catch {
+        return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    }
+
+    // ids 校验：非空数组、上限 500、元素为合法 ID 字符串
+    const ids = body.ids;
+    if (
+        !Array.isArray(ids) ||
+        ids.length === 0 ||
+        ids.length > MAX_BATCH_IDS ||
+        ids.some((id) => typeof id !== "string" || !ID_PATTERN.test(id))
+    ) {
+        return NextResponse.json({ error: "ids must be a non-empty array (max 500) of valid id strings" }, { status: 400 });
+    }
+
+    const db = getDb();
+
+    // 查询本人名下、非目录的图片记录（含 filename 用于删除存储文件）
+    const rows = await db
+        .select({ id: images.id, filename: images.filename })
+        .from(images)
+        .where(
+            and(
+                inArray(images.id, ids as string[]),
+                eq(images.userId, user.id),
+                ne(images.mimeType, "directory"),
+            ),
+        );
+
+    if (rows.length === 0) {
+        return NextResponse.json({ ok: true, deleted: 0 });
+    }
+
+    // 逐条删除 R2/本地存储文件（失败静默忽略，与单图删除行为一致）
+    const storage = getStorage();
+    for (const row of rows) {
+        await storage.delete(row.id, row.filename).catch(() => undefined);
+    }
+
+    // 批量删除数据库记录
+    const validIds = rows.map((r) => r.id);
+    const { changes } = await db
+        .delete(images)
+        .where(
+            and(
+                inArray(images.id, validIds),
+                eq(images.userId, user.id),
+            ),
+        )
+        .run();
+
+    return NextResponse.json({ ok: true, deleted: changes });
 }

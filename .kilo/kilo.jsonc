@@ -13,7 +13,10 @@
       "cat *": "allow",
       "git status*": "allow",
       "git diff*": "allow",
-      "git log*": "allow"
+      "git log*": "allow",
+      "npx tsc --noEmit*": "allow",
+      "npx vitest run": "allow",
+      "npx playwright test": "allow"
     }
   }
 }

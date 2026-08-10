@@ -6,6 +6,7 @@ import ImagesTreeTable, { type ImageEntry } from "./ImagesTreeTable";
 import ImagesPagination from "./ImagesPagination";
 import BatchPublishDialog from "./BatchPublishDialog";
 import BatchChannelDialog from "./BatchChannelDialog";
+import BatchDeleteDialog from "./BatchDeleteDialog";
 
 export type ChannelOption = {
     id: string;
@@ -25,6 +26,11 @@ type Props = {
     labels: {
         batchSetPublishStatus: string;
         batchSetChannel: string;
+        batchDelete: string;
+        batchDeleteConfirmTitle: string;
+        batchDeleteConfirmBody: string;
+        batchDeleteConfirm: string;
+        batchDeleteFailed: string;
         imagePublished: string;
         imageDraft: string;
         updated: string;
@@ -58,6 +64,7 @@ export default function ImagesBatchToolbar({
     const [selectedIds, setSelectedIds] = useState<string[]>([]);
     const [publishDialogOpen, setPublishDialogOpen] = useState(false);
     const [channelDialogOpen, setChannelDialogOpen] = useState(false);
+    const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
     // 列表数据源与视图状态（URL 为唯一真相，此处为客户端镜像）
     const [items, setItems] = useState<ImageEntry[]>(initialItems);
     const [q, setQ] = useState(initialQ);
@@ -140,6 +147,14 @@ export default function ImagesBatchToolbar({
                 >
                     {labels.batchSetChannel}
                 </button>
+                <button
+                    type="button"
+                    disabled={!hasSelection}
+                    onClick={() => setDeleteDialogOpen(true)}
+                    className="px-3 py-1.5 text-sm font-medium text-red-600 bg-white border border-red-300 rounded-md hover:bg-red-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    {labels.batchDelete}
+                </button>
                 {/* 关键词搜索：与批量按钮同行；提交即重置到第 1 页 */}
                 <form
                     className="flex items-center gap-2 ml-auto"
@@ -221,6 +236,22 @@ export default function ImagesBatchToolbar({
                     cancel: labels.cancel,
                     confirm: labels.batchConfirm,
                     operationFailed: labels.batchOperationFailed,
+                }}
+            />
+
+            <BatchDeleteDialog
+                open={deleteDialogOpen}
+                onClose={() => setDeleteDialogOpen(false)}
+                lang={lang}
+                ids={selectedIds}
+                count={selectedIds.length}
+                onSuccess={handleBatchSuccess}
+                labels={{
+                    title: labels.batchDeleteConfirmTitle,
+                    confirmBody: labels.batchDeleteConfirmBody,
+                    cancel: labels.cancel,
+                    confirm: labels.batchDeleteConfirm,
+                    operationFailed: labels.batchDeleteFailed,
                 }}
             />
         </div>

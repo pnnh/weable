@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: Weable 全栈应用根（Next.js + Cloudflare Workers）
+title: Weable Next.js 全栈应用（pnpm monorepo）
 scope:
     - README.md
     - package.json

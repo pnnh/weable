@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: specs_and_docs
-title: 规格驱动开发（SDD）工程目录
+title: Specify 驱动的功能规格与基础设施
 scope:
     - specs/
     - .specify/

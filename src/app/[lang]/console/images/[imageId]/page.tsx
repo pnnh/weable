@@ -10,7 +10,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
 import ImageDeleteSection from "@/components/ImageDeleteSection";
-import ImageUploadForm from "@/components/ImageUploadForm";
+import UploadQueue from "@/components/UploadQueue";
 
 export const dynamic = "force-dynamic";
 
@@ -32,23 +32,30 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
         ? `/${lang}/console/images?parentId=${encodeURIComponent(parentId)}`
         : `/${lang}/console/images`;
 
-    // For "new", show upload form; for existing, show edit form
+    // For "new", show upload queue; for existing, show edit form
     if (isNew) {
         return (
             <>
                 <SiteHeader lang={l} />
                 <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <h1 className="text-2xl font-bold text-gray-900 mb-8">{t(l, "newImage")}</h1>
-                    <ImageUploadForm
+                    <h1 className="text-2xl font-bold text-gray-900 mb-8">{t(l, "uploadQueue")}</h1>
+                    <UploadQueue
                         lang={lang}
                         parentId={parentId ?? null}
                         labels={{
-                            newImage: t(l, "newImage"),
-                            imageTooLarge: t(l, "imageTooLarge"),
-                            uploadError: t(l, "uploadError"),
-                            uploadTooManyFiles: t(l, "uploadTooManyFiles"),
-                            uploadLimitsHint: t(l, "uploadLimitsHint"),
-                            uploadingImages: t(l, "uploadingImages"),
+                            uploadQueue: t(l, "uploadQueue"),
+                            uploadQueueEmpty: t(l, "uploadQueueEmpty"),
+                            uploadQueueStart: t(l, "uploadQueueStart"),
+                            uploadQueueUploading: t(l, "uploadQueueUploading"),
+                            uploadQueueStatusPending: t(l, "uploadQueueStatusPending"),
+                            uploadQueueStatusSuccess: t(l, "uploadQueueStatusSuccess"),
+                            uploadQueueStatusFailed: t(l, "uploadQueueStatusFailed"),
+                            uploadQueueStatusOversized: t(l, "uploadQueueStatusOversized"),
+                            uploadQueueStatusNeedsFile: t(l, "uploadQueueStatusNeedsFile"),
+                            uploadQueueSkippedDupes: t(l, "uploadQueueSkippedDupes"),
+                            uploadQueueModified: t(l, "uploadQueueModified"),
+                            uploadQueueAddFiles: t(l, "uploadQueueAddFiles"),
+                            cancel: t(l, "cancel"),
                         }}
                     />
                 </main>

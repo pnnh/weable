@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { and, asc, count, desc, eq, isNull, like, sql } from "drizzle-orm";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { isValidLang } from "@/lib/language";
 import type { LangKey } from "@/lib/language";
-import { getCurrentUser } from "@/lib/auth";
+import { getCurrentUserOrNull } from "@/lib/auth";
 import { getDb } from "@/db/index";
 import { channels, images } from "@/db/schema";
 import SiteHeader from "@/components/SiteHeader";
@@ -53,7 +53,8 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
 
     const { parentId, q: rawQ, page: rawPage } = await searchParams;
     const db = getDb();
-    const user = await getCurrentUser();
+    const user = await getCurrentUserOrNull();
+    if (!user) redirect(`/${l}/account/signin`);
 
     // 视图状态：q trim 后为空视为无搜索；page 非法回退为 1（FR-009）
     const q = (rawQ ?? "").trim();
@@ -144,6 +145,11 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
     const batchLabels = {
         batchSetPublishStatus: t(l, "batchSetPublishStatus"),
         batchSetChannel: t(l, "batchSetChannel"),
+        batchDelete: t(l, "batchDelete"),
+        batchDeleteConfirmTitle: t(l, "batchDeleteConfirmTitle"),
+        batchDeleteConfirmBody: t(l, "batchDeleteConfirmBody"),
+        batchDeleteConfirm: t(l, "batchDeleteConfirm"),
+        batchDeleteFailed: t(l, "batchDeleteFailed"),
         imagePublished: t(l, "imagePublished"),
         imageDraft: t(l, "imageDraft"),
         updated: t(l, "updated"),
@@ -206,6 +212,7 @@ export default async function ImagesListPage({ params, searchParams }: Props) {
                     <p className="text-gray-500">{t(l, "noImagesYet")}</p>
                 ) : (
                     <ImagesBatchToolbar
+                        key={parentId ?? ""}
                         lang={l}
                         parentId={parentId ?? null}
                         initialItems={items}

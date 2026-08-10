@@ -77,5 +77,22 @@
     "searchPlaceholder": "按名称搜索…",
     "searchButton": "搜索",
     "noSearchResults": "没有匹配的条目。",
-    "fileSize": "大小"
+    "fileSize": "大小",
+    "batchDelete": "批量删除",
+    "batchDeleteConfirmTitle": "删除图片",
+    "batchDeleteConfirmBody": "此操作不可撤销，将永久删除 {count} 张图片。",
+    "batchDeleteConfirm": "确认删除",
+    "batchDeleteFailed": "删除失败，请重试。",
+    "uploadQueue": "上传队列",
+    "uploadQueueEmpty": "未选择文件，请选择要上传的图片。",
+    "uploadQueueStart": "开始上传",
+    "uploadQueueUploading": "上传中…",
+    "uploadQueueStatusPending": "待上传",
+    "uploadQueueStatusSuccess": "成功",
+    "uploadQueueStatusFailed": "失败（{count} 次）",
+    "uploadQueueStatusOversized": "文件过大",
+    "uploadQueueStatusNeedsFile": "需重新选择",
+    "uploadQueueSkippedDupes": "已跳过 {count} 个队列中的同名文件。",
+    "uploadQueueModified": "修改时间",
+    "uploadQueueAddFiles": "选择图片"
 }
