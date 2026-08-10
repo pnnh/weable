@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: components
+title: 控制台与前端 UI 组件集合
+scope:
+    - src/components/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/api_routes/images
+    - path: frontend_app/api_routes/user

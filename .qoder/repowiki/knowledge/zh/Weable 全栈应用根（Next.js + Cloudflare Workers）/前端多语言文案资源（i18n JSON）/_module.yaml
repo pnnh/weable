@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: locales
+title: 前端多语言文案资源（i18n JSON）
+scope:
+    - src/locales/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/i18n_routes

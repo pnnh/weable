@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: frontend_app/api_routes/user
-title: 用户头像与资料 API 路由
-scope:
-    - src/app/api/user/
-source_files: []
-depends_on: []
-related_to: []

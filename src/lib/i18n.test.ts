@@ -9,7 +9,7 @@ describe("t", () => {
     });
 
     it("不同语言返回各自文案", () => {
-        expect(t("ja", "home")).not.toBe("");
+        expect(t("es", "home")).not.toBe("");
         expect(t("zh", "home")).not.toBe("");
     });
 

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: shared_libs
+title: 共享运行时库（认证、i18n、存储抽象）
+scope:
+    - src/lib/
+    - src/data/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/i18n_routes
+    - path: frontend_app/root_layout

@@ -13,11 +13,13 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "upload_source_maps": true,
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "weable-db",
-      "database_id": "a6463e67-8911-4c11-814a-aaf5df7e8f82"
+      "database_id": "a6463e67-8911-4c11-814a-aaf5df7e8f82",
+      "migrations_dir": "./migrations"
     }
   ],
   "vars": {

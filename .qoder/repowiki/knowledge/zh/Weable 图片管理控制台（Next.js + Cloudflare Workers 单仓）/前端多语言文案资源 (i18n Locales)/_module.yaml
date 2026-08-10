@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: locales
-title: 前端多语言文案资源 (i18n Locales)
-scope:
-    - src/locales/
-source_files: []
-depends_on: []
-related_to: []

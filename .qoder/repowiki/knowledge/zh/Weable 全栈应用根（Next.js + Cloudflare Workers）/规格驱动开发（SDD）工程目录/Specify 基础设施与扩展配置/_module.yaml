@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: specs_and_docs/specify_infra
+title: Specify 基础设施与扩展配置
+scope:
+    - .specify/
+source_files: []
+depends_on: []
+related_to: []

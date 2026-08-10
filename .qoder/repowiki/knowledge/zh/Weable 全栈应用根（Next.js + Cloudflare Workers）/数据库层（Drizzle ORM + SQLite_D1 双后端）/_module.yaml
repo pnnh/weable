@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: database_layer
+title: 数据库层（Drizzle ORM + SQLite/D1 双后端）
+scope:
+    - src/db/
+    - migrations/
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend_app/api_routes/images
+    - path: frontend_app/api_routes/user

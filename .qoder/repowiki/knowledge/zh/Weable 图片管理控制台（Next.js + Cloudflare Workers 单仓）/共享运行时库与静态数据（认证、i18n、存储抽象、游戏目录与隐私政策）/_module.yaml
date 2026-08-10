@@ -1,9 +1,0 @@
-schema_version: 1
-module_path: shared_libs
-title: 共享运行时库与静态数据（认证、i18n、存储抽象、游戏目录与隐私政策）
-scope:
-    - src/lib/
-    - src/data/
-source_files: []
-depends_on: []
-related_to: []

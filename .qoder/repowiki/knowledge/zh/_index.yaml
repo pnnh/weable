@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-08-07T10:28:55Z"
+exported_at: "2026-08-10T06:31:45Z"
 modules:
     "":
-        dir_name: Weable 图片管理控制台（Next.js + Cloudflare Workers 单仓）
-        title: Weable 图片管理控制台（Next.js + Cloudflare Workers 单仓）
+        dir_name: Weable 全栈应用根（Next.js + Cloudflare Workers）
+        title: Weable 全栈应用根（Next.js + Cloudflare Workers）
         scope:
             - README.md
             - package.json
@@ -37,8 +37,8 @@ modules:
         depends_on: []
         related_to: []
     api_endpoints:
-        dir_name: Next.js API 路由集合
-        title: Next.js API 路由集合
+        dir_name: Next.js API 路由聚合层
+        title: Next.js API 路由聚合层
         scope:
             - src/app/api/
         source_files: []
@@ -67,27 +67,31 @@ modules:
         depends_on: []
         related_to: []
     components:
-        dir_name: 站点与控制台 UI 组件集
-        title: 站点与控制台 UI 组件集
+        dir_name: 控制台与前端 UI 组件集合
+        title: 控制台与前端 UI 组件集合
         scope:
             - src/components/
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: frontend_app/api_routes/images
+            - path: frontend_app/api_routes/user
     database_layer:
-        dir_name: 数据库层与迁移管理
-        title: 数据库层与迁移管理
+        dir_name: 数据库层（Drizzle ORM + SQLite_D1 双后端）
+        title: 数据库层（Drizzle ORM + SQLite/D1 双后端）
         scope:
             - src/db/
             - migrations/
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: frontend_app/api_routes/images
+            - path: frontend_app/api_routes/user
     frontend_app:
-        dir_name: Next.js 多语言前端应用（App Router）
-        title: Next.js 多语言前端应用（App Router）
+        dir_name: Next.js 前端应用（App Router）
+        title: Next.js 前端应用（App Router）
         scope:
             - src/app/
         source_files: []
@@ -116,7 +120,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: components
+            - path: database_layer
     frontend_app/api_routes/user:
         dir_name: 用户头像与资料 API 路由
         title: 用户头像与资料 API 路由
@@ -125,7 +131,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: components
+            - path: database_layer
     frontend_app/i18n_routes:
         dir_name: 多语言路由层（Next.js App Router [lang] 段）
         title: 多语言路由层（Next.js App Router [lang] 段）
@@ -134,7 +142,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: locales
+            - path: shared_libs
     frontend_app/root_layout:
         dir_name: 应用根布局与首页路由
         title: 应用根布局与首页路由
@@ -145,52 +155,56 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: shared_libs
     locales:
-        dir_name: 前端多语言文案资源 (i18n Locales)
-        title: 前端多语言文案资源 (i18n Locales)
+        dir_name: 前端多语言文案资源（i18n JSON）
+        title: 前端多语言文案资源（i18n JSON）
         scope:
             - src/locales/
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: frontend_app/i18n_routes
     shared_libs:
-        dir_name: 共享运行时库与静态数据（认证、i18n、存储抽象、游戏目录与隐私政策）
-        title: 共享运行时库与静态数据（认证、i18n、存储抽象、游戏目录与隐私政策）
+        dir_name: 共享运行时库（认证、i18n、存储抽象）
+        title: 共享运行时库（认证、i18n、存储抽象）
         scope:
             - src/lib/
             - src/data/
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: frontend_app/i18n_routes
+            - path: frontend_app/root_layout
     specs_and_docs:
-        dir_name: 图片管理控制台规格与 Specify 配置
-        title: 图片管理控制台规格与 Specify 配置
+        dir_name: 规格驱动开发（SDD）工程目录
+        title: 规格驱动开发（SDD）工程目录
         scope:
             - specs/
             - .specify/
         source_files: []
         children:
-            - specs_and_docs/specify_config
-            - specs_and_docs/specs
+            - specs_and_docs/feature_specs
+            - specs_and_docs/specify_infra
         depends_on: []
         related_to: []
-    specs_and_docs/specify_config:
-        dir_name: Specify 项目配置与扩展管理
-        title: Specify 项目配置与扩展管理
+    specs_and_docs/feature_specs:
+        dir_name: 功能规格与契约文档集
+        title: 功能规格与契约文档集
         scope:
-            - .specify/
+            - specs/
         source_files: []
         children: []
         depends_on: []
         related_to: []
-    specs_and_docs/specs:
-        dir_name: 图片管理控制台迭代需求规格集
-        title: 图片管理控制台迭代需求规格集
+    specs_and_docs/specify_infra:
+        dir_name: Specify 基础设施与扩展配置
+        title: Specify 基础设施与扩展配置
         scope:
-            - specs/
+            - .specify/
         source_files: []
         children: []
         depends_on: []

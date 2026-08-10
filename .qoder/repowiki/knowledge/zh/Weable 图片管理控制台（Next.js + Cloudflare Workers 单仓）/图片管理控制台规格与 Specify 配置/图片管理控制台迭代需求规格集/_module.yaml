@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: specs_and_docs/specs
-title: 图片管理控制台迭代需求规格集
-scope:
-    - specs/
-source_files: []
-depends_on: []
-related_to: []
