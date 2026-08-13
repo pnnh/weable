@@ -1,0 +1,14 @@
+.specify/memory/constitution.md
+  h_6465a203f88bd5 4-7,9-11,66,93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "5eccddee6c0d47ff3c6a9c2c29ca8bac8fbc713b",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
