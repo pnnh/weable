@@ -26,6 +26,7 @@
     "newImage": "上傳圖片",
     "editImage": "編輯圖片",
     "imageTitle": "標題",
+    "imageTags": "標籤",
     "imageDescription": "描述",
     "imageChannel": "頻道",
     "imageStatus": "狀態",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "選擇圖片",
     "aiRecognize": "AI 識別",
     "aiRecognizeConfirmTitle": "使用瀏覽器本機 AI 識別圖片",
-    "aiRecognizeConfirmBody": "此功能使用瀏覽器內建的本機 AI 識別目前圖片。成功後將覆蓋下方的標題和描述，不會自動儲存。",
+    "aiRecognizeConfirmBody": "此功能使用瀏覽器內建的本機 AI 識別目前圖片。成功後將覆蓋下方的標題、描述和標籤，不會自動儲存。",
     "aiRecognizeConfirm": "開始識別",
     "aiRecognizeTargetLang": "輸出語言",
     "aiRecognizeUnsupported": "目前瀏覽器不具備本機圖像識別能力。請改用 Chrome 或 Edge，並確認裝置符合瀏覽器本機模型要求。",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "本機能力尚未就緒。",
     "aiRecognizeImageUnreadable": "無法讀取目前圖片。",
     "aiRecognizeEmptyTitle": "未得到可用標題。",
-    "aiRecognizeFailed": "識別失敗。"
+    "aiRecognizeFailed": "識別失敗。",
+    "imagePreview": "放大預覽",
+    "imagePreviewClose": "關閉預覽",
+    "imagePreviewUnavailable": "目前圖片尚未準備好，無法預覽。"
 }

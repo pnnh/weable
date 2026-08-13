@@ -26,6 +26,7 @@
     "newImage": "Télécharger une Image",
     "editImage": "Modifier l'Image",
     "imageTitle": "Titre",
+    "imageTags": "Tags",
     "imageDescription": "Description",
     "imageChannel": "Chaîne",
     "imageStatus": "Statut",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "Choisir des images",
     "aiRecognize": "Reconnaissance IA",
     "aiRecognizeConfirmTitle": "Reconnaître l'image avec l'IA locale",
-    "aiRecognizeConfirmBody": "Cette fonction utilise l'IA intégrée du navigateur pour reconnaître l'image actuelle. En cas de succès, le titre et la description ci-dessous seront remplacés. Rien n'est enregistré automatiquement.",
+    "aiRecognizeConfirmBody": "Cette fonction utilise l'IA intégrée du navigateur pour reconnaître l'image actuelle. En cas de succès, le titre, la description et les tags ci-dessous seront remplacés. Rien n'est enregistré automatiquement.",
     "aiRecognizeConfirm": "Reconnaître",
     "aiRecognizeTargetLang": "Langue de sortie",
     "aiRecognizeUnsupported": "La reconnaissance d'images sur l'appareil n'est pas disponible. Passez à Chrome ou Edge et vérifiez que cet appareil répond aux exigences du modèle local du navigateur.",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "Le modèle local n'est pas prêt.",
     "aiRecognizeImageUnreadable": "Impossible de lire l'image actuelle.",
     "aiRecognizeEmptyTitle": "Aucun titre utilisable n'a été renvoyé.",
-    "aiRecognizeFailed": "Échec de la reconnaissance."
+    "aiRecognizeFailed": "Échec de la reconnaissance.",
+    "imagePreview": "Agrandir l'aperçu",
+    "imagePreviewClose": "Fermer l'aperçu",
+    "imagePreviewUnavailable": "L'image actuelle n'est pas encore prête à être prévisualisée."
 }

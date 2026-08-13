@@ -1,4 +1,5 @@
 import type { LangKey } from "@/lib/language";
+import { tagsFromRecognition } from "@/lib/imageTags";
 
 export type TargetLang = LangKey;
 
@@ -90,7 +91,11 @@ export function truncateTitle(title: string): string {
     return slice;
 }
 
-export function parseRecognitionResult(raw: string): { title: string; description: string } {
+export function parseRecognitionResult(raw: string): {
+    title: string;
+    description: string;
+    tags: string;
+} {
     let parsed: unknown;
     try {
         parsed = JSON.parse(raw);
@@ -100,11 +105,11 @@ export function parseRecognitionResult(raw: string): { title: string; descriptio
     if (!parsed || typeof parsed !== "object" || !("title" in parsed)) {
         throw new RecognizeError("failed");
     }
-    const record = parsed as { title: unknown; description?: unknown };
+    const record = parsed as { title: unknown; description?: unknown; tags?: unknown };
     const title = String(record.title ?? "").trim();
     if (!title) throw new RecognizeError("empty_title");
     const description = typeof record.description === "string" ? record.description : "";
-    return { title: truncateTitle(title), description };
+    return { title: truncateTitle(title), description, tags: tagsFromRecognition(record.tags) };
 }
 
 export async function withTimeout<T>(
@@ -153,6 +158,8 @@ function buildPromptText(targetLang: TargetLang): string {
         `Write the title and description in ${OUTPUT_LANG_NAME[targetLang]}.`,
         "The title must be short (about 80 characters or fewer).",
         "The description must be one paragraph covering the main subject, scene, and notable details.",
+        "Also provide at most 8 short tags in the same language as a JSON array named tags.",
+        "Do not number tags or prefix them with #.",
         "Do not wrap the answer in markdown fences or add extra keys.",
     ].join(" ");
 }
@@ -163,7 +170,7 @@ export async function recognizeImage(input: {
     signal?: AbortSignal;
     readyTimeoutMs?: number;
     promptTimeoutMs?: number;
-}): Promise<{ title: string; description: string }> {
+}): Promise<{ title: string; description: string; tags: string }> {
     if (!input.image) throw new RecognizeError("image_unreadable");
     if (input.signal?.aborted) throw new RecognizeError("failed");
 
@@ -218,6 +225,7 @@ export async function recognizeImage(input: {
                             properties: {
                                 title: { type: "string" },
                                 description: { type: "string" },
+                                tags: { type: "array", items: { type: "string" } },
                             },
                         },
                     },

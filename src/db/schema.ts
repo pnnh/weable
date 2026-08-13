@@ -57,6 +57,7 @@ export const images = sqliteTable("images", {
   }),
   title: text("title").notNull(),
   description: text("description").notNull().default(""),
+  tags: text("tags").notNull().default(""),
   filename: text("filename").notNull(),
   mimeType: text("mime_type").notNull(),
   width: integer("width"),

@@ -26,6 +26,7 @@
     "newImage": "Subir Imagen",
     "editImage": "Editar Imagen",
     "imageTitle": "Título",
+    "imageTags": "Etiquetas",
     "imageDescription": "Descripción",
     "imageChannel": "Canal",
     "imageStatus": "Estado",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "Elegir imágenes",
     "aiRecognize": "Reconocimiento IA",
     "aiRecognizeConfirmTitle": "Reconocer la imagen con IA local",
-    "aiRecognizeConfirmBody": "Esta función usa la IA integrada del navegador para reconocer la imagen actual. Si tiene éxito, se sobrescribirán el título y la descripción. No se guarda automáticamente.",
+    "aiRecognizeConfirmBody": "Esta función usa la IA integrada del navegador para reconocer la imagen actual. Si tiene éxito, se sobrescribirán el título, la descripción y las etiquetas. No se guarda automáticamente.",
     "aiRecognizeConfirm": "Reconocer",
     "aiRecognizeTargetLang": "Idioma de salida",
     "aiRecognizeUnsupported": "El reconocimiento de imágenes en el dispositivo no está disponible. Cambia a Chrome o Edge y comprueba que el equipo cumple los requisitos del modelo local del navegador.",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "El modelo local no está listo.",
     "aiRecognizeImageUnreadable": "No se pudo leer la imagen actual.",
     "aiRecognizeEmptyTitle": "No se obtuvo un título usable.",
-    "aiRecognizeFailed": "El reconocimiento falló."
+    "aiRecognizeFailed": "El reconocimiento falló.",
+    "imagePreview": "Ampliar vista previa",
+    "imagePreviewClose": "Cerrar vista previa",
+    "imagePreviewUnavailable": "La imagen actual aún no está lista para previsualizar."
 }

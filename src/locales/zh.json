@@ -26,6 +26,7 @@
     "newImage": "上传图片",
     "editImage": "编辑图片",
     "imageTitle": "标题",
+    "imageTags": "标签",
     "imageDescription": "描述",
     "imageChannel": "频道",
     "imageStatus": "状态",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "选择图片",
     "aiRecognize": "AI 识别",
     "aiRecognizeConfirmTitle": "使用浏览器本地 AI 识别图片",
-    "aiRecognizeConfirmBody": "此功能使用浏览器内置的本地 AI 识别当前图片。成功后将覆盖下方的标题和描述，不会自动保存。",
+    "aiRecognizeConfirmBody": "此功能使用浏览器内置的本地 AI 识别当前图片。成功后将覆盖下方的标题、描述和标签，不会自动保存。",
     "aiRecognizeConfirm": "开始识别",
     "aiRecognizeTargetLang": "输出语言",
     "aiRecognizeUnsupported": "当前浏览器不具备本地图像识别能力。请改用 Chrome 或 Edge，并确认设备满足浏览器本地模型要求。",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "本地能力未就绪。",
     "aiRecognizeImageUnreadable": "无法读取当前图片。",
     "aiRecognizeEmptyTitle": "未得到可用标题。",
-    "aiRecognizeFailed": "识别失败。"
+    "aiRecognizeFailed": "识别失败。",
+    "imagePreview": "放大预览",
+    "imagePreviewClose": "关闭预览",
+    "imagePreviewUnavailable": "当前图片尚未准备好，无法预览。"
 }

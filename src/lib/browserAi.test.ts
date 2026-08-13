@@ -33,6 +33,7 @@ describe("parseRecognitionResult", () => {
         expect(parseRecognitionResult(JSON.stringify({ title: " Cat ", description: "A cat." }))).toEqual({
             title: "Cat",
             description: "A cat.",
+            tags: "",
         });
     });
 
@@ -60,6 +61,33 @@ describe("parseRecognitionResult", () => {
         expect(parseRecognitionResult(JSON.stringify({ title: "Hello" }))).toEqual({
             title: "Hello",
             description: "",
+            tags: "",
+        });
+    });
+
+    it("解析 tags 数组并截到 8 个", () => {
+        expect(
+            parseRecognitionResult(
+                JSON.stringify({
+                    title: "T",
+                    description: "D",
+                    tags: ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+                }),
+            ),
+        ).toEqual({
+            title: "T",
+            description: "D",
+            tags: "a, b, c, d, e, f, g, h",
+        });
+    });
+
+    it("tags 为逗号字符串也可解析", () => {
+        expect(
+            parseRecognitionResult(JSON.stringify({ title: "T", description: "D", tags: "x, y" })),
+        ).toEqual({
+            title: "T",
+            description: "D",
+            tags: "x, y",
         });
     });
 
@@ -129,7 +157,7 @@ describe("recognizeImage", () => {
         };
         const image = document.createElement("img");
         const result = await recognizeImage({ image, targetLang: "es" });
-        expect(result).toEqual({ title: "A tree", description: "Green." });
+        expect(result).toEqual({ title: "A tree", description: "Green.", tags: "" });
         expect(create).toHaveBeenCalled();
         expect(JSON.stringify(prompt.mock.calls)).toContain("Spanish");
         expect(destroy).toHaveBeenCalled();

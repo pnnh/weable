@@ -9,6 +9,7 @@ import { channels, images } from "@/db/schema";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
+import { normalizeTags } from "@/lib/imageTags";
 import ImageDeleteSection from "@/components/ImageDeleteSection";
 import ImageAiMetaSection from "@/components/ImageAiMetaSection";
 import UploadQueue from "@/components/UploadQueue";
@@ -87,6 +88,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
         const user2 = await getCurrentUser();
         const title = ((formData.get("title") as string | null) ?? "").trim();
         const description = (formData.get("description") as string | null) ?? "";
+        const tags = normalizeTags((formData.get("tags") as string | null) ?? "");
         const rawChannelId = (formData.get("channelId") as string | null) ?? "";
         const isPublished = formData.get("isPublished") === "true";
         const now = Date.now();
@@ -111,7 +113,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
 
         await db2
             .update(images)
-            .set({ title, description, channelId, isPublished, updatedAt: now })
+            .set({ title, description, tags, channelId, isPublished, updatedAt: now })
             .where(and(eq(images.id, imageId), eq(images.userId, user2.id)));
 
         redirect(listHref);
@@ -138,9 +140,14 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
                         imageElementId="image-preview"
                         initialTitle={existingImage.title}
                         initialDescription={existingImage.description}
+                        initialTags={existingImage.tags}
                         labels={{
                             imageTitle: t(l, "imageTitle"),
+                            imageTags: t(l, "imageTags"),
                             imageDescription: t(l, "imageDescription"),
+                            imagePreview: t(l, "imagePreview"),
+                            imagePreviewClose: t(l, "imagePreviewClose"),
+                            imagePreviewUnavailable: t(l, "imagePreviewUnavailable"),
                             cancel: t(l, "cancel"),
                             aiRecognize: t(l, "aiRecognize"),
                             aiRecognizeConfirmTitle: t(l, "aiRecognizeConfirmTitle"),

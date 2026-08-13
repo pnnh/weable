@@ -26,6 +26,7 @@
     "newImage": "Upload Image",
     "editImage": "Edit Image",
     "imageTitle": "Title",
+    "imageTags": "Tags",
     "imageDescription": "Description",
     "imageChannel": "Channel",
     "imageStatus": "Status",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "Choose Images",
     "aiRecognize": "AI recognize",
     "aiRecognizeConfirmTitle": "Recognize image with on-device AI",
-    "aiRecognizeConfirmBody": "This uses your browser’s built-in local AI to recognize the current image. If it succeeds, the title and description below will be overwritten. Nothing is saved automatically.",
+    "aiRecognizeConfirmBody": "This uses your browser’s built-in local AI to recognize the current image. If it succeeds, the title, description, and tags below will be overwritten. Nothing is saved automatically.",
     "aiRecognizeConfirm": "Recognize",
     "aiRecognizeTargetLang": "Output language",
     "aiRecognizeUnsupported": "On-device image recognition is not available. Switch to Chrome or Edge, and make sure this device meets the browser’s local-model requirements.",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "The on-device model is not ready.",
     "aiRecognizeImageUnreadable": "Could not read the current image.",
     "aiRecognizeEmptyTitle": "No usable title was returned.",
-    "aiRecognizeFailed": "Recognition failed."
+    "aiRecognizeFailed": "Recognition failed.",
+    "imagePreview": "Enlarge preview",
+    "imagePreviewClose": "Close preview",
+    "imagePreviewUnavailable": "The current image is not ready to preview."
 }

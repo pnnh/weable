@@ -26,6 +26,7 @@
     "newImage": "画像をアップロード",
     "editImage": "画像を編集",
     "imageTitle": "タイトル",
+    "imageTags": "タグ",
     "imageDescription": "説明",
     "imageChannel": "チャンネル",
     "imageStatus": "ステータス",
@@ -97,7 +98,7 @@
     "uploadQueueAddFiles": "画像を選択",
     "aiRecognize": "AI 認識",
     "aiRecognizeConfirmTitle": "端末内 AI で画像を認識",
-    "aiRecognizeConfirmBody": "ブラウザ内蔵のローカル AI で現在の画像を認識します。成功すると下のタイトルと説明が上書きされます。自動保存はされません。",
+    "aiRecognizeConfirmBody": "ブラウザ内蔵のローカル AI で現在の画像を認識します。成功すると下のタイトル、説明、タグが上書きされます。自動保存はされません。",
     "aiRecognizeConfirm": "認識する",
     "aiRecognizeTargetLang": "出力言語",
     "aiRecognizeUnsupported": "端末内の画像認識は利用できません。Chrome または Edge に切り替え、この端末がブラウザのローカルモデル要件を満たしていることを確認してください。",
@@ -106,5 +107,8 @@
     "aiRecognizeModelNotReady": "端末内モデルの準備ができていません。",
     "aiRecognizeImageUnreadable": "現在の画像を読み取れませんでした。",
     "aiRecognizeEmptyTitle": "使えるタイトルが返りませんでした。",
-    "aiRecognizeFailed": "認識に失敗しました。"
+    "aiRecognizeFailed": "認識に失敗しました。",
+    "imagePreview": "拡大プレビュー",
+    "imagePreviewClose": "プレビューを閉じる",
+    "imagePreviewUnavailable": "現在の画像はまだプレビューできません。"
 }
