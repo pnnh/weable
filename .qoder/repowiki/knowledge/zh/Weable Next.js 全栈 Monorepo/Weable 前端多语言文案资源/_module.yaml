@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: locales
-title: 前端界面多语言文案资源
+title: Weable 前端多语言文案资源
 scope:
     - src/locales/
 source_files: []

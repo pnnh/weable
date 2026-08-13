@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: frontend_app
-title: Next.js 前端应用（App Router）
+title: Next.js App Router 前端应用入口
 scope:
     - src/app/
 source_files: []

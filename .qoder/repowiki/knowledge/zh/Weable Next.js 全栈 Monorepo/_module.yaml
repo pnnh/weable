@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: Weable Next.js 全栈应用（pnpm monorepo）
+title: Weable Next.js 全栈 Monorepo
 scope:
     - README.md
     - package.json

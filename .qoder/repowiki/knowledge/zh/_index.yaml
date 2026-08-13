@@ -3,11 +3,11 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-08-10T08:59:31Z"
+exported_at: "2026-08-10T10:59:19Z"
 modules:
     "":
-        dir_name: Weable Next.js 全栈应用（pnpm monorepo）
-        title: Weable Next.js 全栈应用（pnpm monorepo）
+        dir_name: Weable Next.js 全栈 Monorepo
+        title: Weable Next.js 全栈 Monorepo
         scope:
             - README.md
             - package.json
@@ -67,8 +67,8 @@ modules:
         depends_on: []
         related_to: []
     components:
-        dir_name: 控制台与前端 UI 组件集合
-        title: 控制台与前端 UI 组件集合
+        dir_name: 控制台与站点 UI 组件集合
+        title: 控制台与站点 UI 组件集合
         scope:
             - src/components/
         source_files: []
@@ -90,8 +90,8 @@ modules:
             - path: frontend_app/api_routes/images
             - path: frontend_app/api_routes/user
     frontend_app:
-        dir_name: Next.js 前端应用（App Router）
-        title: Next.js 前端应用（App Router）
+        dir_name: Next.js App Router 前端应用入口
+        title: Next.js App Router 前端应用入口
         scope:
             - src/app/
         source_files: []
@@ -135,8 +135,8 @@ modules:
             - path: components
             - path: database_layer
     frontend_app/i18n_routes:
-        dir_name: 多语言路由层（Next.js App Router [lang] 段）
-        title: 多语言路由层（Next.js App Router [lang] 段）
+        dir_name: 多语言路由与控制台页面（Next.js App Router）
+        title: 多语言路由与控制台页面（Next.js App Router）
         scope:
             - src/app/[lang]/
         source_files: []
@@ -158,8 +158,8 @@ modules:
         related_to:
             - path: shared_libs
     locales:
-        dir_name: 前端界面多语言文案资源
-        title: 前端界面多语言文案资源
+        dir_name: Weable 前端多语言文案资源
+        title: Weable 前端多语言文案资源
         scope:
             - src/locales/
         source_files: []
@@ -180,8 +180,8 @@ modules:
             - path: frontend_app/i18n_routes
             - path: frontend_app/root_layout
     specs_and_docs:
-        dir_name: Specify 驱动的功能规格与基础设施
-        title: Specify 驱动的功能规格与基础设施
+        dir_name: Specify 驱动的规格文档生产管线
+        title: Specify 驱动的规格文档生产管线
         scope:
             - specs/
             - .specify/
@@ -192,8 +192,8 @@ modules:
         depends_on: []
         related_to: []
     specs_and_docs/feature_specs:
-        dir_name: 功能规格与契约文档集
-        title: 功能规格与契约文档集
+        dir_name: 图片管理应用功能特性规格文档集
+        title: 图片管理应用功能特性规格文档集
         scope:
             - specs/
         source_files: []

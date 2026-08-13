@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: specs_and_docs
-title: Specify 驱动的功能规格与基础设施
+title: Specify 驱动的规格文档生产管线
 scope:
     - specs/
     - .specify/

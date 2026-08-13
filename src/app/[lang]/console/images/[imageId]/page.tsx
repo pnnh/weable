@@ -10,6 +10,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { t } from "@/lib/i18n";
 import ImageDeleteSection from "@/components/ImageDeleteSection";
+import ImageAiMetaSection from "@/components/ImageAiMetaSection";
 import UploadQueue from "@/components/UploadQueue";
 
 export const dynamic = "force-dynamic";
@@ -124,6 +125,7 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
 
                 <div className="mb-8">
                     <img
+                        id="image-preview"
                         src={`/${l}/console/api/images/${imageId}/file`}
                         alt={existingImage.title}
                         className="max-w-full max-h-64 rounded-lg border border-gray-200"
@@ -131,25 +133,29 @@ export default async function ImageEditorPage({ params, searchParams }: Props) {
                 </div>
 
                 <form action={handleSave} className="space-y-6">
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">{t(l, "imageTitle")}</label>
-                        <input
-                            name="title"
-                            type="text"
-                            defaultValue={existingImage.title}
-                            required
-                            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">{t(l, "imageDescription")}</label>
-                        <textarea
-                            name="description"
-                            rows={8}
-                            defaultValue={existingImage.description}
-                            className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
+                    <ImageAiMetaSection
+                        pageLang={l}
+                        imageElementId="image-preview"
+                        initialTitle={existingImage.title}
+                        initialDescription={existingImage.description}
+                        labels={{
+                            imageTitle: t(l, "imageTitle"),
+                            imageDescription: t(l, "imageDescription"),
+                            cancel: t(l, "cancel"),
+                            aiRecognize: t(l, "aiRecognize"),
+                            aiRecognizeConfirmTitle: t(l, "aiRecognizeConfirmTitle"),
+                            aiRecognizeConfirmBody: t(l, "aiRecognizeConfirmBody"),
+                            aiRecognizeConfirm: t(l, "aiRecognizeConfirm"),
+                            aiRecognizeTargetLang: t(l, "aiRecognizeTargetLang"),
+                            aiRecognizeUnsupported: t(l, "aiRecognizeUnsupported"),
+                            aiRecognizeRunning: t(l, "aiRecognizeRunning"),
+                            aiRecognizeTimeout: t(l, "aiRecognizeTimeout"),
+                            aiRecognizeModelNotReady: t(l, "aiRecognizeModelNotReady"),
+                            aiRecognizeImageUnreadable: t(l, "aiRecognizeImageUnreadable"),
+                            aiRecognizeEmptyTitle: t(l, "aiRecognizeEmptyTitle"),
+                            aiRecognizeFailed: t(l, "aiRecognizeFailed"),
+                        }}
+                    />
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">{t(l, "imageChannel")}</label>
                         <select

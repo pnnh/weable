@@ -94,5 +94,17 @@
     "uploadQueueStatusNeedsFile": "需重新选择",
     "uploadQueueSkippedDupes": "已跳过 {count} 个队列中的同名文件。",
     "uploadQueueModified": "修改时间",
-    "uploadQueueAddFiles": "选择图片"
+    "uploadQueueAddFiles": "选择图片",
+    "aiRecognize": "AI 识别",
+    "aiRecognizeConfirmTitle": "使用浏览器本地 AI 识别图片",
+    "aiRecognizeConfirmBody": "此功能使用浏览器内置的本地 AI 识别当前图片。成功后将覆盖下方的标题和描述，不会自动保存。",
+    "aiRecognizeConfirm": "开始识别",
+    "aiRecognizeTargetLang": "输出语言",
+    "aiRecognizeUnsupported": "当前浏览器不具备本地图像识别能力。请改用 Chrome 或 Edge，并确认设备满足浏览器本地模型要求。",
+    "aiRecognizeRunning": "识别中…",
+    "aiRecognizeTimeout": "识别超时。",
+    "aiRecognizeModelNotReady": "本地能力未就绪。",
+    "aiRecognizeImageUnreadable": "无法读取当前图片。",
+    "aiRecognizeEmptyTitle": "未得到可用标题。",
+    "aiRecognizeFailed": "识别失败。"
 }
