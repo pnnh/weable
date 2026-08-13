@@ -1,0 +1,132 @@
+.claude/settings.json
+  h_6465a203f88bd5 102
+.claude/skills/speckit-git-commit/SKILL.md
+  h_6465a203f88bd5 1-68
+.claude/skills/speckit-git-feature/SKILL.md
+  h_6465a203f88bd5 1-87
+.claude/skills/speckit-git-initialize/SKILL.md
+  h_6465a203f88bd5 1-54
+.claude/skills/speckit-git-remote/SKILL.md
+  h_6465a203f88bd5 1-50
+.claude/skills/speckit-git-validate/SKILL.md
+  h_6465a203f88bd5 1-54
+.specify/extensions.yml
+  h_6465a203f88bd5 4,7-169
+.specify/extensions/.registry
+  h_6465a203f88bd5 37-54
+.specify/extensions/git/README.md
+  h_6465a203f88bd5 1-119
+.specify/extensions/git/commands/speckit.git.commit.md
+  h_6465a203f88bd5 1-63
+.specify/extensions/git/commands/speckit.git.feature.md
+  h_6465a203f88bd5 1-82
+.specify/extensions/git/commands/speckit.git.initialize.md
+  h_6465a203f88bd5 1-49
+.specify/extensions/git/commands/speckit.git.remote.md
+  h_6465a203f88bd5 1-45
+.specify/extensions/git/commands/speckit.git.validate.md
+  h_6465a203f88bd5 1-49
+.specify/extensions/git/config-template.yml
+  h_6465a203f88bd5 1-79
+.specify/extensions/git/extension.yml
+  h_6465a203f88bd5 1-142
+.specify/extensions/git/git-config.yml
+  h_6465a203f88bd5 1-79
+.specify/extensions/git/scripts/bash/auto-commit.sh
+  h_6465a203f88bd5 1-211
+.specify/extensions/git/scripts/bash/create-new-feature-branch.sh
+  h_6465a203f88bd5 1-626
+.specify/extensions/git/scripts/bash/git-common.sh
+  h_6465a203f88bd5 1-56
+.specify/extensions/git/scripts/bash/initialize-repo.sh
+  h_6465a203f88bd5 1-54
+.specify/extensions/git/scripts/powershell/auto-commit.ps1
+  h_6465a203f88bd5 1-230
+.specify/extensions/git/scripts/powershell/create-new-feature-branch.ps1
+  h_6465a203f88bd5 1-592
+.specify/extensions/git/scripts/powershell/git-common.ps1
+  h_6465a203f88bd5 1-52
+.specify/extensions/git/scripts/powershell/initialize-repo.ps1
+  h_6465a203f88bd5 1-69
+.specify/extensions/git/scripts/python/auto_commit.py
+  h_6465a203f88bd5 1-195
+.specify/extensions/git/scripts/python/create_new_feature_branch.py
+  h_6465a203f88bd5 1-634
+.specify/extensions/git/scripts/python/git_common.py
+  h_6465a203f88bd5 1-81
+.specify/extensions/git/scripts/python/initialize_repo.py
+  h_6465a203f88bd5 1-89
+.specify/feature.json
+  h_6465a203f88bd5 2
+e2e/console-image-tags-preview.spec.ts
+  h_6465a203f88bd5 1-116
+migrations/0003_sloppy_roulette.sql
+  h_6465a203f88bd5 1
+migrations/meta/0003_snapshot.json
+  h_6465a203f88bd5 1-317
+migrations/meta/_journal.json
+  h_6465a203f88bd5 25-31
+package.json
+  h_6465a203f88bd5 29-30
+pnpm-lock.yaml
+  h_6465a203f88bd5 50-52,3742-3755,7413-7420
+specs/013-image-tags-preview/checklists/requirements.md
+  h_6465a203f88bd5 1-36
+specs/013-image-tags-preview/contracts/image-ai-tags.md
+  h_6465a203f88bd5 1-71
+specs/013-image-tags-preview/contracts/image-preview-ui.md
+  h_6465a203f88bd5 1-69
+specs/013-image-tags-preview/contracts/image-tags-form.md
+  h_6465a203f88bd5 1-51
+specs/013-image-tags-preview/data-model.md
+  h_6465a203f88bd5 1-102
+specs/013-image-tags-preview/plan.md
+  h_6465a203f88bd5 1-116
+specs/013-image-tags-preview/quickstart.md
+  h_6465a203f88bd5 1-91
+specs/013-image-tags-preview/research.md
+  h_6465a203f88bd5 1-182
+specs/013-image-tags-preview/spec.md
+  h_6465a203f88bd5 1-154
+specs/013-image-tags-preview/tasks.md
+  h_6465a203f88bd5 1-199
+src/app/[lang]/console/images/[imageId]/page.tsx
+  h_6465a203f88bd5 12,91,116,143,146,148-150
+src/components/ImageAiMetaSection.test.tsx
+  h_6465a203f88bd5 8-30,33,35-37,41,55-56,66,69-71,73-77,85,98,135,140-153,165,169-179,185,204,213,225,238,241-277
+src/components/ImageAiMetaSection.tsx
+  h_6465a203f88bd5 4-6,18,20-22,45,66-70,76,82,87-89,104-112,133-134,156,181-188,195-209,227-234,293-302
+src/db/schema.ts
+  h_6465a203f88bd5 60
+src/lib/browserAi.test.ts
+  h_6465a203f88bd5 36,64-90,160
+src/lib/browserAi.ts
+  h_6465a203f88bd5 2,94-98,108,112,161-162,173,228
+src/lib/imageTags.test.ts
+  h_6465a203f88bd5 1-47
+src/lib/imageTags.ts
+  h_6465a203f88bd5 1-31
+src/locales/en.json
+  h_6465a203f88bd5 29,101,110-113
+src/locales/es.json
+  h_6465a203f88bd5 29,101,110-113
+src/locales/fr.json
+  h_6465a203f88bd5 29,101,110-113
+src/locales/ja.json
+  h_6465a203f88bd5 29,101,110-113
+src/locales/zh-TW.json
+  h_6465a203f88bd5 29,101,110-113
+src/locales/zh.json
+  h_6465a203f88bd5 29,101,110-113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "85ce9f448cc0c36a13a33206481c1f05664e9584",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
