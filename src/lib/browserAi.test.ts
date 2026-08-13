@@ -134,4 +134,19 @@ describe("recognizeImage", () => {
         expect(JSON.stringify(prompt.mock.calls)).toContain("Spanish");
         expect(destroy).toHaveBeenCalled();
     });
+
+    it("恢复语言写入对应的 prompt 语言名", async () => {
+        const prompt = vi.fn(async () => JSON.stringify({ title: "A tree", description: "Green." }));
+        (globalThis as unknown as { LanguageModel: unknown }).LanguageModel = {
+            availability: async () => "available",
+            create: async () => ({ prompt, destroy() {} }),
+        };
+        const image = document.createElement("img");
+        await recognizeImage({ image, targetLang: "ja" });
+        expect(JSON.stringify(prompt.mock.calls)).toContain("Japanese");
+        await recognizeImage({ image, targetLang: "fr" });
+        expect(JSON.stringify(prompt.mock.calls)).toContain("French");
+        await recognizeImage({ image, targetLang: "zh-TW" });
+        expect(JSON.stringify(prompt.mock.calls)).toContain("Traditional Chinese");
+    });
 });

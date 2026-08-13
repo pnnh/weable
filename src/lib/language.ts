@@ -2,12 +2,18 @@ import acceptLanguage from "accept-language";
 
 export const langEn = "en";
 export const langEs = "es";
+export const langFr = "fr";
+export const langJa = "ja";
 export const langZh = "zh";
+export const langZhTW = "zh-TW";
 
 export type LangKey =
   | typeof langEn
   | typeof langEs
-  | typeof langZh;
+  | typeof langFr
+  | typeof langJa
+  | typeof langZh
+  | typeof langZhTW;
 
 export const defaultLanguage: LangKey = langEn;
 export const unknownLanguage = "unknown";
@@ -15,7 +21,10 @@ export const unknownLanguage = "unknown";
 export const supportedLanguages: { key: LangKey; name: string }[] = [
   { key: langEn, name: "English" },
   { key: langEs, name: "Español" },
+  { key: langFr, name: "Français" },
+  { key: langJa, name: "日本語" },
   { key: langZh, name: "简体中文" },
+  { key: langZhTW, name: "繁體中文" },
 ];
 
 const supportedKeys = supportedLanguages.map((l) => l.key);

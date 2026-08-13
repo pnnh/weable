@@ -1,4 +1,6 @@
-export type TargetLang = "en" | "es" | "zh";
+import type { LangKey } from "@/lib/language";
+
+export type TargetLang = LangKey;
 
 export type RecognizeErrorCode =
     | "unsupported"
@@ -30,7 +32,10 @@ const SESSION_OPTIONS = {
 const OUTPUT_LANG_NAME: Record<TargetLang, string> = {
     en: "English",
     es: "Spanish",
+    fr: "French",
+    ja: "Japanese",
     zh: "Simplified Chinese",
+    "zh-TW": "Traditional Chinese",
 };
 
 type LanguageModelAvailability = "unavailable" | "downloadable" | "downloading" | "available";

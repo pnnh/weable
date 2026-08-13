@@ -1,6 +1,8 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+import { type LangKey } from "@/lib/language";
+
 import ImageAiMetaSection, { type ImageAiLabels } from "./ImageAiMetaSection";
 
 const labels: ImageAiLabels = {
@@ -33,7 +35,7 @@ function installLanguageModel(promptImpl?: () => Promise<string>) {
     return { prompt, destroy };
 }
 
-function renderSection(pageLang: "en" | "es" | "zh" = "zh") {
+function renderSection(pageLang: LangKey = "zh") {
     const img = document.createElement("img");
     img.id = "image-preview";
     document.body.appendChild(img);
@@ -66,6 +68,18 @@ describe("ImageAiMetaSection", () => {
         expect(button.parentElement).toHaveAttribute("title", expect.stringContaining("Chrome"));
         fireEvent.click(button);
         expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
+
+    it("确认框输出语言为站点支持的 6 项，页面语言为日语时默认 ja", async () => {
+        installLanguageModel();
+        renderSection("ja");
+        const button = await screen.findByRole("button", { name: "AI recognize" });
+        await waitFor(() => expect(button).toBeEnabled());
+        fireEvent.click(button);
+        const select = screen.getByLabelText("Output language");
+        const values = screen.getAllByRole("option").map((option) => (option as HTMLOptionElement).value);
+        expect(values).toEqual(["en", "es", "fr", "ja", "zh", "zh-TW"]);
+        expect(select).toHaveValue("ja");
     });
 
     it("取消确认不改表单，再次打开下拉回到页面语言", async () => {
