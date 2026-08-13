@@ -1,0 +1,50 @@
+.specify/feature.json
+  h_6465a203f88bd5 2
+specs/012-restore-i18n-locales/checklists/requirements.md
+  h_6465a203f88bd5 1-37
+specs/012-restore-i18n-locales/contracts/locale-contract.md
+  h_6465a203f88bd5 1-116
+specs/012-restore-i18n-locales/data-model.md
+  h_6465a203f88bd5 1-140
+specs/012-restore-i18n-locales/plan.md
+  h_6465a203f88bd5 1-112
+specs/012-restore-i18n-locales/quickstart.md
+  h_6465a203f88bd5 1-82
+specs/012-restore-i18n-locales/research.md
+  h_6465a203f88bd5 1-74
+specs/012-restore-i18n-locales/spec.md
+  h_6465a203f88bd5 1-139
+specs/012-restore-i18n-locales/tasks.md
+  h_6465a203f88bd5 1-211
+src/components/ImageAiMetaSection.test.tsx
+  h_6465a203f88bd5 4-5,38,73-84
+src/lib/browserAi.test.ts
+  h_6465a203f88bd5 137-151
+src/lib/browserAi.ts
+  h_6465a203f88bd5 1-3,35-36,38
+src/lib/i18n.test.ts
+  h_6465a203f88bd5 1,5-15,26-52
+src/lib/i18n.ts
+  h_6465a203f88bd5 5-6,8,15-16,18
+src/lib/language.test.ts
+  h_6465a203f88bd5 21-26,34-36,41-48
+src/lib/language.ts
+  h_6465a203f88bd5 5-6,8,13-16,24-25,27
+src/locales/fr.json
+  h_6465a203f88bd5 1-110
+src/locales/ja.json
+  h_6465a203f88bd5 1-110
+src/locales/zh-TW.json
+  h_6465a203f88bd5 1-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "8eb03222fe60dfb0e64df91ee962097140ad95e1",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
