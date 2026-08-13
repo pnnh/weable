@@ -1,0 +1,92 @@
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/多语言路由与控制台页面（Next.js App Router）/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/多语言路由与控制台页面（Next.js App Router）/技术栈.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/多语言路由与控制台页面（Next.js App Router）/架构设计.md"
+  h_6465a203f88bd5 1-5
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/多语言路由与控制台页面（Next.js App Router）/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/架构设计.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Next.js App Router 前端应用入口/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Specify 驱动的规格文档生产管线/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Specify 驱动的规格文档生产管线/图片管理应用功能特性规格文档集/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Specify 驱动的规格文档生产管线/概述.md"
+  h_6465a203f88bd5 1
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/Weable 前端多语言文案资源/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/控制台与站点 UI 组件集合/_module.yaml"
+  h_6465a203f88bd5 3
+".qoder/repowiki/knowledge/zh/Weable Next.js 全栈 Monorepo/概述.md"
+  h_6465a203f88bd5 1
+.qoder/repowiki/knowledge/zh/_index.yaml
+  h_6465a203f88bd5 6,9-10,70-71,93-94,138-139,161-162,183-184,195-196
+".qoder/repowiki/zh/content/API 接口文档/文件上传 API.md"
+  h_6465a203f88bd5 4-6,11-12,16-22,36,38,41-42,50-53,60-62,66-68,76,81-86,90,94-96,102,107-109,112-115,121,123-128,131-133,139-140,144,149,153,159,178-179,181-182,185-212,214,219,223,227,230,233,274,277,281,288,290,294-295,298,301-302,306,311-312,315-316,320-321,326-329,332,334-337,340,344,349,351-352,357,362-365,368,371,375,379-381,383,385,389-390,392,396-398,400,404,408,412,418,421,427,429-452
+.qoder/repowiki/zh/content/功能特性/国际化支持.md
+  h_6465a203f88bd5 17-21,30-33,50,72-74,90-92,94,105,122-124,137-139,152,166,180-181,183,283-329,347-349,353-355,385,413-418,421,453,513-521
+.qoder/repowiki/zh/content/功能特性/图片管理/批量图片管理.md
+  h_6465a203f88bd5 20,22-24,29-32,47,52-53,58,62-63,74-75,81-83,94-95,113,125-126,138,146,148-155,157-158,162,427-451,493-495,512,549-560,570,575,578,582,585,588-615,619,638,642,645,651,659,661-663,665-668,673,677,679-680,692,698,715-717,730-735,740,745,754,760-762,769-771,774-778
+.qoder/repowiki/zh/content/开发指南/测试套件设置.md
+  h_6465a203f88bd5 11,13-15,33,49,52,72,98,103,132,136,151-154,163-164,166,169,172,174,178,185-196,204-205,207-218,221,223-225,227,229-231,252-253,257-258,267,275,281,283,286,289-291,298-300
+.qoder/repowiki/zh/content/核心模块/认证系统.md
+  h_6465a203f88bd5 15,21-24,39,46,57,60,70,72-73,79,83-85,91-92,94,99-105,108-110,116,122,124-125,132-136,140-141,149-151,158,161,163-168,176-177,180-185,192-193,197-241,244,247-248,252,254,257-258,279-280,284-285,291,294-296,298-299,312,352,354-355,357,359,361-362,364,375-376,381-384,389-390,394-395,398,400-401,403-404,406,414,416,418,420,429-433,436,440,444,446-447,457-460,470,479,482,487-491,495,498,501,504,507-509,516,519,522,527,533-534,537,540-541
+.qoder/repowiki/zh/meta/repowiki-metadata.json
+  h_6465a203f88bd5 1
+.specify/feature.json
+  h_6465a203f88bd5 2
+e2e/console-image-ai-recognize.spec.ts
+  h_6465a203f88bd5 1-95
+specs/011-image-ai-recognize/checklists/requirements.md
+  h_6465a203f88bd5 1-37
+specs/011-image-ai-recognize/contracts/browser-prompt-api.md
+  h_6465a203f88bd5 1-135
+specs/011-image-ai-recognize/contracts/image-ai-toolbar-ui.md
+  h_6465a203f88bd5 1-106
+specs/011-image-ai-recognize/data-model.md
+  h_6465a203f88bd5 1-137
+specs/011-image-ai-recognize/plan.md
+  h_6465a203f88bd5 1-99
+specs/011-image-ai-recognize/quickstart.md
+  h_6465a203f88bd5 1-99
+specs/011-image-ai-recognize/research.md
+  h_6465a203f88bd5 1-231
+specs/011-image-ai-recognize/spec.md
+  h_6465a203f88bd5 1-166
+specs/011-image-ai-recognize/tasks.md
+  h_6465a203f88bd5 1-182
+src/app/[lang]/console/images/[imageId]/page.tsx
+  h_6465a203f88bd5 13,128,136-158
+src/components/ImageAiMetaSection.test.tsx
+  h_6465a203f88bd5 1-162
+src/components/ImageAiMetaSection.tsx
+  h_6465a203f88bd5 1-248
+src/lib/browserAi.test.ts
+  h_6465a203f88bd5 1-137
+src/lib/browserAi.ts
+  h_6465a203f88bd5 1-238
+src/locales/en.json
+  h_6465a203f88bd5 97-109
+src/locales/es.json
+  h_6465a203f88bd5 97-109
+src/locales/zh.json
+  h_6465a203f88bd5 97-109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "a6603fe094062f9fcb04220f07f305f87f7a53eb",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
