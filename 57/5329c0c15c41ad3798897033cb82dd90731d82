@@ -1,0 +1,16 @@
+.specify/extensions.yml
+  h_6465a203f88bd5 11,20,29,38,47,56,65,74,83,92,101,110,119,128,137,146,155,164
+.specify/extensions/.registry
+  h_6465a203f88bd5 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "575329c0c15c41ad3798897033cb82dd90731d82",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
