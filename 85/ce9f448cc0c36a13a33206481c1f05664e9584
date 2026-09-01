@@ -1,3 +1,6 @@
+.specify/extensions/git/git-config.yml
+  h_6465a203f88bd5 31
+  h_6465a203f88bd5 1-30,32-79
 .claude/settings.json
   h_6465a203f88bd5 102
 .claude/skills/speckit-git-commit/SKILL.md
@@ -30,8 +33,6 @@
   h_6465a203f88bd5 1-79
 .specify/extensions/git/extension.yml
   h_6465a203f88bd5 1-142
-.specify/extensions/git/git-config.yml
-  h_6465a203f88bd5 1-79
 .specify/extensions/git/scripts/bash/auto-commit.sh
   h_6465a203f88bd5 1-211
 .specify/extensions/git/scripts/bash/create-new-feature-branch.sh
