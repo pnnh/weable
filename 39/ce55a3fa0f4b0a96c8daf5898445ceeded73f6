@@ -1,0 +1,32 @@
+.env
+  h_6465a203f88bd5 1-3
+.specify/memory/constitution.md
+  h_6465a203f88bd5 103
+  s_f452dbf8ebe8f4::t_923cbcf0930eba 4-7,9-13
+  s_f452dbf8ebe8f4::t_c4a7c76fc13770 61-73,110
+.gitignore
+  h_6465a203f88bd5 40-41
+.claude/settings.json
+  h_6465a203f88bd5 25,29,34,38,43,47,85-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "39ce55a3fa0f4b0a96c8daf5898445ceeded73f6",
+  "prompts": {},
+  "humans": {
+    "h_6465a203f88bd5": {
+      "author": "larry <xspanni@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_f452dbf8ebe8f4": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "c1c5f6d7-4f3e-4969-9738-3b47f53efd6f",
+        "model": "copilot/claude-sonnet-5"
+      },
+      "human_author": "larry <xspanni@gmail.com>"
+    }
+  }
+}
