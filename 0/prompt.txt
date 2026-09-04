@@ -1,0 +1,13 @@
+/speckit-constitution 本项目禁止静默发明需求。用户未明确的行为不得写成已决定的功能需求，必须列为 Assumptions 或 [NEEDS CLARIFICATION]。
+进入 /speckit.plan 前，Assumptions 必须经用户确认或被 clarify 消除。
+未经明确授权，不得改变现有公共 API、数据模型、权限与错误语义。
+提出可能影响存量行为的需求时，必须先对照现有实现与测试并记录冲突。
+安全、隐私、金钱、数据删除、权限提升类决策没有默认值，必须提问。
+
+---
+
+/speckit-constitution 本项目禁止静默发明需求。用户未明确的行为不得写成已决定的功能需求，必须列为 Assumptions 或 [NEEDS CLARIFICATION]。
+进入 /speckit.plan 前，Assumptions 必须经用户确认或被 clarify 消除。
+未经明确授权，不得改变现有公共 API、数据模型、权限与错误语义。
+提出可能影响存量行为的需求时，必须先对照现有实现与测试并记录冲突。
+安全、隐私、金钱、数据删除、权限提升类决策没有默认值，必须提问。

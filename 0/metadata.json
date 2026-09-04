@@ -1,0 +1,86 @@
+{
+  "cli_version": "0.10.5",
+  "checkpoint_id": "01M1P34J60ET11RYD2C27DZTWN",
+  "session_id": "c1c5f6d7-4f3e-4969-9738-3b47f53efd6f",
+  "strategy": "manual-commit",
+  "created_at": "2026-09-04T11:33:51.201613Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    ". qoderignore",
+    ".gitignore",
+    ".specify/memory/constitution.md"
+  ],
+  "agent": "Copilot CLI",
+  "model": "claude-sonnet-5",
+  "turn_id": "e07bf01f6ea6",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 0,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 0,
+    "api_call_count": 0
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "prompt-skill-copilot-cli-speckit-constitution-2026-09-01T08:30:07.117Z",
+      "event_type": "prompt_invocation",
+      "skill": {
+        "name": "speckit-constitution"
+      },
+      "source": {
+        "agent": "copilot-cli",
+        "signal": "prompt_slash_command",
+        "confidence": "explicit"
+      },
+      "turn_id": "c36ebb438ed3",
+      "timestamp": "2026-09-01T08:30:07.117Z",
+      "native": {
+        "command": "/speckit-constitution"
+      },
+      "collapse": {
+        "target": "user_message",
+        "label": "/speckit-constitution",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-09-04T11:33:51.181735Z",
+    "agent_lines": 10,
+    "agent_removed": 7,
+    "human_added": 0,
+    "human_modified": 1,
+    "human_removed": 12,
+    "total_committed": 11,
+    "total_lines_changed": 39,
+    "agent_percentage": 43.58974358974359,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 28,
+      "user_lines_removed": 13,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.json": 20,
+        ".env": 3,
+        ".gitignore": 2,
+        ".qoderignore": 3
+      },
+      "user_removed_per_file": {
+        ". qoderignore": 3,
+        ".claude/settings.json": 9,
+        ".gitignore": 1
+      }
+    }
+  ]
+}
