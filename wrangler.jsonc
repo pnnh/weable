@@ -3,6 +3,14 @@
   "name": "weable",
   "compatibility_date": "2026-04-20",
   "main": ".open-next/worker.js",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "weable.xyz",
+      "zone_name": "weable.xyz",
+      "custom_domain": true
+    }
+  ],
   "observability": {
     "enabled": true
   },
@@ -23,9 +31,7 @@
     }
   ],
   "vars": {
-    // 生产环境通过 wrangler secret put CALIEO_CLIENT_ID 注入
-    // wrangler secret put CALIEO_CLIENT_SECRET
-    "CALIEO_CLIENT_ID": ""
+    "CALIEO_CLIENT_ID": "prism_Qgkl2_lHijOgfoJIz3ec9Q"
   },
   "r2_buckets": [
     {
@@ -33,8 +39,8 @@
       "bucket_name": "weable-images"
     },
     {
-      "bucket_name": "weable-images",           // 可以用同一个 bucket
-      "binding": "NEXT_INC_CACHE_R2_BUCKET"   // 必须是这个名字
+      "bucket_name": "weable-images", // 可以用同一个 bucket
+      "binding": "NEXT_INC_CACHE_R2_BUCKET" // 必须是这个名字
     }
   ]
 }

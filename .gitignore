@@ -59,3 +59,6 @@ pnpm-debug.log*
 .idea/
 graphify-out/
 .open-next/
+
+.env
+.env.*
